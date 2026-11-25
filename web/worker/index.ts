@@ -1,5 +1,6 @@
 import { authorize } from './auth';
 import { boundedJson, json } from './http';
+import { chat } from './chat';
 
 const BASE = '/capitol-lens';
 const securityHeaders = {
@@ -30,8 +31,9 @@ export default {
     }
     if (request.method === 'POST' && request.headers.get('Origin') !== url.origin) return json({ error: 'Cross-origin action rejected' }, 403);
     try {
+      if (path === '/api/chat' && request.method === 'POST') return await chat(request, env);
       if (path === '/api/session') return json({ email: auth.email, local: String(env.ENVIRONMENT) === 'local' });
-      if (path === '/api/status') return json({ quoteConfigured: Boolean(env.FINNHUB_API_KEY), refreshConfigured: Boolean(env.GITHUB_TOKEN && env.GITHUB_REPOSITORY), repository: env.GITHUB_REPOSITORY || null, environment: env.ENVIRONMENT });
+      if (path === '/api/status') return json({ chatConfigured: Boolean(env.OPENAI_API_KEY), quoteConfigured: Boolean(env.FINNHUB_API_KEY), refreshConfigured: Boolean(env.GITHUB_TOKEN && env.GITHUB_REPOSITORY), repository: env.GITHUB_REPOSITORY || null, environment: env.ENVIRONMENT });
       if (path === '/api/dataset' && request.method === 'GET') return secured(await asset(env, '/data/dataset.json'));
       if (path === '/api/quote' && request.method === 'GET') {
         const symbol = (url.searchParams.get('symbol') ?? '').toUpperCase();

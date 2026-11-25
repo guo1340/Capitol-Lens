@@ -1,5 +1,8 @@
 /** Single source for every in-product technical/economic explanation. */
 export const glossary = {
+  aiResearch: { title: 'AI research assistant', text: 'AI turns the app’s evidence into a plain-language answer. It can make mistakes. Historical ideas are a starting point for research, not a promise or a checked recommendation to buy today. It cannot place trades.' },
+  apiAccess: { title: 'OpenAI API access', text: 'The backend connects to OpenAI with a private API key. ChatGPT and API billing are separate; eligible subscriptions may offer promotional API credits. Check your API organization’s credits and usage. Never put the key in frontend code.' },
+  chatPrivacy: { title: 'Chat privacy and usage', text: 'Your question, recent conversation and a summary of public research data are sent to OpenAI. Optional scenario settings are included only when selected. This app keeps the conversation in page memory and requests store:false; provider retention rules still apply. Each request can use paid API credits. Stopping a request may not stop provider billing.' },
   disclosure: { title: 'Public disclosure', text: 'A report that tells the public about a politician’s financial transaction. It may appear days or weeks after the actual trade.' },
   tradeDate: { title: 'Trade date', text: 'The day the politician or their household actually bought or sold the investment. This date does not tell us when the public learned about it.' },
   filingDate: { title: 'Filing date', text: 'The date recorded by the government for receiving the report. We use it as an estimate of when the information became public; the exact publication time is not verified.' },

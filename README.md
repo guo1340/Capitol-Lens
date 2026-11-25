@@ -36,6 +36,21 @@ or production login are required for historical exploration in local development
 
 ## Publish on Cloudflare
 
+### Chat with AI
+
+The separate **Chat with AI** tab summarizes the stored data, discusses historical
+stock ideas and can explain your what-if settings. Add `OPENAI_API_KEY` to
+`web/.dev.vars`, restart the backend, and reload the frontend. For deployment,
+add the key as a Worker secret. `OPENAI_MODEL` is optional (default `gpt-5-mini`).
+Never put this key in frontend code or Git.
+
+Eligible ChatGPT Pro subscriptions may provide API credits after activation;
+check ChatGPT Settings → Billing and your linked API organization. ChatGPT and
+API billing remain separate. See [the complete AI setup and usage notes](web/README.md#connect-chat-with-ai).
+Chat uses the displayed historical coverage, not live market/news information.
+
+### Current deployment configuration
+
 The current production configuration packages frontend assets and the API in one
 Worker. Separately hosted frontend/backend deployments are a future requirement;
 the instructions below describe the current combined deployment only.

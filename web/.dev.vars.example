@@ -1,3 +1,6 @@
 # Copy to .dev.vars for local use only. Never commit real values.
 FINNHUB_API_KEY=
 GITHUB_TOKEN=
+OPENAI_API_KEY=
+# Optional Responses-compatible model; default is gpt-5-mini.
+OPENAI_MODEL=gpt-5-mini

@@ -73,6 +73,69 @@ make a public repository private.
 
 ## Local development
 
+### Connect Chat with AI
+
+ChatGPT Pro and the API have separate billing, but eligible Pro subscriptions can
+claim API credits. Check **ChatGPT → Settings → Billing → API credits benefit**,
+link the intended API organization, and confirm the grant in that organization's
+API billing page. Eligibility and activation are account-specific; having Pro
+alone does not confirm that credits have been issued.
+See [OpenAI's credit-benefit instructions](https://help.openai.com/en/articles/20001626-api-credits-benefit-for-eligible-chatgpt-subscriptions)
+and [billing separation](https://help.openai.com/en/articles/9039756-managing-billing-for-chatgpt-and-the-api-platform).
+
+1. Create an API key in your intended project at
+   <https://platform.openai.com/api-keys>. Ensure that project has access to the
+   selected model and usable API credits/billing.
+2. Locally, copy `.dev.vars.example` to **`web/.dev.vars`** if the latter does not
+   already exist. If it exists, append the OpenAI settings without overwriting
+   your existing provider keys:
+
+   ```dotenv
+   OPENAI_API_KEY=your-api-key-here
+   OPENAI_MODEL=gpt-5-mini
+   ```
+
+3. Restart only the backend (`npm run dev:backend`), then reload the frontend.
+   Open **Chat with AI**, select a starter question or type your own, and Send.
+4. For Cloudflare, add `OPENAI_API_KEY` as a **secret** on the application Worker.
+   Optionally add `OPENAI_MODEL` as a backend variable. The default is
+   `gpt-5-mini`; overrides must support the Responses API request parameters used
+   by `worker/chat.ts`. Redeploy/reload as needed after configuration changes.
+   Never use a `VITE_` variable for the key, paste it into chat, or commit it.
+
+The chat can summarize the research, compare historical stock trends, suggest a
+shortlist to investigate, and discuss tradeoffs. Checking **Include my current
+what-if settings** sends the selected scenario to the backend, which recalculates
+it from its own dataset. It does not trust a return supplied by the browser.
+Stock price changes and disclosure-following returns are explicitly different.
+Source chips open the original House filings or the app's stock view.
+
+The current chat uses the stored historical dataset only: no live quotes, news,
+web browsing or brokerage tools are enabled. Its visible coverage end date is
+authoritative; rebuilding the app does not make its market evidence current.
+Historical shortlists are not verified current purchase recommendations. Model
+answers can still be wrong; inspect their supporting records.
+
+Questions, the last nine conversation messages, summarized public research data,
+and optionally scenario settings are sent to OpenAI. The API key and admin cookie
+are not included in that content. Chat history lives in page memory, survives tab
+switches, and is cleared by New chat or page reload. Requests set `store: false`;
+this is not a promise of zero provider retention. Each request may spend API
+credits. Requests are bounded to 2,000-character questions, a limited history and
+4,000 output tokens (including reasoning), with a 55-second upstream timeout.
+Stopping the UI request may not cancel provider processing/billing. There is no
+app-level monthly spend cap; monitor your OpenAI organization usage and limits.
+
+The endpoint uses the existing admin authorization and same-origin POST checks.
+Missing keys, rejected credentials, rate/credit limits and incomplete responses
+produce visible errors, not fabricated answers. Tests use mocked provider replies;
+a successful paid API request must be verified after you supply your key.
+
+References: [Responses API](https://developers.openai.com/api/reference/resources/responses/methods/create),
+[GPT-5 mini](https://developers.openai.com/api/docs/models/gpt-5-mini).
+
+### Start the frontend and backend separately
+
 Requires Node 24 and npm. Install and prepare the assets once:
 
 ```powershell
@@ -141,6 +204,8 @@ python -m unittest discover -s tests -v
 python scripts/check_web.py
 # With dev:backend AND dev running
 python scripts/check_dev.py
+# Chat UI with mocked replies; no API charges
+python scripts/check_chat.py
 ```
 
 The web suite compares all 112 scenarios with independent Python research results
