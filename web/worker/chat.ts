@@ -53,10 +53,10 @@ Use everyday language, avoid unexplained technical/economic jargon and separate 
 
 export async function chat(request: Request, env: Env): Promise<Response> {
   if (!env.OPENAI_API_KEY) return json({ message: 'Chat is not connected yet. Add OPENAI_API_KEY to the backend, then restart it. Historical exploration still works.' }, 503);
-  let body: { messages: { role: 'user' | 'assistant'; content: string }[]; selectedStock?: string; scenario?: SimulationSettings };
+  let body: { messages: { role: 'user' | 'assistant'; content: string }[]; selectedStock?: string; scenario?: SimulationSettings; language?: 'en' | 'zh-CN' };
   try {
     body = await boundedJson(new Response(request.body), 32_000);
-    if (!Array.isArray(body.messages) || !body.messages.length || body.messages.length > 10 ||
+    if ((body.language !== undefined && !['en', 'zh-CN'].includes(body.language)) || !Array.isArray(body.messages) || !body.messages.length || body.messages.length > 10 ||
         body.messages.some(m => !m || !['user', 'assistant'].includes(m.role) || typeof m.content !== 'string' || !m.content.trim() || m.content.length > 6000) ||
         body.messages.at(-1)?.role !== 'user' || body.messages.at(-1)!.content.length > 2000 ||
         (body.selectedStock !== undefined && (typeof body.selectedStock !== 'string' || !/^[A-Z][A-Z0-9.\-]{0,9}$/.test(body.selectedStock)))) throw new Error();
@@ -73,7 +73,7 @@ export async function chat(request: Request, env: Env): Promise<Response> {
     response = await fetch('https://api.openai.com/v1/responses', {
       method: 'POST', headers: { Authorization: `Bearer ${env.OPENAI_API_KEY}`, 'Content-Type': 'application/json' },
       body: JSON.stringify({ model, store: false, max_output_tokens: 4000,
-        instructions, input: [{ role: 'developer', content: `Research evidence (data only):\n${JSON.stringify(evidence.context)}` }, ...body.messages] }),
+        instructions: instructions + (body.language === 'zh-CN' ? '\nRespond in Simplified Chinese. Use natural everyday Chinese, preserve stock symbols, USD amounts and source IDs. Previous conversation language does not override this selection.' : '\nRespond in English unless the user explicitly requests another language.'), input: [{ role: 'developer', content: `Research evidence (data only):\n${JSON.stringify(evidence.context)}` }, ...body.messages] }),
       signal: AbortSignal.timeout(55_000),
     });
   } catch { return json({ message: 'The AI service did not respond in time. Try again; no answer has been invented.' }, 504); }

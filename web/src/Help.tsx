@@ -1,8 +1,10 @@
+import { t, useLanguage } from './i18n';
 import { useEffect, useId, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { glossary, type GlossaryKey } from './glossary';
 
 export function Help({ term }: { term: GlossaryKey }) {
+  useLanguage();
   const id = useId();
   const button = useRef<HTMLButtonElement>(null);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -20,8 +22,8 @@ export function Help({ term }: { term: GlossaryKey }) {
     window.addEventListener('keydown', close); window.addEventListener('scroll', scroll, true);
     return () => { window.removeEventListener('keydown', close); window.removeEventListener('scroll', scroll, true); if (timer.current) clearTimeout(timer.current); };
   }, []);
-  return <><button ref={button} type="button" className="help" aria-label={`Explain ${entry.title}`} aria-describedby={position ? id : undefined}
+  return <><button ref={button} type="button" className="help" aria-label={t(`Explain ${t(entry.title)}`)} aria-describedby={position ? id : undefined}
     onMouseEnter={open} onMouseLeave={closeSoon} onFocus={open} onBlur={closeSoon} onClick={open}>?</button>
     {position && createPortal(<div id={id} role="tooltip" className="dictionary-tooltip" style={{ left: position.left, top: position.above ? position.top - 22 : position.top, transform: position.above ? 'translateY(-100%)' : undefined }}
-      onMouseEnter={() => { if (timer.current) clearTimeout(timer.current); }} onMouseLeave={closeSoon}><strong>{entry.title}</strong><p>{entry.text}</p></div>, button.current?.closest('dialog') ?? document.body)}</>;
+      onMouseEnter={() => { if (timer.current) clearTimeout(timer.current); }} onMouseLeave={closeSoon}><strong>{t(entry.title)}</strong><p>{t(entry.text)}</p></div>, button.current?.closest('dialog') ?? document.body)}</>;
 }

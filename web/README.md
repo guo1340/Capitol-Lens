@@ -73,6 +73,21 @@ make a public repository private.
 
 ## Local development
 
+### English / 简体中文
+
+Use the **中文 / English** button in the top bar to switch languages instantly.
+The choice is saved in this browser. Navigation, controls, dates, chart labels,
+errors and the central question-mark dictionary are translated. The sign-in gate
+also offers a language link. New AI answers follow the selected language; existing
+messages remain as originally written. Stock symbols, USD values, original company
+names and linked government documents are preserved.
+
+Translations live in `src/zh-CN.json`, with shared lookup logic in
+`src/translations.ts` and browser preference handling in `src/i18n.ts`.
+Run `python scripts/check_language.py` with the frontend and backend running to
+check all tabs and the language preference. Its AI/quote replies are mocked, so
+the test does not spend API credits.
+
 ### Connect Chat with AI
 
 ChatGPT Pro and the API have separate billing, but eligible Pro subscriptions can

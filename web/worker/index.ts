@@ -1,3 +1,4 @@
+import { translate, type Language } from '../src/translations';
 import { authorize } from './auth';
 import { boundedJson, json } from './http';
 import { chat } from './chat';
@@ -26,8 +27,10 @@ export default {
       const status = auth.status === 'forbidden' ? 403 : auth.status === 'unavailable' ? 503 : 401;
       if (path.startsWith('/api/') || !request.headers.get('Accept')?.includes('text/html')) return json({ error: auth.status }, status);
       const local = String(env.ENVIRONMENT) === 'local';
+      const language: Language = (url.searchParams.get('lang') ?? request.headers.get('Cookie')?.match(/(?:^|;\s*)capitol-language=([^;]+)/)?.[1]) === 'zh-CN' ? 'zh-CN' : 'en';
+      const l = (text: string) => translate(text, language);
       const login = local ? 'http://127.0.0.1:8790/login' : 'https://admin.guopq.com/login';
-      return secured(new Response(`<!doctype html><html lang="en"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Capitol Lens · Private access</title><style>body{font:18px/1.7 system-ui;background:#101822;color:#edf4fa;max-width:580px;margin:15vh auto;padding:24px}a{color:#89d8ca}h1{font-size:38px}</style><h1>Capitol Lens</h1><p>${status === 503 ? 'Your admin session could not be checked. Please retry shortly.' : status === 403 ? 'This account does not have access to Capitol Lens.' : 'Use your existing guopq admin session to open your research workspace.'}</p><p><a href="${login}">Open guopq admin</a></p><p>After signing in, return here and reload.</p>${local ? '<p>Local development preview: uses a test identity, not your production session.</p>' : ''}</html>`, { status, headers: { 'Content-Type': 'text/html; charset=utf-8' } }));
+      return secured(new Response(`<!doctype html><html lang="${language}"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Capitol Lens · ${language === 'zh-CN' ? '私人访问' : 'Private access'}</title><style>body{font:18px/1.7 system-ui;background:#101822;color:#edf4fa;max-width:580px;margin:15vh auto;padding:24px}a{color:#89d8ca}h1{font-size:38px}</style><h1>Capitol Lens</h1><p>${l(status === 503 ? 'Your admin session could not be checked. Please retry shortly.' : status === 403 ? 'This account does not have access to Capitol Lens.' : 'Use your existing guopq admin session to open your research workspace.')}</p><p><a href="${login}">${l('Open guopq admin')}</a></p><p>${l('After signing in, return here and reload.')}</p><a href="?lang=${language === 'en' ? 'zh-CN' : 'en'}">${language === 'en' ? '中文' : 'English'}</a>${local ? '<p>' + l('Local development preview: uses a test identity, not your production session.') + '</p>' : ''}</html>`, { status, headers: { 'Content-Type': 'text/html; charset=utf-8', 'Set-Cookie': `capitol-language=${language}; Path=/capitol-lens; SameSite=Lax${url.protocol === 'https:' ? '; Secure' : ''}` } }));
     }
     if (request.method === 'POST' && request.headers.get('Origin') !== url.origin) return json({ error: 'Cross-origin action rejected' }, 403);
     try {
