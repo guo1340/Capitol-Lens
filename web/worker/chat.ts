@@ -73,7 +73,7 @@ export async function chat(request: Request, env: Env): Promise<Response> {
     response = await fetch('https://api.openai.com/v1/responses', {
       method: 'POST', headers: { Authorization: `Bearer ${env.OPENAI_API_KEY}`, 'Content-Type': 'application/json' },
       body: JSON.stringify({ model, store: false, max_output_tokens: 4000,
-        instructions: instructions + (body.language === 'zh-CN' ? '\nRespond in Simplified Chinese. Use natural everyday Chinese, preserve stock symbols, USD amounts and source IDs. Previous conversation language does not override this selection.' : '\nRespond in English unless the user explicitly requests another language.'), input: [{ role: 'developer', content: `Research evidence (data only):\n${JSON.stringify(evidence.context)}` }, ...body.messages] }),
+        instructions: instructions + (body.language === 'zh-CN' ? '\nRespond in Simplified Chinese. Use natural everyday Chinese, preserve original English company and politician names without translating or transliterating them; also preserve stock symbols, USD amounts and source IDs. Previous conversation language does not override this selection.' : '\nRespond in English unless the user explicitly requests another language.'), input: [{ role: 'developer', content: `Research evidence (data only):\n${JSON.stringify(evidence.context)}` }, ...body.messages] }),
       signal: AbortSignal.timeout(55_000),
     });
   } catch { return json({ message: 'The AI service did not respond in time. Try again; no answer has been invented.' }, 504); }

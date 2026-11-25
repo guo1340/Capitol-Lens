@@ -12,3 +12,5 @@
   stale/unavailable states. Never fabricate successful API responses or returns.
 - Preserve the Python research code and its reproducible historical results.
 - Stage 1 is research and visualization only; no brokerage connection or orders.
+
+- Keep company and politician names in their original English form in every UI language and in AI replies; translate only interface text and explanations.

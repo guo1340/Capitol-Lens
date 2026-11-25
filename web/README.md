@@ -79,7 +79,7 @@ Use the **中文 / English** button in the top bar to switch languages instantly
 The choice is saved in this browser. Navigation, controls, dates, chart labels,
 errors and the central question-mark dictionary are translated. The sign-in gate
 also offers a language link. New AI answers follow the selected language; existing
-messages remain as originally written. Stock symbols, USD values, original company
+messages remain as originally written. Stock symbols, USD values, original company and politician
 names and linked government documents are preserved.
 
 Translations live in `src/zh-CN.json`, with shared lookup logic in

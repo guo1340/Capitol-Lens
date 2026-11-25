@@ -99,7 +99,7 @@ export function Chat({ data, configured, settings, stock, viewStock }: {
     {error && <div className="notice error" role="alert">{tr(error)}<button className="icon-button" aria-label={tr("Dismiss chat error")} onClick={() => setError('')}><X size={16}/></button></div>}
     <form className="chat-compose" onSubmit={e => { e.preventDefault(); void send(); }}>
       <label className="chat-scenario"><input type="checkbox" checked={includeScenario} onChange={e => setIncludeScenario(e.target.checked)}/>{tr("Include my current what-if settings")}<Help term="backtest"/></label>
-      {includeScenario && <small>{tr("Recalculates your settings for this answer: ")}{settings.politicians.map(name => tr(name)).join('、') || tr('no politicians selected')} · {settings.start}{tr(" to ")}{settings.end} · ${settings.initial.toLocaleString()}.</small>}
+      {includeScenario && <small>{tr("Recalculates your settings for this answer: ")}{settings.politicians.join(', ') || tr('no politicians selected')} · {settings.start}{tr(" to ")}{settings.end} · ${settings.initial.toLocaleString()}.</small>}
       <label htmlFor="chat-question">{tr("Your question")}</label><textarea id="chat-question" value={draft} maxLength={2000} rows={3} onChange={e => setDraft(e.target.value)} placeholder={tr("What does this mean for someone just getting started?")}/>
       <div className="chat-send-row"><span>{draft.length}{tr("/2,000 \u00B7 Messages are sent to OpenAI")}<Help term="chatPrivacy"/></span><button className="primary" type="submit" disabled={!configured || busy || !draft.trim()}><Send size={16}/>{busy ? tr('Thinking…') : tr('Send question')}</button></div>
     </form>
