@@ -1,0 +1,3106 @@
+[
+  {
+    "settings": {
+      "politicians": [
+        "Pelosi"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.02,
+      "capFraction": 0.1,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10206.791631469696,
+      "returnPercent": 2.0679163146969604,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 1.0366439653456796,
+      "realizedProfit": 37.20572297884428,
+      "unrealizedProfit": 169.58590849085175,
+      "maxDrawdownPercent": -1.4081019084123625,
+      "averageCashPercent": 96.08415990033062
+    },
+    "orders": 5
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Greene"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.02,
+      "capFraction": 0.1,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 13450.549290732099,
+      "returnPercent": 34.50549290732099,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 10.646606971668236,
+      "realizedProfit": -71.70183746883725,
+      "unrealizedProfit": 3522.251128200938,
+      "maxDrawdownPercent": -21.041369701476032,
+      "averageCashPercent": 27.977925099062105
+    },
+    "orders": 58
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Allen"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.02,
+      "capFraction": 0.1,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10057.495971229011,
+      "returnPercent": 0.5749597122901129,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 2.2171513465211055,
+      "realizedProfit": 18.930199170817218,
+      "unrealizedProfit": 38.565772058193204,
+      "maxDrawdownPercent": -1.9810140448467295,
+      "averageCashPercent": 90.45277005509784
+    },
+    "orders": 11
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Doggett"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.02,
+      "capFraction": 0.1,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10860.248399550208,
+      "returnPercent": 8.602483995502075,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 5.994005994005306,
+      "realizedProfit": 0,
+      "unrealizedProfit": 860.2483995502075,
+      "maxDrawdownPercent": -7.219102499327157,
+      "averageCashPercent": 55.18094570845102
+    },
+    "orders": 30
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Foxx"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.02,
+      "capFraction": 0.1,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10631.145309919419,
+      "returnPercent": 6.311453099194186,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 11.379407824724955,
+      "realizedProfit": 207.81363168637202,
+      "unrealizedProfit": 423.33167823304507,
+      "maxDrawdownPercent": -6.839385637295258,
+      "averageCashPercent": 65.78392887290133
+    },
+    "orders": 49
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Franklin"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.02,
+      "capFraction": 0.1,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 9817.94193999103,
+      "returnPercent": -1.8205806000897051,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 13.420879798989182,
+      "realizedProfit": -173.7598620276298,
+      "unrealizedProfit": -8.298197981340564,
+      "maxDrawdownPercent": -4.985319571644942,
+      "averageCashPercent": 74.25431673099138
+    },
+    "orders": 62
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Pelosi",
+        "Greene",
+        "Allen",
+        "Doggett",
+        "Foxx",
+        "Franklin"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.02,
+      "capFraction": 0.1,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10837.362090481918,
+      "returnPercent": 8.373620904819191,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 7.449115983542421,
+      "realizedProfit": 3.081309056594364,
+      "unrealizedProfit": 834.2807814253163,
+      "maxDrawdownPercent": -6.840177897460753,
+      "averageCashPercent": 67.45801017522874
+    },
+    "orders": 215
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Pelosi"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.05,
+      "capFraction": 0.2,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10516.97907867424,
+      "returnPercent": 5.169790786742401,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 2.591609913364242,
+      "realizedProfit": 93.01430744711081,
+      "unrealizedProfit": 423.96477122712935,
+      "maxDrawdownPercent": -3.463758692595875,
+      "averageCashPercent": 90.38450556693448
+    },
+    "orders": 5
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Greene"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.05,
+      "capFraction": 0.2,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 12183.645098310019,
+      "returnPercent": 21.836450983100185,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 10.742841314788244,
+      "realizedProfit": -123.58471402598201,
+      "unrealizedProfit": 2307.2298123360047,
+      "maxDrawdownPercent": -16.53733477767847,
+      "averageCashPercent": 20.422136675101058
+    },
+    "orders": 28
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Allen"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.05,
+      "capFraction": 0.2,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10143.739928072526,
+      "returnPercent": 1.43739928072526,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 5.542878366302877,
+      "realizedProfit": 47.32549792704299,
+      "unrealizedProfit": 96.41443014548298,
+      "maxDrawdownPercent": -4.782209011414018,
+      "averageCashPercent": 76.56301644526305
+    },
+    "orders": 11
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Doggett"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.05,
+      "capFraction": 0.2,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 11734.739745316523,
+      "returnPercent": 17.347397453165225,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 9.990009990008815,
+      "realizedProfit": 0,
+      "unrealizedProfit": 1734.7397453165242,
+      "maxDrawdownPercent": -11.78867237828457,
+      "averageCashPercent": 17.3883862444166
+    },
+    "orders": 22
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Foxx"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.05,
+      "capFraction": 0.2,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 11476.59165895534,
+      "returnPercent": 14.765916589553395,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 26.33228509306137,
+      "realizedProfit": 450.6754142535739,
+      "unrealizedProfit": 1025.9162447017666,
+      "maxDrawdownPercent": -13.980040467626488,
+      "averageCashPercent": 23.815253664599418
+    },
+    "orders": 47
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Franklin"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.05,
+      "capFraction": 0.2,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 9700.317489982548,
+      "returnPercent": -2.996825100174516,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 14.213936473306944,
+      "realizedProfit": -333.85499674267874,
+      "unrealizedProfit": 34.17248672522552,
+      "maxDrawdownPercent": -11.70088986116441,
+      "averageCashPercent": 49.927854047516455
+    },
+    "orders": 62
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Pelosi",
+        "Greene",
+        "Allen",
+        "Doggett",
+        "Foxx",
+        "Franklin"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.05,
+      "capFraction": 0.2,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10959.335499885203,
+      "returnPercent": 9.593354998852032,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 11.568926858472045,
+      "realizedProfit": 22.262584809844476,
+      "unrealizedProfit": 937.0729150753559,
+      "maxDrawdownPercent": -9.10538581820095,
+      "averageCashPercent": 45.74087017863471
+    },
+    "orders": 175
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Pelosi"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 11033.95815734848,
+      "returnPercent": 10.339581573484802,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 5.183219826728484,
+      "realizedProfit": 186.02861489422162,
+      "unrealizedProfit": 847.9295424542587,
+      "maxDrawdownPercent": -6.747046697592363,
+      "averageCashPercent": 81.310703629056
+    },
+    "orders": 5
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Greene"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 12741.951797537207,
+      "returnPercent": 27.419517975372077,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 9.99000999000873,
+      "realizedProfit": 0,
+      "unrealizedProfit": 2741.951797537209,
+      "maxDrawdownPercent": -16.769970894815124,
+      "averageCashPercent": 17.549595335933233
+    },
+    "orders": 13
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Allen"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10287.479856145052,
+      "returnPercent": 2.87479856145052,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 11.085756732605754,
+      "realizedProfit": 94.65099585408598,
+      "unrealizedProfit": 192.82886029096596,
+      "maxDrawdownPercent": -9.04591093440985,
+      "averageCashPercent": 54.47761836768913
+    },
+    "orders": 11
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Doggett"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 12161.875769715598,
+      "returnPercent": 21.618757697155978,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 9.990009990008957,
+      "realizedProfit": 0,
+      "unrealizedProfit": 2161.875769715599,
+      "maxDrawdownPercent": -12.468276890104402,
+      "averageCashPercent": 6.693669343575273
+    },
+    "orders": 10
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Foxx"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 12098.564901365666,
+      "returnPercent": 20.985649013656648,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 29.10883140428744,
+      "realizedProfit": 691.8557034918224,
+      "unrealizedProfit": 1406.709197873843,
+      "maxDrawdownPercent": -15.681077756135387,
+      "averageCashPercent": 10.021797348553688
+    },
+    "orders": 36
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Franklin"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 9550.831345129227,
+      "returnPercent": -4.4916865487077295,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 16.44945439028539,
+      "realizedProfit": -543.0190401276117,
+      "unrealizedProfit": 93.85038525683876,
+      "maxDrawdownPercent": -16.167657735950726,
+      "averageCashPercent": 40.059434221962704
+    },
+    "orders": 20
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Pelosi",
+        "Greene",
+        "Allen",
+        "Doggett",
+        "Foxx",
+        "Franklin"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 11312.443637873539,
+      "returnPercent": 13.124436378735393,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 13.634547055654187,
+      "realizedProfit": 71.58604568541998,
+      "unrealizedProfit": 1240.8575921881188,
+      "maxDrawdownPercent": -10.458163761865457,
+      "averageCashPercent": 34.31766307712704
+    },
+    "orders": 95
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Pelosi"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "previous_close_equity",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 11045.100189220955,
+      "returnPercent": 10.451001892209554,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 5.265056916516986,
+      "realizedProfit": 184.32157949104248,
+      "unrealizedProfit": 860.7786097299127,
+      "maxDrawdownPercent": -6.759557020028851,
+      "averageCashPercent": 81.05003530221914
+    },
+    "orders": 5
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Greene"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "previous_close_equity",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 12741.951797537207,
+      "returnPercent": 27.419517975372077,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 9.99000999000873,
+      "realizedProfit": 0,
+      "unrealizedProfit": 2741.951797537209,
+      "maxDrawdownPercent": -16.769970894815124,
+      "averageCashPercent": 17.549595335933233
+    },
+    "orders": 13
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Allen"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "previous_close_equity",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10273.037961560854,
+      "returnPercent": 2.730379615608536,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 11.619023448038186,
+      "realizedProfit": 94.65099585408598,
+      "unrealizedProfit": 178.3869657067678,
+      "maxDrawdownPercent": -9.45554302644842,
+      "averageCashPercent": 53.00825803226158
+    },
+    "orders": 11
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Doggett"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "previous_close_equity",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 12154.980788479501,
+      "returnPercent": 21.549807884795015,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 9.990009990008843,
+      "realizedProfit": 0,
+      "unrealizedProfit": 2154.9807884795,
+      "maxDrawdownPercent": -12.454552195202616,
+      "averageCashPercent": 6.682355995980399
+    },
+    "orders": 10
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Foxx"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "previous_close_equity",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 12177.125063554322,
+      "returnPercent": 21.771250635543215,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 29.363559020817778,
+      "realizedProfit": 711.2917506748695,
+      "unrealizedProfit": 1465.833312879451,
+      "maxDrawdownPercent": -15.667542983798299,
+      "averageCashPercent": 9.711342843028909
+    },
+    "orders": 37
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Franklin"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "previous_close_equity",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 9548.160004989275,
+      "returnPercent": -4.518399950107255,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 16.311720524585787,
+      "realizedProfit": -543.0190401276117,
+      "unrealizedProfit": 91.17904511688505,
+      "maxDrawdownPercent": -16.167657735950726,
+      "averageCashPercent": 40.27442448407501
+    },
+    "orders": 20
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Pelosi",
+        "Greene",
+        "Allen",
+        "Doggett",
+        "Foxx",
+        "Franklin"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "previous_close_equity",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 11323.392634223686,
+      "returnPercent": 13.233926342236856,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 13.756563314996093,
+      "realizedProfit": 74.54088098206434,
+      "unrealizedProfit": 1248.8517532416208,
+      "maxDrawdownPercent": -10.468551037720886,
+      "averageCashPercent": 34.01118017750009
+    },
+    "orders": 96
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Pelosi"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.02,
+      "capFraction": 0.1,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 3
+    },
+    "expected": {
+      "endingValue": 10264.910820423222,
+      "returnPercent": 2.649108204232209,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 1.0592968992013472,
+      "realizedProfit": 59.836003900542494,
+      "unrealizedProfit": 205.07481652267998,
+      "maxDrawdownPercent": -1.5063499958276605,
+      "averageCashPercent": 95.90865800446402
+    },
+    "orders": 5
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Greene"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.02,
+      "capFraction": 0.1,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 3
+    },
+    "expected": {
+      "endingValue": 13492.321122344178,
+      "returnPercent": 34.923211223441776,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 10.67145822115288,
+      "realizedProfit": -59.27622515217712,
+      "unrealizedProfit": 3551.597347496353,
+      "maxDrawdownPercent": -21.043267961026846,
+      "averageCashPercent": 28.371732561182476
+    },
+    "orders": 58
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Allen"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.02,
+      "capFraction": 0.1,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 3
+    },
+    "expected": {
+      "endingValue": 10067.086069459054,
+      "returnPercent": 0.6708606945905471,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 2.220558228642658,
+      "realizedProfit": 22.333674410248307,
+      "unrealizedProfit": 44.752395048804345,
+      "maxDrawdownPercent": -1.9350675255284444,
+      "averageCashPercent": 90.48267347064713
+    },
+    "orders": 11
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Doggett"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.02,
+      "capFraction": 0.1,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 3
+    },
+    "expected": {
+      "endingValue": 10865.545163742512,
+      "returnPercent": 8.655451637425116,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 5.994005994005363,
+      "realizedProfit": 0,
+      "unrealizedProfit": 865.5451637425118,
+      "maxDrawdownPercent": -7.138429249958134,
+      "averageCashPercent": 55.4477124846128
+    },
+    "orders": 30
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Foxx"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.02,
+      "capFraction": 0.1,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 3
+    },
+    "expected": {
+      "endingValue": 10683.159381540805,
+      "returnPercent": 6.831593815408055,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 11.457536768404747,
+      "realizedProfit": 285.8644464223714,
+      "unrealizedProfit": 397.2949351184342,
+      "maxDrawdownPercent": -6.0657747491757235,
+      "averageCashPercent": 66.18774509796388
+    },
+    "orders": 49
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Franklin"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.02,
+      "capFraction": 0.1,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 3
+    },
+    "expected": {
+      "endingValue": 9856.462603056956,
+      "returnPercent": -1.4353739694304424,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 13.457602346857408,
+      "realizedProfit": -137.0740367072157,
+      "unrealizedProfit": -6.463360235829128,
+      "maxDrawdownPercent": -4.608412812245466,
+      "averageCashPercent": 74.29068872863078
+    },
+    "orders": 62
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Pelosi",
+        "Greene",
+        "Allen",
+        "Doggett",
+        "Foxx",
+        "Franklin"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.02,
+      "capFraction": 0.1,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 3
+    },
+    "expected": {
+      "endingValue": 10871.580860094462,
+      "returnPercent": 8.71580860094463,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 7.4767430763773985,
+      "realizedProfit": 28.6139771456282,
+      "unrealizedProfit": 842.9668829488261,
+      "maxDrawdownPercent": -6.681262491878992,
+      "averageCashPercent": 67.6237017194815
+    },
+    "orders": 215
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Pelosi"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.05,
+      "capFraction": 0.2,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 3
+    },
+    "expected": {
+      "endingValue": 10662.277051058056,
+      "returnPercent": 6.622770510580556,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 2.64824224800324,
+      "realizedProfit": 149.59000975135632,
+      "unrealizedProfit": 512.6870413066999,
+      "maxDrawdownPercent": -3.6797108291756087,
+      "averageCashPercent": 90.02234566927085
+    },
+    "orders": 5
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Greene"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.05,
+      "capFraction": 0.2,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 3
+    },
+    "expected": {
+      "endingValue": 12242.413211410418,
+      "returnPercent": 22.424132114104168,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 10.769881288160933,
+      "realizedProfit": -110.06474085964794,
+      "unrealizedProfit": 2352.4779522700637,
+      "maxDrawdownPercent": -16.472533488317985,
+      "averageCashPercent": 20.82765098121662
+    },
+    "orders": 28
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Allen"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.05,
+      "capFraction": 0.2,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 3
+    },
+    "expected": {
+      "endingValue": 10167.715173647632,
+      "returnPercent": 1.6771517364763122,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 5.551395571606758,
+      "realizedProfit": 55.83418602562074,
+      "unrealizedProfit": 111.88098762201093,
+      "maxDrawdownPercent": -4.668148910225723,
+      "averageCashPercent": 76.6577553679157
+    },
+    "orders": 11
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Doggett"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.05,
+      "capFraction": 0.2,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 3
+    },
+    "expected": {
+      "endingValue": 11713.823535489757,
+      "returnPercent": 17.13823535489758,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 9.990009990008986,
+      "realizedProfit": 0,
+      "unrealizedProfit": 1713.8235354897563,
+      "maxDrawdownPercent": -11.792744582080106,
+      "averageCashPercent": 17.88857222047602
+    },
+    "orders": 22
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Foxx"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.05,
+      "capFraction": 0.2,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 3
+    },
+    "expected": {
+      "endingValue": 11590.547427135702,
+      "returnPercent": 15.905474271357022,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 26.60302467870389,
+      "realizedProfit": 631.1524579975336,
+      "unrealizedProfit": 959.394969138169,
+      "maxDrawdownPercent": -12.435133440965219,
+      "averageCashPercent": 24.857611780369904
+    },
+    "orders": 47
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Franklin"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.05,
+      "capFraction": 0.2,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 3
+    },
+    "expected": {
+      "endingValue": 9738.531700226424,
+      "returnPercent": -2.614682997735762,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 14.247597249963816,
+      "realizedProfit": -300.22788086258095,
+      "unrealizedProfit": 38.759581089004506,
+      "maxDrawdownPercent": -11.338299487703496,
+      "averageCashPercent": 50.35458811170873
+    },
+    "orders": 62
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Pelosi",
+        "Greene",
+        "Allen",
+        "Doggett",
+        "Foxx",
+        "Franklin"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.05,
+      "capFraction": 0.2,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 3
+    },
+    "expected": {
+      "endingValue": 11019.218016494664,
+      "returnPercent": 10.19218016494663,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 11.635025171074577,
+      "realizedProfit": 71.04733867538017,
+      "unrealizedProfit": 948.1706778192843,
+      "maxDrawdownPercent": -8.77178201611195,
+      "averageCashPercent": 46.161947593021516
+    },
+    "orders": 175
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Pelosi"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 3
+    },
+    "expected": {
+      "endingValue": 11324.554102116113,
+      "returnPercent": 13.245541021161134,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 5.29648449600648,
+      "realizedProfit": 299.18001950271264,
+      "unrealizedProfit": 1025.3740826133999,
+      "maxDrawdownPercent": -7.08908814589252,
+      "averageCashPercent": 80.81393023986581
+    },
+    "orders": 5
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Greene"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 3
+    },
+    "expected": {
+      "endingValue": 12686.21623037881,
+      "returnPercent": 26.862162303788107,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 9.990009990008787,
+      "realizedProfit": 0,
+      "unrealizedProfit": 2686.2162303788114,
+      "maxDrawdownPercent": -16.703465223814618,
+      "averageCashPercent": 18.013564424243526
+    },
+    "orders": 13
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Allen"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 3
+    },
+    "expected": {
+      "endingValue": 10335.430347295263,
+      "returnPercent": 3.3543034729526244,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 11.102791143213516,
+      "realizedProfit": 111.66837205124148,
+      "unrealizedProfit": 223.76197524402187,
+      "maxDrawdownPercent": -8.821120128035009,
+      "averageCashPercent": 54.7272226007203
+    },
+    "orders": 11
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Doggett"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 3
+    },
+    "expected": {
+      "endingValue": 12158.184695370566,
+      "returnPercent": 21.581846953705664,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 9.99000999000907,
+      "realizedProfit": 0,
+      "unrealizedProfit": 2158.1846953705644,
+      "maxDrawdownPercent": -12.47491732259406,
+      "averageCashPercent": 7.330035386370043
+    },
+    "orders": 10
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Foxx"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 3
+    },
+    "expected": {
+      "endingValue": 12180.666546515211,
+      "returnPercent": 21.806665465152108,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 29.658906559268054,
+      "realizedProfit": 854.374047272179,
+      "unrealizedProfit": 1326.292499243033,
+      "maxDrawdownPercent": -14.73587326502751,
+      "averageCashPercent": 10.388543226723849
+    },
+    "orders": 36
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Franklin"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 3
+    },
+    "expected": {
+      "endingValue": 9555.794669987428,
+      "returnPercent": -4.442053300125714,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 16.49780293897835,
+      "realizedProfit": -494.7188399835735,
+      "unrealizedProfit": 50.51350997100212,
+      "maxDrawdownPercent": -16.17133493535532,
+      "averageCashPercent": 40.55037069468719
+    },
+    "orders": 20
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Pelosi",
+        "Greene",
+        "Allen",
+        "Doggett",
+        "Foxx",
+        "Franklin"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 3
+    },
+    "expected": {
+      "endingValue": 11373.474431943898,
+      "returnPercent": 13.734744319438974,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 13.756000852913926,
+      "realizedProfit": 128.41726647375992,
+      "unrealizedProfit": 1245.057165470139,
+      "maxDrawdownPercent": -10.275393027731106,
+      "averageCashPercent": 34.74368453903022
+    },
+    "orders": 95
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Pelosi"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "previous_close_equity",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 3
+    },
+    "expected": {
+      "endingValue": 11336.26509912407,
+      "returnPercent": 13.362650991240699,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 5.411565219543524,
+      "realizedProfit": 295.12354924551414,
+      "unrealizedProfit": 1041.1415498785557,
+      "maxDrawdownPercent": -7.123241452490181,
+      "averageCashPercent": 80.43997294572598
+    },
+    "orders": 5
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Greene"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "previous_close_equity",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 3
+    },
+    "expected": {
+      "endingValue": 12686.21623037881,
+      "returnPercent": 26.862162303788107,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 9.990009990008787,
+      "realizedProfit": 0,
+      "unrealizedProfit": 2686.2162303788114,
+      "maxDrawdownPercent": -16.703465223814618,
+      "averageCashPercent": 18.013564424243526
+    },
+    "orders": 13
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Allen"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "previous_close_equity",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 3
+    },
+    "expected": {
+      "endingValue": 10322.805197500882,
+      "returnPercent": 3.2280519750088166,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 11.663532861420684,
+      "realizedProfit": 111.66837205124148,
+      "unrealizedProfit": 211.1368254496391,
+      "maxDrawdownPercent": -9.249625318537436,
+      "averageCashPercent": 53.1333300364209
+    },
+    "orders": 11
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Doggett"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "previous_close_equity",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 3
+    },
+    "expected": {
+      "endingValue": 12149.195090885742,
+      "returnPercent": 21.491950908857426,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 9.990009990008957,
+      "realizedProfit": 0,
+      "unrealizedProfit": 2149.195090885742,
+      "maxDrawdownPercent": -12.426154690142365,
+      "averageCashPercent": 7.334316849601298
+    },
+    "orders": 11
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Foxx"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "previous_close_equity",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 3
+    },
+    "expected": {
+      "endingValue": 12208.982640118782,
+      "returnPercent": 22.089826401187818,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 29.840484747836804,
+      "realizedProfit": 847.0859900272683,
+      "unrealizedProfit": 1361.8966500915142,
+      "maxDrawdownPercent": -14.865666291017787,
+      "averageCashPercent": 10.112581819234535
+    },
+    "orders": 40
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Franklin"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "previous_close_equity",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 3
+    },
+    "expected": {
+      "endingValue": 9556.073126246418,
+      "returnPercent": -4.4392687375358175,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 16.364562842162524,
+      "realizedProfit": -494.7188399835735,
+      "unrealizedProfit": 50.79196622999211,
+      "maxDrawdownPercent": -16.17133493535532,
+      "averageCashPercent": 40.749104600527126
+    },
+    "orders": 20
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Pelosi",
+        "Greene",
+        "Allen",
+        "Doggett",
+        "Foxx",
+        "Franklin"
+      ],
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "previous_close_equity",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 3
+    },
+    "expected": {
+      "endingValue": 11376.58956404245,
+      "returnPercent": 13.765895640424496,
+      "benchmarkPercent": 47.84813199442113,
+      "costs": 13.876694275163448,
+      "realizedProfit": 126.52651189007508,
+      "unrealizedProfit": 1250.0630521523756,
+      "maxDrawdownPercent": -10.31540233711743,
+      "averageCashPercent": 34.40659126610123
+    },
+    "orders": 100
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Pelosi"
+      ],
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "initial": 10000,
+      "buyFraction": 0.02,
+      "capFraction": 0.1,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10058.267299062923,
+      "returnPercent": 0.5826729906292405,
+      "benchmarkPercent": 25.59407002594247,
+      "costs": 0.399600399600331,
+      "realizedProfit": 0,
+      "unrealizedProfit": 58.2672990629232,
+      "maxDrawdownPercent": -0.9230177628091085,
+      "averageCashPercent": 97.98650573599353
+    },
+    "orders": 2
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Greene"
+      ],
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "initial": 10000,
+      "buyFraction": 0.02,
+      "capFraction": 0.1,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10843.721431913584,
+      "returnPercent": 8.437214319135844,
+      "benchmarkPercent": 25.59407002594247,
+      "costs": 9.990009990008957,
+      "realizedProfit": 0,
+      "unrealizedProfit": 843.7214319135803,
+      "maxDrawdownPercent": -4.97119890843607,
+      "averageCashPercent": 55.733803173528486
+    },
+    "orders": 55
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Allen"
+      ],
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "initial": 10000,
+      "buyFraction": 0.02,
+      "capFraction": 0.1,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10072.318123565257,
+      "returnPercent": 0.7231812356525813,
+      "benchmarkPercent": 25.59407002594247,
+      "costs": 1.0183501477200554,
+      "realizedProfit": 18.930199170817218,
+      "unrealizedProfit": 53.3879243944389,
+      "maxDrawdownPercent": -0.6776183530150082,
+      "averageCashPercent": 95.05274979520296
+    },
+    "orders": 5
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Doggett"
+      ],
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "initial": 10000,
+      "buyFraction": 0.02,
+      "capFraction": 0.1,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10130.883915573539,
+      "returnPercent": 1.3088391557353862,
+      "benchmarkPercent": 25.59407002594247,
+      "costs": 4.795204795204228,
+      "realizedProfit": 0,
+      "unrealizedProfit": 130.88391557353918,
+      "maxDrawdownPercent": -3.6890326069646817,
+      "averageCashPercent": 71.86729563323553
+    },
+    "orders": 24
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Foxx"
+      ],
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "initial": 10000,
+      "buyFraction": 0.02,
+      "capFraction": 0.1,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10402.144843223947,
+      "returnPercent": 4.021448432239461,
+      "benchmarkPercent": 25.59407002594247,
+      "costs": 4.592198675219673,
+      "realizedProfit": -3.602314663839593,
+      "unrealizedProfit": 405.74715788778707,
+      "maxDrawdownPercent": -3.986153021857608,
+      "averageCashPercent": 71.79416421858116
+    },
+    "orders": 23
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Franklin"
+      ],
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "initial": 10000,
+      "buyFraction": 0.02,
+      "capFraction": 0.1,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 9871.528932786332,
+      "returnPercent": -1.2847106721366797,
+      "benchmarkPercent": 25.59407002594247,
+      "costs": 2.797202797202573,
+      "realizedProfit": 0,
+      "unrealizedProfit": -128.47106721366876,
+      "maxDrawdownPercent": -2.5282401931136067,
+      "averageCashPercent": 90.3640122663587
+    },
+    "orders": 14
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Pelosi",
+        "Greene",
+        "Allen",
+        "Doggett",
+        "Foxx",
+        "Franklin"
+      ],
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "initial": 10000,
+      "buyFraction": 0.02,
+      "capFraction": 0.1,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10229.810757687603,
+      "returnPercent": 2.2981075768760295,
+      "benchmarkPercent": 25.59407002594247,
+      "costs": 3.932094467492653,
+      "realizedProfit": 2.5546474178295995,
+      "unrealizedProfit": 227.2561102697666,
+      "maxDrawdownPercent": -1.72201265003179,
+      "averageCashPercent": 80.21931763207662
+    },
+    "orders": 123
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Pelosi"
+      ],
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "initial": 10000,
+      "buyFraction": 0.05,
+      "capFraction": 0.2,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10145.668247657308,
+      "returnPercent": 1.456682476573068,
+      "benchmarkPercent": 25.59407002594247,
+      "costs": 0.9990009990008275,
+      "realizedProfit": 0,
+      "unrealizedProfit": 145.66824765730803,
+      "maxDrawdownPercent": -2.292629654841627,
+      "averageCashPercent": 94.99700582795457
+    },
+    "orders": 2
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Greene"
+      ],
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "initial": 10000,
+      "buyFraction": 0.05,
+      "capFraction": 0.2,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10324.639168326194,
+      "returnPercent": 3.246391683261929,
+      "benchmarkPercent": 25.59407002594247,
+      "costs": 9.990009990008915,
+      "realizedProfit": 0,
+      "unrealizedProfit": 324.6391683261963,
+      "maxDrawdownPercent": -10.149587626613366,
+      "averageCashPercent": 40.68219290039972
+    },
+    "orders": 25
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Allen"
+      ],
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "initial": 10000,
+      "buyFraction": 0.05,
+      "capFraction": 0.2,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10180.795308913139,
+      "returnPercent": 1.8079530891313977,
+      "benchmarkPercent": 25.59407002594247,
+      "costs": 2.5458753693002807,
+      "realizedProfit": 47.32549792704299,
+      "unrealizedProfit": 133.46981098609706,
+      "maxDrawdownPercent": -1.6599373329616474,
+      "averageCashPercent": 87.71768566424527
+    },
+    "orders": 5
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Doggett"
+      ],
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "initial": 10000,
+      "buyFraction": 0.05,
+      "capFraction": 0.2,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10426.774671198345,
+      "returnPercent": 4.2677467119834445,
+      "benchmarkPercent": 25.59407002594247,
+      "costs": 9.990009990008815,
+      "realizedProfit": 0,
+      "unrealizedProfit": 426.7746711983457,
+      "maxDrawdownPercent": -7.55848897457313,
+      "averageCashPercent": 34.63876942340133
+    },
+    "orders": 22
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Foxx"
+      ],
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "initial": 10000,
+      "buyFraction": 0.05,
+      "capFraction": 0.2,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10850.52386572206,
+      "returnPercent": 8.505238657220593,
+      "benchmarkPercent": 25.59407002594247,
+      "costs": 10.481495689048455,
+      "realizedProfit": -9.005786659599096,
+      "unrealizedProfit": 859.5296523816595,
+      "maxDrawdownPercent": -9.064548630726533,
+      "averageCashPercent": 36.41870986002525
+    },
+    "orders": 21
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Franklin"
+      ],
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "initial": 10000,
+      "buyFraction": 0.05,
+      "capFraction": 0.2,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 9678.822331965828,
+      "returnPercent": -3.211776680341716,
+      "benchmarkPercent": 25.59407002594247,
+      "costs": 6.993006993006304,
+      "realizedProfit": 0,
+      "unrealizedProfit": -321.1776680341717,
+      "maxDrawdownPercent": -6.211507320452647,
+      "averageCashPercent": 75.94615900575884
+    },
+    "orders": 14
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Pelosi",
+        "Greene",
+        "Allen",
+        "Doggett",
+        "Foxx",
+        "Franklin"
+      ],
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "initial": 10000,
+      "buyFraction": 0.05,
+      "capFraction": 0.2,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10267.870598963818,
+      "returnPercent": 2.678705989638175,
+      "benchmarkPercent": 25.59407002594247,
+      "costs": 6.833233171728901,
+      "realizedProfit": 6.386618544574006,
+      "unrealizedProfit": 261.4839804192393,
+      "maxDrawdownPercent": -3.6112178929766925,
+      "averageCashPercent": 61.31220614183466
+    },
+    "orders": 89
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Pelosi"
+      ],
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10291.336495314616,
+      "returnPercent": 2.913364953146158,
+      "benchmarkPercent": 25.59407002594247,
+      "costs": 1.998001998001655,
+      "realizedProfit": 0,
+      "unrealizedProfit": 291.33649531461606,
+      "maxDrawdownPercent": -4.536391235274262,
+      "averageCashPercent": 90.09306876688181
+    },
+    "orders": 2
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Greene"
+      ],
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10718.121090595132,
+      "returnPercent": 7.1812109059513185,
+      "benchmarkPercent": 25.59407002594247,
+      "costs": 9.99000999000873,
+      "realizedProfit": 0,
+      "unrealizedProfit": 718.1210905951311,
+      "maxDrawdownPercent": -8.985201147832967,
+      "averageCashPercent": 34.95990816920033
+    },
+    "orders": 13
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Allen"
+      ],
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10361.590617826281,
+      "returnPercent": 3.6159061782628177,
+      "benchmarkPercent": 25.59407002594247,
+      "costs": 5.091750738600561,
+      "realizedProfit": 94.65099585408598,
+      "unrealizedProfit": 266.9396219721941,
+      "maxDrawdownPercent": -3.212085783769425,
+      "averageCashPercent": 75.71183205840131
+    },
+    "orders": 5
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Doggett"
+      ],
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10637.044493269685,
+      "returnPercent": 6.37044493269685,
+      "benchmarkPercent": 25.59407002594247,
+      "costs": 9.990009990008957,
+      "realizedProfit": 0,
+      "unrealizedProfit": 637.0444932696848,
+      "maxDrawdownPercent": -7.782433005755996,
+      "averageCashPercent": 13.334214327280902
+    },
+    "orders": 10
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Foxx"
+      ],
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 11345.409486647048,
+      "returnPercent": 13.454094866470466,
+      "benchmarkPercent": 25.59407002594247,
+      "costs": 11.953988807349297,
+      "realizedProfit": -18.01157331919819,
+      "unrealizedProfit": 1363.4210599662458,
+      "maxDrawdownPercent": -12.175311519243593,
+      "averageCashPercent": 15.822312032902355
+    },
+    "orders": 12
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Franklin"
+      ],
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 9470.488342116118,
+      "returnPercent": -5.295116578838821,
+      "benchmarkPercent": 25.59407002594247,
+      "costs": 9.99000999000907,
+      "realizedProfit": 0,
+      "unrealizedProfit": -529.511657883882,
+      "maxDrawdownPercent": -10.036851825785064,
+      "averageCashPercent": 63.49206349206349
+    },
+    "orders": 12
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Pelosi",
+        "Greene",
+        "Allen",
+        "Doggett",
+        "Foxx",
+        "Franklin"
+      ],
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10470.665087628146,
+      "returnPercent": 4.70665087628146,
+      "benchmarkPercent": 25.59407002594247,
+      "costs": 8.168961918996413,
+      "realizedProfit": 12.773237089148012,
+      "unrealizedProfit": 457.8918505389985,
+      "maxDrawdownPercent": -4.975973163834091,
+      "averageCashPercent": 48.22363957702687
+    },
+    "orders": 54
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Pelosi"
+      ],
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "previous_close_equity",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10288.543028655382,
+      "returnPercent": 2.885430286553814,
+      "benchmarkPercent": 25.59407002594247,
+      "costs": 1.9831938209966893,
+      "realizedProfit": 0,
+      "unrealizedProfit": 288.543028655381,
+      "maxDrawdownPercent": -4.502495959375441,
+      "averageCashPercent": 90.16146249708946
+    },
+    "orders": 2
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Greene"
+      ],
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "previous_close_equity",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10718.121090595132,
+      "returnPercent": 7.1812109059513185,
+      "benchmarkPercent": 25.59407002594247,
+      "costs": 9.99000999000873,
+      "realizedProfit": 0,
+      "unrealizedProfit": 718.1210905951311,
+      "maxDrawdownPercent": -8.985201147832967,
+      "averageCashPercent": 34.959908169200325
+    },
+    "orders": 13
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Allen"
+      ],
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "previous_close_equity",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10366.070515366298,
+      "returnPercent": 3.660705153662991,
+      "benchmarkPercent": 25.59407002594247,
+      "costs": 5.1168793118574545,
+      "realizedProfit": 94.65099585408598,
+      "unrealizedProfit": 271.41951951221256,
+      "maxDrawdownPercent": -3.2503530101629208,
+      "averageCashPercent": 75.54423286163325
+    },
+    "orders": 5
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Doggett"
+      ],
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "previous_close_equity",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10637.656976848053,
+      "returnPercent": 6.376569768480533,
+      "benchmarkPercent": 25.59407002594247,
+      "costs": 9.990009990008843,
+      "realizedProfit": 0,
+      "unrealizedProfit": 637.6569768480522,
+      "maxDrawdownPercent": -7.763891873329021,
+      "averageCashPercent": 13.311677420564127
+    },
+    "orders": 10
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Foxx"
+      ],
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "previous_close_equity",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 11337.957610935191,
+      "returnPercent": 13.37957610935192,
+      "benchmarkPercent": 25.59407002594247,
+      "costs": 11.953988807349297,
+      "realizedProfit": -18.01157331919819,
+      "unrealizedProfit": 1355.9691842543884,
+      "maxDrawdownPercent": -12.24192805777139,
+      "averageCashPercent": 15.857374175449726
+    },
+    "orders": 12
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Franklin"
+      ],
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "previous_close_equity",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 9470.488342116118,
+      "returnPercent": -5.295116578838821,
+      "benchmarkPercent": 25.59407002594247,
+      "costs": 9.99000999000907,
+      "realizedProfit": 0,
+      "unrealizedProfit": -529.511657883882,
+      "maxDrawdownPercent": -10.036851825785064,
+      "averageCashPercent": 63.49206349206349
+    },
+    "orders": 12
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Pelosi",
+        "Greene",
+        "Allen",
+        "Doggett",
+        "Foxx",
+        "Franklin"
+      ],
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "previous_close_equity",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10469.806260752695,
+      "returnPercent": 4.698062607526943,
+      "benchmarkPercent": 25.59407002594247,
+      "costs": 8.170681985038382,
+      "realizedProfit": 12.773237089148012,
+      "unrealizedProfit": 457.0330236635471,
+      "maxDrawdownPercent": -4.982760959749466,
+      "averageCashPercent": 48.20993808716018
+    },
+    "orders": 54
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Pelosi"
+      ],
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.02,
+      "capFraction": 0.1,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10051.281379692186,
+      "returnPercent": 0.5128137969218516,
+      "benchmarkPercent": 16.94102292154076,
+      "costs": 0.3996003996003594,
+      "realizedProfit": 0,
+      "unrealizedProfit": 51.281379692185226,
+      "maxDrawdownPercent": -0.7917909434212667,
+      "averageCashPercent": 96.82133372575134
+    },
+    "orders": 2
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Greene"
+      ],
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.02,
+      "capFraction": 0.1,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 12747.137542665212,
+      "returnPercent": 27.471375426652124,
+      "benchmarkPercent": 16.94102292154076,
+      "costs": 9.990009990008758,
+      "realizedProfit": 0,
+      "unrealizedProfit": 2747.137542665212,
+      "maxDrawdownPercent": -18.966369335892807,
+      "averageCashPercent": 11.303765580387266
+    },
+    "orders": 53
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Allen"
+      ],
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.02,
+      "capFraction": 0.1,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 9981.908869001065,
+      "returnPercent": -0.18091130998935112,
+      "benchmarkPercent": 16.94102292154076,
+      "costs": 1.1988011988010498,
+      "realizedProfit": 0,
+      "unrealizedProfit": -18.091130998936137,
+      "maxDrawdownPercent": -1.087275342459404,
+      "averageCashPercent": 92.61655951642699
+    },
+    "orders": 6
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Doggett"
+      ],
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.02,
+      "capFraction": 0.1,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10311.23268827645,
+      "returnPercent": 3.1123268827645045,
+      "benchmarkPercent": 16.94102292154076,
+      "costs": 3.396603396602984,
+      "realizedProfit": 0,
+      "unrealizedProfit": 311.23268827645074,
+      "maxDrawdownPercent": -1.8995783794552468,
+      "averageCashPercent": 74.21967901459891
+    },
+    "orders": 17
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Foxx"
+      ],
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.02,
+      "capFraction": 0.1,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10377.092319906295,
+      "returnPercent": 3.7709231990629366,
+      "benchmarkPercent": 16.94102292154076,
+      "costs": 4.571227136877023,
+      "realizedProfit": -26.151283066572056,
+      "unrealizedProfit": 403.2436029728672,
+      "maxDrawdownPercent": -2.123467260384282,
+      "averageCashPercent": 77.13402796097508
+    },
+    "orders": 24
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Franklin"
+      ],
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.02,
+      "capFraction": 0.1,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 9958.330393546963,
+      "returnPercent": -0.4166960645303752,
+      "benchmarkPercent": 16.94102292154076,
+      "costs": 9.552930825240692,
+      "realizedProfit": -43.435292397002854,
+      "unrealizedProfit": 1.7656859439659058,
+      "maxDrawdownPercent": -2.929148699278228,
+      "averageCashPercent": 80.12773290585427
+    },
+    "orders": 48
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Pelosi",
+        "Greene",
+        "Allen",
+        "Doggett",
+        "Foxx",
+        "Franklin"
+      ],
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.02,
+      "capFraction": 0.1,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10571.1638655147,
+      "returnPercent": 5.711638655146989,
+      "benchmarkPercent": 16.94102292154076,
+      "costs": 4.8515288245218535,
+      "realizedProfit": -11.597762577262488,
+      "unrealizedProfit": 582.7616280919578,
+      "maxDrawdownPercent": -3.788358254586277,
+      "averageCashPercent": 71.31240474504062
+    },
+    "orders": 150
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Pelosi"
+      ],
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.05,
+      "capFraction": 0.2,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10128.203449230463,
+      "returnPercent": 1.2820344923046179,
+      "benchmarkPercent": 16.94102292154076,
+      "costs": 0.9990009990009412,
+      "realizedProfit": 0,
+      "unrealizedProfit": 128.20344923046304,
+      "maxDrawdownPercent": -1.9460891330164598,
+      "averageCashPercent": 92.10354671674135
+    },
+    "orders": 2
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Greene"
+      ],
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.05,
+      "capFraction": 0.2,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 12347.7470846178,
+      "returnPercent": 23.477470846177994,
+      "benchmarkPercent": 16.94102292154076,
+      "costs": 9.990009990008787,
+      "realizedProfit": 0,
+      "unrealizedProfit": 2347.747084617803,
+      "maxDrawdownPercent": -19.456925588111773,
+      "averageCashPercent": 6.399999999999971
+    },
+    "orders": 26
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Allen"
+      ],
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.05,
+      "capFraction": 0.2,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 9954.77217250266,
+      "returnPercent": -0.45227827497339446,
+      "benchmarkPercent": 16.94102292154076,
+      "costs": 2.997002997002596,
+      "realizedProfit": 0,
+      "unrealizedProfit": -45.227827497340456,
+      "maxDrawdownPercent": -2.6874068511183236,
+      "averageCashPercent": 81.63486834176447
+    },
+    "orders": 6
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Doggett"
+      ],
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.05,
+      "capFraction": 0.2,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10778.081720691125,
+      "returnPercent": 7.780817206911261,
+      "benchmarkPercent": 16.94102292154076,
+      "costs": 8.491508491507204,
+      "realizedProfit": 0,
+      "unrealizedProfit": 778.0817206911265,
+      "maxDrawdownPercent": -4.675349264740536,
+      "averageCashPercent": 37.38037716150508
+    },
+    "orders": 17
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Foxx"
+      ],
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.05,
+      "capFraction": 0.2,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10942.730799765737,
+      "returnPercent": 9.427307997657364,
+      "benchmarkPercent": 16.94102292154076,
+      "costs": 11.428067842192544,
+      "realizedProfit": -65.37820766643003,
+      "unrealizedProfit": 1008.1090074321683,
+      "maxDrawdownPercent": -5.14196952302628,
+      "averageCashPercent": 44.619775364252895
+    },
+    "orders": 24
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Franklin"
+      ],
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.05,
+      "capFraction": 0.2,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 9964.22954546959,
+      "returnPercent": -0.3577045453040939,
+      "benchmarkPercent": 16.94102292154076,
+      "costs": 15.373491332468967,
+      "realizedProfit": -64.3485813288932,
+      "unrealizedProfit": 28.57812679848908,
+      "maxDrawdownPercent": -5.56164347365784,
+      "averageCashPercent": 63.29566875995985
+    },
+    "orders": 48
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Pelosi",
+        "Greene",
+        "Allen",
+        "Doggett",
+        "Foxx",
+        "Franklin"
+      ],
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.05,
+      "capFraction": 0.2,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10685.960795379564,
+      "returnPercent": 6.859607953795632,
+      "benchmarkPercent": 16.94102292154076,
+      "costs": 8.213180275363552,
+      "realizedProfit": -21.62113149922062,
+      "unrealizedProfit": 707.5819268787849,
+      "maxDrawdownPercent": -4.852834027837128,
+      "averageCashPercent": 53.87644608007467
+    },
+    "orders": 123
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Pelosi"
+      ],
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10256.406898460926,
+      "returnPercent": 2.564068984609258,
+      "benchmarkPercent": 16.94102292154076,
+      "costs": 1.9980019980018824,
+      "realizedProfit": 0,
+      "unrealizedProfit": 256.4068984609261,
+      "maxDrawdownPercent": -3.7857532192361543,
+      "averageCashPercent": 84.36972007277593
+    },
+    "orders": 2
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Greene"
+      ],
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 12347.7470846178,
+      "returnPercent": 23.477470846177994,
+      "benchmarkPercent": 16.94102292154076,
+      "costs": 9.990009990008787,
+      "realizedProfit": 0,
+      "unrealizedProfit": 2347.747084617803,
+      "maxDrawdownPercent": -19.456925588111773,
+      "averageCashPercent": 6.399999999999971
+    },
+    "orders": 26
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Allen"
+      ],
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 9909.544345005319,
+      "returnPercent": -0.9045565499468111,
+      "benchmarkPercent": 16.94102292154076,
+      "costs": 5.994005994005192,
+      "realizedProfit": 0,
+      "unrealizedProfit": -90.45565499468091,
+      "maxDrawdownPercent": -5.275249761242728,
+      "averageCashPercent": 63.57497586184048
+    },
+    "orders": 6
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Doggett"
+      ],
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 11430.942032072124,
+      "returnPercent": 14.309420320721244,
+      "benchmarkPercent": 16.94102292154076,
+      "costs": 9.990009990008389,
+      "realizedProfit": 0,
+      "unrealizedProfit": 1430.9420320721244,
+      "maxDrawdownPercent": -9.115259316302026,
+      "averageCashPercent": 12.855532970140382
+    },
+    "orders": 10
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Foxx"
+      ],
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 11757.74630363582,
+      "returnPercent": 17.57746303635821,
+      "benchmarkPercent": 16.94102292154076,
+      "costs": 15.654084230700954,
+      "realizedProfit": -179.82262120084533,
+      "unrealizedProfit": 1937.568924836667,
+      "maxDrawdownPercent": -9.776844462256973,
+      "averageCashPercent": 7.658011940464536
+    },
+    "orders": 22
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Franklin"
+      ],
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10052.829202943167,
+      "returnPercent": 0.5282920294316762,
+      "benchmarkPercent": 16.94102292154076,
+      "costs": 15.276372245604696,
+      "realizedProfit": -48.26143599666989,
+      "unrealizedProfit": 101.09063893983989,
+      "maxDrawdownPercent": -7.922269287091588,
+      "averageCashPercent": 50.588870312609004
+    },
+    "orders": 48
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Pelosi",
+        "Greene",
+        "Allen",
+        "Doggett",
+        "Foxx",
+        "Franklin"
+      ],
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "initial",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10959.20264445586,
+      "returnPercent": 9.592026444558588,
+      "benchmarkPercent": 16.94102292154076,
+      "costs": 9.817080741388363,
+      "realizedProfit": -38.01400953291921,
+      "unrealizedProfit": 997.2166539887799,
+      "maxDrawdownPercent": -6.421287301611467,
+      "averageCashPercent": 36.95036427818999
+    },
+    "orders": 114
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Pelosi"
+      ],
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "previous_close_equity",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10259.69231919753,
+      "returnPercent": 2.5969231919752866,
+      "benchmarkPercent": 16.94102292154076,
+      "costs": 2.0116633863557354,
+      "realizedProfit": 0,
+      "unrealizedProfit": 259.6923191975304,
+      "maxDrawdownPercent": -3.8116014852949354,
+      "averageCashPercent": 84.29498126832173
+    },
+    "orders": 2
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Greene"
+      ],
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "previous_close_equity",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 12347.7470846178,
+      "returnPercent": 23.477470846177994,
+      "benchmarkPercent": 16.94102292154076,
+      "costs": 9.990009990008787,
+      "realizedProfit": 0,
+      "unrealizedProfit": 2347.747084617803,
+      "maxDrawdownPercent": -19.456925588111773,
+      "averageCashPercent": 6.399999999999971
+    },
+    "orders": 26
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Allen"
+      ],
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "previous_close_equity",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 9902.430417934464,
+      "returnPercent": -0.9756958206553645,
+      "benchmarkPercent": 16.94102292154076,
+      "costs": 6.097525929641051,
+      "realizedProfit": 0,
+      "unrealizedProfit": -97.56958206553543,
+      "maxDrawdownPercent": -5.3668093886382495,
+      "averageCashPercent": 63.123166826730525
+    },
+    "orders": 6
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Doggett"
+      ],
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "previous_close_equity",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 11412.19578209709,
+      "returnPercent": 14.121957820970898,
+      "benchmarkPercent": 16.94102292154076,
+      "costs": 9.990009990008275,
+      "realizedProfit": 0,
+      "unrealizedProfit": 1412.1957820970902,
+      "maxDrawdownPercent": -9.135859859499417,
+      "averageCashPercent": 12.82366561886588
+    },
+    "orders": 11
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Foxx"
+      ],
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "previous_close_equity",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 11722.249973589405,
+      "returnPercent": 17.222499735894047,
+      "benchmarkPercent": 16.94102292154076,
+      "costs": 15.812471390791515,
+      "realizedProfit": -197.302734776681,
+      "unrealizedProfit": 1919.5527083660854,
+      "maxDrawdownPercent": -10.02361607270499,
+      "averageCashPercent": 7.369785503229226
+    },
+    "orders": 22
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Franklin"
+      ],
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "previous_close_equity",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10055.251210661503,
+      "returnPercent": 0.5525121066150218,
+      "benchmarkPercent": 16.94102292154076,
+      "costs": 15.24680095913375,
+      "realizedProfit": -48.14438614391278,
+      "unrealizedProfit": 103.39559680541788,
+      "maxDrawdownPercent": -7.906537165505323,
+      "averageCashPercent": 50.62625173558028
+    },
+    "orders": 48
+  },
+  {
+    "settings": {
+      "politicians": [
+        "Pelosi",
+        "Greene",
+        "Allen",
+        "Doggett",
+        "Foxx",
+        "Franklin"
+      ],
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "initial": 10000,
+      "buyFraction": 0.1,
+      "capFraction": 0.3,
+      "sizing": "previous_close_equity",
+      "costPercent": 0.1,
+      "partialFraction": 0.5,
+      "extraDays": 0
+    },
+    "expected": {
+      "endingValue": 10949.9277980163,
+      "returnPercent": 9.499277980163011,
+      "benchmarkPercent": 16.94102292154076,
+      "costs": 9.858080274323187,
+      "realizedProfit": -40.9078534867656,
+      "unrealizedProfit": 990.8356515030652,
+      "maxDrawdownPercent": -6.455183206433013,
+      "averageCashPercent": 36.82963820251451
+    },
+    "orders": 115
+  }
+]

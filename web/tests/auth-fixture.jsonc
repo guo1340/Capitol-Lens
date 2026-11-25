@@ -1,0 +1,6 @@
+{
+  "name": "capitol-lens-auth-fixture",
+  "main": "auth-fixture.ts",
+  "compatibility_date": "2026-11-24",
+  "workers_dev": false
+}

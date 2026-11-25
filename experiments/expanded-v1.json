@@ -1,0 +1,25 @@
+{
+  "id": "expanded-v1",
+  "selection_rule": "Retain Pelosi and Greene; add first four last names alphabetically with >=4 PTRs in both 2024 and 2025 and all indexed PTR document IDs starting with 200. Selection uses filing metadata, not investment returns. Digital-only availability selection is a limitation.",
+  "names": ["Pelosi", "Greene", "Allen", "Beyer", "Collins", "DelBene"],
+  "start": "2024-01-01",
+  "end": "2025-12-31",
+  "initial": 10000,
+  "cost_bps": 10,
+  "partial_fraction": 0.5,
+  "rules": [
+    {"id": "small", "label": "2% buys / 10% cap", "buy_fraction": 0.02, "cap_fraction": 0.1, "allocation_basis": "initial"},
+    {"id": "baseline", "label": "5% buys / 20% cap", "buy_fraction": 0.05, "cap_fraction": 0.2, "allocation_basis": "initial"},
+    {"id": "larger", "label": "10% buys / 30% cap", "buy_fraction": 0.1, "cap_fraction": 0.3, "allocation_basis": "initial"},
+    {"id": "equity", "label": "10% prior-close equity / 30% cap", "buy_fraction": 0.1, "cap_fraction": 0.3, "allocation_basis": "previous_close_equity"}
+  ],
+  "scenarios": [
+    {"id": "main", "label": "2024-2025", "start": "2024-01-01", "end": "2025-12-31", "extra_days": 0},
+    {"id": "delay3", "label": "2024-2025 / +3 days", "start": "2024-01-01", "end": "2025-12-31", "extra_days": 3},
+    {"id": "year2024", "label": "2024 only", "start": "2024-01-01", "end": "2024-12-31", "extra_days": 0},
+    {"id": "year2025", "label": "2025 only", "start": "2025-01-01", "end": "2025-12-31", "extra_days": 0}
+  ],
+  "portfolio_groups": "Each individual plus an equal-initial-capital six-person portfolio; no cash transfers across sleeves.",
+  "data_policy": "Any parsing error blocks affected politician and combined runs; missing held-position price blocks a run, missing entry quotes flagged; no retroactive ticker guesses. All blocked combinations remain in results. Rules will not be tuned after reviewing returns.",
+  "interpretation": "Exploratory retrospective comparison, not preregistered research or an untouched holdout. Standalone-year runs begin in cash. Neither politician selection nor rule selection establishes future profitability."
+}

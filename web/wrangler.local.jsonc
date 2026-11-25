@@ -1,0 +1,10 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "capitol-lens-local",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-11-24",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": { "directory": "dist", "binding": "ASSETS", "run_worker_first": true },
+  "services": [{ "binding": "ADMIN", "service": "capitol-lens-auth-fixture" }],
+  "vars": { "ENVIRONMENT": "local", "GITHUB_REPOSITORY": "", "GITHUB_REF": "main" }
+}

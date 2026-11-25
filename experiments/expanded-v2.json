@@ -1,0 +1,86 @@
+{
+  "id": "expanded-v2",
+  "selection_rule": "Retain Pelosi and Greene. Expanded-v1 selected new names alphabetically by digital filing availability; after that run showed no eligible stock purchases for Beyer, Collins and DelBene, retain Allen and examine the next three names (Doggett, Foxx, Franklin). This coverage-based refinement was made before calculating those three members returns. Allocation rules are unchanged. The earlier v1 run remains available; this is exploratory research, not preregistration.",
+  "names": [
+    "Pelosi",
+    "Greene",
+    "Allen",
+    "Doggett",
+    "Foxx",
+    "Franklin"
+  ],
+  "start": "2024-01-01",
+  "end": "2025-12-31",
+  "initial": 10000,
+  "cost_bps": 10,
+  "partial_fraction": 0.5,
+  "rules": [
+    {
+      "id": "small",
+      "label": "2% buys / 10% cap",
+      "buy_fraction": 0.02,
+      "cap_fraction": 0.1,
+      "allocation_basis": "initial"
+    },
+    {
+      "id": "baseline",
+      "label": "5% buys / 20% cap",
+      "buy_fraction": 0.05,
+      "cap_fraction": 0.2,
+      "allocation_basis": "initial"
+    },
+    {
+      "id": "larger",
+      "label": "10% buys / 30% cap",
+      "buy_fraction": 0.1,
+      "cap_fraction": 0.3,
+      "allocation_basis": "initial"
+    },
+    {
+      "id": "equity",
+      "label": "10% prior-close equity / 30% cap",
+      "buy_fraction": 0.1,
+      "cap_fraction": 0.3,
+      "allocation_basis": "previous_close_equity"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "main",
+      "label": "2024-2025",
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "extra_days": 0
+    },
+    {
+      "id": "delay3",
+      "label": "2024-2025 / +3 days",
+      "start": "2024-01-01",
+      "end": "2025-12-31",
+      "extra_days": 3
+    },
+    {
+      "id": "year2024",
+      "label": "2024 only",
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "extra_days": 0
+    },
+    {
+      "id": "year2025",
+      "label": "2025 only",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "extra_days": 0
+    }
+  ],
+  "portfolio_groups": "Each individual plus an equal-initial-capital six-person portfolio; no cash transfers across sleeves.",
+  "data_policy": "Any parsing error blocks affected politician and combined runs; missing held-position price blocks a run, missing entry quotes flagged; no retroactive ticker guesses. All blocked combinations remain in results. Rules will not be tuned after reviewing returns.",
+  "interpretation": "Exploratory retrospective comparison, not preregistered research or an untouched holdout. Standalone-year runs begin in cash. Neither politician selection nor rule selection establishes future profitability.",
+  "snapshot_suffix": "expanded-v2",
+  "coverage_exclusions": {
+    "Beyer": "No eligible common-stock rows",
+    "Collins": "No eligible common-stock rows (mostly crypto)",
+    "DelBene": "Only two eligible stock sales, no eligible stock purchases"
+  }
+}

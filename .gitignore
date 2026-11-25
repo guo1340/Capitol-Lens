@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+/data/
+/output/
+*.pyc
+node_modules/
+web/dist/
+.wrangler/
+web/.dev.vars*
+!web/.dev.vars.example
+web/worker-configuration.d.ts
+web/local-configuration.d.ts
+web/test-output/
