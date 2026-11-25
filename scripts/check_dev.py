@@ -1,4 +1,4 @@
-"""Regression checks for npm run dev; requires Playwright and Chrome."""
+"""Regression checks for separately running dev and dev:backend; requires Playwright and Chrome."""
 from playwright.sync_api import sync_playwright
 
 with sync_playwright() as p:

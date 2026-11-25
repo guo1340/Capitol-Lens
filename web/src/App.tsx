@@ -17,7 +17,7 @@ interface Quote { price: number; asOf: string; provider: string; changePercent: 
 
 async function api<T>(path: string, options?: RequestInit): Promise<T> {
   const response = await fetch(`${API}${path}`, { ...options, credentials: 'same-origin' });
-  if (response.status === 401 || response.status === 403) throw new Error('Access could not be verified. Sign in at admin.guopq.com, then return here and retry. For local development, restart npm run dev.');
+  if (response.status === 401 || response.status === 403) throw new Error('Access could not be verified. Sign in at admin.guopq.com, then return here and retry. For local development, start npm run dev:backend in a separate terminal.');
   const body = await response.json() as { message?: string; error?: string };
   if (!response.ok) throw new Error(body.message ?? body.error ?? 'The request failed.');
   return body as T;

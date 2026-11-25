@@ -7,6 +7,17 @@ including SPY. Unpriced symbols remain visible. The UI offers relationship table
 stock charts, source links, four allocation rules, delay/cost controls, browser-saved
 settings, a central question-mark glossary, and light/dark themes.
 
+## Deployment architecture
+
+Frontend and backend run as independent processes locally. The checked-in
+production configuration currently serves the assets and API through one Worker;
+it is not yet a pair of independently deployed services. Separate production
+hosting is the intended next architecture change. It must preserve the existing
+API-domain session and protect the dataset, with an explicit API origin/routing
+and authentication arrangement. Do not publish `public/data` directly as an
+unprotected static site. The following deployment steps describe the current
+combined configuration, not the future split hosting setup.
+
 ## Deploy from GitHub to Cloudflare
 
 Use **Workers**, with static assets, in the same Cloudflare account as the existing
@@ -62,51 +73,57 @@ make a public repository private.
 
 ## Local development
 
-Requires Node 24 and npm. From the repository root:
+Requires Node 24 and npm. Install and prepare the assets once:
 
 ```powershell
 cd web
 npm ci
+npm run build
+```
+
+**Terminal 1 — backend**, from `web`:
+
+```powershell
+npm run dev:backend
+```
+
+This starts the API Worker on 8787 and its separate local authentication fixture
+on 8790. It does not start or build the frontend. Wait for “Backend ready”. The
+current Worker reads its bundled dataset from `dist`, so run `npm run build`
+again after updating `public/data/dataset.json`.
+
+**Terminal 2 — frontend**, also from `web`:
+
+```powershell
 npm run dev
 ```
 
-Wait for the ready message, then open
-<http://127.0.0.1:5173/capitol-lens/>. This **single command** builds the local
-assets and starts all three required services: Vite on 5173, the real application
-Worker on 8787, and a local test identity service on 8790. You do not need to
-start the backend separately or sign in to production for local development.
-The local Vite proxy supplies only the fixture identity. The UI labels this
-session as a local preview; production always checks the real admin session.
-Press Ctrl+C once to shut down the stack. Frontend edits update automatically.
+Open <http://127.0.0.1:5173/capitol-lens/>. Frontend edits update automatically.
+Vite proxies API requests to the separately running backend. The local proxy
+supplies a test identity; the UI labels this session as a local preview.
+Production always verifies the real admin session. Stop each terminal separately
+with Ctrl+C. Stopping the frontend does not stop the backend, or vice versa.
 
-For a production-build preview with explicit local login, use two terminals
-instead of `npm run dev`:
-
-```powershell
-# Terminal 1, in web
-npm run build
-npm run preview:auth
-# Terminal 2, in web
-npm run preview
-```
-
-Open <http://127.0.0.1:8787/capitol-lens/> and follow the local login link.
-Do not run this preview and `npm run dev` simultaneously: both use 8787/8790.
+For a built-asset preview, keep the backend running and open
+<http://127.0.0.1:8787/capitol-lens/>. Follow the local login link. Alternatively,
+start the two backend services manually in separate terminals with
+`npm run preview:auth` and `npm run preview`; do not run those alongside
+`npm run dev:backend`, because they use the same ports.
 
 ### Troubleshooting local startup
 
-- **Port already in use:** stop the prior dev/preview terminals with Ctrl+C,
-  then rerun. The launcher fails clearly instead of choosing a different port.
-- **Old page keeps flashing/reloading:** close that tab, run the updated command,
-  and open the exact 5173 URL above. The former authentication reload loop has
-  been removed; failures now show a stable, readable message.
-- **Missing package/module:** run `npm ci` inside `web`, then `npm run dev`.
-- **Missing latest quotes:** set `FINNHUB_API_KEY` as described below and restart.
-  No key is needed to explore the bundled historical snapshot or run simulations.
-- **Refresh not configured locally:** this is expected until a repository token
-  and repository variable are configured. Use GitHub's Run workflow to refresh
-  data directly; production setup is described above.
-- **Changed a backend secret/config:** stop and restart the stack.
+- **API errors or loading failure:** ensure `npm run dev:backend` is running in
+  another terminal, then reload the frontend. Starting only Vite does not start
+  the API. No automatic reload loop is used.
+- **Missing dist/assets:** run `npm run build` once before starting the backend.
+- **Port already in use:** stop the earlier process on 5173 (frontend), 8787
+  (API), or 8790 (local authentication). Each command owns only its own services.
+- **Missing package/module:** run `npm ci` inside `web`.
+- **Missing latest quotes:** set `FINNHUB_API_KEY` and restart the backend.
+  No key is needed for the historical snapshot or simulations.
+- **Refresh not configured locally:** configure the repository variable and token,
+  or use GitHub's Run workflow. Production setup is described above.
+- **Changed a backend secret/config:** restart `npm run dev:backend`.
 
 Optional local provider secrets go in `web/.dev.vars`, copied from
 `.dev.vars.example`; these are ignored by Git. Never deploy `wrangler.local.jsonc`
@@ -120,8 +137,10 @@ npm test
 npm run build
 # From repository root
 python -m unittest discover -s tests -v
-# With both previews running and Playwright + Chrome installed
+# With dev:backend running and Playwright + Chrome installed
 python scripts/check_web.py
+# With dev:backend AND dev running
+python scripts/check_dev.py
 ```
 
 The web suite compares all 112 scenarios with independent Python research results

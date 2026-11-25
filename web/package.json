@@ -4,13 +4,14 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "node scripts/dev.mjs",
+    "dev": "vite --host 127.0.0.1",
     "build": "npm run types && tsc --noEmit && vite build",
     "types": "wrangler types",
     "preview": "wrangler dev --config wrangler.local.jsonc --ip 127.0.0.1 --port 8787",
     "preview:auth": "wrangler dev --config tests/auth-fixture.jsonc --ip 127.0.0.1 --port 8790",
     "test": "vitest run",
-    "deploy": "wrangler deploy"
+    "deploy": "wrangler deploy",
+    "dev:backend": "node scripts/backend.mjs"
   },
   "dependencies": {
     "react": "latest",

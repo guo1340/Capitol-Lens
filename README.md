@@ -10,20 +10,35 @@ latest quotes require your Finnhub key. Stage 1 cannot place real orders.
 
 ## Start the web app locally
 
-Install Node.js 24, then run from this repository:
+Install Node.js 24. One-time setup from the repository root:
 
 ```powershell
 cd web
 npm ci
+npm run build
+```
+
+Then use **two separate terminals**, both in `web`:
+
+```powershell
+# Terminal 1 — backend API and local authentication fixture
+npm run dev:backend
+```
+
+```powershell
+# Terminal 2 — frontend only
 npm run dev
 ```
 
-Open **http://127.0.0.1:5173/capitol-lens/** after the ready message. This command
-starts the frontend, API and local test identity together. No API keys or real
-admin login are required for historical exploration. Press Ctrl+C to stop.
-Do not start additional preview servers at the same time.
+Open **http://127.0.0.1:5173/capitol-lens/**. The frontend command does not start,
+build or stop the backend. Stop each terminal separately with Ctrl+C. No API keys
+or production login are required for historical exploration in local development.
 
 ## Publish on Cloudflare
+
+The current production configuration packages frontend assets and the API in one
+Worker. Separately hosted frontend/backend deployments are a future requirement;
+the instructions below describe the current combined deployment only.
 
 Connect this repository to **Cloudflare Workers**, use root directory `web`,
 build command `npm ci && npm run build`, and deploy command `npx wrangler deploy`.

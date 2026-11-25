@@ -1,22 +1,19 @@
-// One-command local stack. Never used by the production Worker.
+// Local API and authentication fixture only. Never used by the production Worker.
 import { spawn } from 'node:child_process';
 import { createRequire } from 'node:module';
 import { createServer as createTcpServer } from 'node:net';
 import { fileURLToPath } from 'node:url';
 import { resolve, dirname } from 'node:path';
 import { setTimeout as delay } from 'node:timers/promises';
-import { build, createServer } from 'vite';
 
 process.chdir(fileURLToPath(new URL('..', import.meta.url)));
 const require = createRequire(import.meta.url);
 const wrangler = resolve(dirname(require.resolve('wrangler/package.json')), 'bin/wrangler.js');
 const children = [];
-let vite;
 let stopping = false;
 async function stop(code = 0) {
   if (stopping) return;
   stopping = true;
-  await vite?.close();
   for (const child of children) {
     if (child.exitCode !== null) continue;
     if (process.platform === 'win32') {
@@ -36,7 +33,7 @@ function launch(config, port) {
 async function freePort(port) {
   await new Promise((done, reject) => {
     const socket = createTcpServer();
-    socket.once('error', () => reject(new Error(`Port ${port} is in use. Stop the previous dev/preview process, then retry npm run dev.`)));
+    socket.once('error', () => reject(new Error(`Port ${port} is in use. Stop the previous dev/preview process, then retry npm run dev:backend.`)));
     socket.listen(port, '127.0.0.1', () => socket.close(done));
   });
 }
@@ -49,16 +46,13 @@ async function ready(url, status, headers = {}) {
   throw new Error(`Local backend did not become ready: ${url}`);
 }
 try {
-  await Promise.all([5173, 8787, 8790].map(freePort));
-  console.log('Preparing local assets and starting the API and test identity service…');
-  await build();
+  await Promise.all([8787, 8790].map(freePort));
+  console.log('Starting the API and local test identity service…');
   launch('tests/auth-fixture.jsonc', 8790);
   await ready('http://127.0.0.1:8790/api/auth/me', 401);
   launch('wrangler.local.jsonc', 8787);
   await ready('http://127.0.0.1:8787/capitol-lens/api/session', 200, { Cookie: 'admin_token=local-preview-only' });
-  vite = await createServer();
-  await vite.listen();
-  console.log('\nCapitol Lens: http://127.0.0.1:5173/capitol-lens/\nLocal test identity only. Press Ctrl+C to stop all three services.\n');
+  console.log('\nBackend ready on http://127.0.0.1:8787\nStart the frontend separately: npm run dev\nPress Ctrl+C to stop the backend and local authentication fixture.\n');
 } catch (error) {
   console.error(error.message);
   await stop(1);
