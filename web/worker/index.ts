@@ -40,6 +40,7 @@ export default {
       if (path === '/api/session') return json({ email: auth.email, local: String(env.ENVIRONMENT) === 'local' });
       if (path === '/api/status') return json({ chatConfigured: Boolean(env.OPENAI_API_KEY), quoteConfigured: Boolean(env.FINNHUB_API_KEY), refreshConfigured: Boolean(env.GITHUB_TOKEN && env.GITHUB_REPOSITORY), repository: env.GITHUB_REPOSITORY || null, environment: env.ENVIRONMENT });
       if (path === '/api/recommendations' && request.method === 'GET') return secured(await asset(env, '/data/recommendations.json'));
+      if (path === '/api/dataset-version' && request.method === 'GET') return secured(await asset(env, '/data/dataset-version.json'));
       if (path === '/api/dataset' && request.method === 'GET') return secured(await asset(env, '/data/dataset.json'));
       if (path === '/api/quote' && request.method === 'GET') {
         const symbol = (url.searchParams.get('symbol') ?? '').toUpperCase();

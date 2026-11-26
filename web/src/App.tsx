@@ -1,11 +1,12 @@
+import { loadDataset } from './datasetCache';
 import { t as tr, useLanguage, setLanguage, locale } from './i18n';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { lazy, Suspense, useEffect, useMemo, useRef, useState } from 'react';
 import { Area, AreaChart, CartesianGrid, Line, LineChart, ReferenceDot, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 import { BookOpen, ChevronRight, Compass, ExternalLink, FlaskConical, Layers3, MessageCircle, Moon, RefreshCw, Search, ShieldCheck, Sun, X } from 'lucide-react';
 import { Help } from './Help';
-import { Chat } from './Chat';
-import { Recommendations } from './Recommendations';
-import { Manual } from './Manual';
+const Chat = lazy(() => import('./Chat').then(m => ({ default: m.Chat })));
+const Recommendations = lazy(() => import('./Recommendations').then(m => ({ default: m.Recommendations })));
+const Manual = lazy(() => import('./Manual').then(m => ({ default: m.Manual })));
 import { glossary, type GlossaryKey } from './glossary';
 import type { Dataset, SimulationResult, SimulationSettings, Trade } from './types';
 const API = location.hostname === 'www.guopq.com' ? 'https://api.guopq.com/capitol-lens/api' : '/capitol-lens/api';
@@ -53,7 +54,8 @@ export default function App() {
     const language = useLanguage();
     useEffect(() => { document.documentElement.lang = language; }, [language]);
     const [theme, setTheme] = useState(() => localStorage.getItem('capitol-theme') ?? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
-    const [data, setData] = useState<Dataset | null>(null);
+    const [loadedData, setData] = useState<Dataset | null>(null);
+    const data: Dataset = loadedData ?? { schemaVersion: 1, builtAt: '', coverageStart: '', coverageEnd: '', politicians: [], trades: [], prices: {}, priceErrors: {}, source: '', sourceIssues: 0, companies: {} };
     const [status, setStatus] = useState<Status | null>(null);
     const [error, setError] = useState('');
     const [tab, updateTab] = useState<Tab>(() => location.pathname.replace(/\/$/, '') === '/capitol-lens/recommendations' ? 'recommendations' : location.pathname.replace(/\/$/, '') === '/capitol-lens/manual' ? 'manual' : 'explore');
@@ -68,6 +70,8 @@ export default function App() {
         window.addEventListener('popstate', onPop);
         return () => window.removeEventListener('popstate', onPop);
     }, []);
+    const [chatOpened, setChatOpened] = useState(false);
+    useEffect(() => { if (tab === 'chat') setChatOpened(true); }, [tab]);
     const [person, setPerson] = useState('all');
     const [search, setSearch] = useState('');
     const [direction, setDirection] = useState('all');
@@ -94,15 +98,19 @@ export default function App() {
     useEffect(() => { document.documentElement.dataset.theme = theme; localStorage.setItem('capitol-theme', theme); }, [theme]);
     useEffect(() => {
         let active = true;
-        Promise.all([api<Dataset>('/dataset'), api<Status>('/status')]).then(([dataset, state]) => {
-            if (!active)
-                return;
-            setData(dataset);
-            setStatus(state);
-            setSettings(s => ({ ...s, politicians: dataset.politicians.map(p => p.id), start: dataset.coverageStart, end: dataset.coverageEnd }));
-        }).catch(e => active && setError(e.message));
+        api<Status>('/status').then(state => active && setStatus(state)).catch(e => active && setError(e.message));
         return () => { active = false; calculation.current?.terminate(); };
     }, []);
+    useEffect(() => {
+        if (tab === 'recommendations' || loadedData || !status) return;
+        let active = true;
+        loadDataset().then(dataset => {
+            if (!active) return;
+            setData(dataset);
+            setSettings(s => ({ ...s, politicians: dataset.politicians.map(p => p.id), start: dataset.coverageStart, end: dataset.coverageEnd }));
+        }).catch(e => active && setError(e.message));
+        return () => { active = false; };
+    }, [tab, loadedData, status]);
     useEffect(() => { if (dictionary)
         dictionaryRef.current?.showModal();
     else
@@ -187,7 +195,7 @@ export default function App() {
             setRefreshing(false);
         }
     }
-    if (!data)
+    if ((!loadedData && tab !== 'recommendations') || !status)
         return <main className="loading-page"><div className="brand-symbol"><Layers3 /></div><h1>Capitol Lens</h1><button className="language-button" onClick={() => setLanguage(language === 'en' ? 'zh-CN' : 'en')}>{language === 'en' ? '中文' : 'English'}</button><p>{tr(error) || tr('Opening your research workspace…')}</p>{error && <button className="primary" onClick={() => location.reload()}>{tr("Try again")}</button>}</main>;
     return <div className="app-shell">
     <aside className="sidebar"><a className="brand" href="/capitol-lens/"><span className="brand-symbol"><Layers3 size={23}/></span><span>Capitol Lens<small>{tr("FOLLOW THE DISCLOSURES")}</small></span></a>
@@ -236,7 +244,7 @@ export default function App() {
             setRefreshMessage('The saved scenario could not be read.');
         } }}>{tr("Load saved settings")}</button></div></section>
           <div className="scenario-results">{runError && <div className="notice error" role="alert">{tr(runError)}</div>}{dirty && result && <div className="notice">{tr("Settings changed. Run again to update these results.")}</div>}{!result ? <section className="panel scenario-empty"><span className="empty-illustration"><FlaskConical size={38}/></span><div className="eyebrow">{tr("A LITTLE CURIOSITY GOES A LONG WAY")}</div><h2>{tr("Your what-if starts here.")}</h2><p>{tr("Pick your politicians and a budget, then run the scenario to see the path your money could have taken.")}</p><span className="subtle">{tr("Historical simulation ")}<Help term="backtest"/>{tr(" \u00B7 No real trades")}</span></section> : <><div className="metrics result-metrics"><Metric label={tr("Ending account value")} term="equity" value={money(result.endingValue, 0)} detail={tr(`${money(result.profit, 0)} change`)}/><Metric label={tr("Your return")} term="return" value={percent(result.returnPercent)} tone={result.returnPercent >= 0 ? 'buy-text' : 'sell-text'}/><Metric label={tr("SPY comparison")} term="spy" value={percent(result.benchmarkPercent)}/><Metric label={tr("Largest decline")} term="drawdown" value={`${result.maxDrawdownPercent.toFixed(2)}%`}/></div><section className="panel"><div className="panel-heading"><h2>{tr("Your money over time ")}<Help term="portfolio"/></h2><div className="legend"><span className="buy-text">{tr("\u25CF Your scenario")}</span><span>··· SPY</span></div></div><div className="chart-container"><ResponsiveContainer width="100%" height="100%"><LineChart data={result.curve} margin={{ right: 20, left: 0, top: 10 }}><CartesianGrid vertical={false} stroke="var(--border)"/><XAxis dataKey="date" minTickGap={65} tickFormatter={d => String(d).slice(0, 7)} tick={{ fill: 'var(--muted)', fontSize: 12 }}/><YAxis tickFormatter={n => language === 'zh-CN' ? `$${(Number(n) / 10000).toFixed(1)}万` : `$${(Number(n) / 1000).toFixed(0)}k`} tick={{ fill: 'var(--muted)', fontSize: 12 }} width={60}/><Tooltip contentStyle={{ background: 'var(--panel)', borderColor: 'var(--border)' }} formatter={v => money(Number(v))}/><Line type="monotone" dataKey="equity" name={tr("Your account")} stroke="#69c7aa" strokeWidth={2.5} dot={false} isAnimationActive={false}/><Line dataKey="benchmark" name={tr("SPY comparison")} stroke="#a4aebb" strokeDasharray="5 5" strokeWidth={1.5} dot={false} isAnimationActive={false}/></LineChart></ResponsiveContainer></div><div className="result-footnote"><span>{tr("Average unspent cash: ")}<strong>{result.averageCashPercent.toFixed(1)}%</strong><Help term="cash"/></span><span>{result.orders.length}{tr(" simulated orders")}<Help term="executionDate"/></span></div></section><div className="notice">{tr("Historical results depend on these settings and the available data.")}<Help term="backtest"/>{result.audit.some(a => a.reason === 'missing_execution_price') && <strong>{tr(" Some orders were skipped because their prices were unavailable.")}<Help term="coverage"/></strong>}</div><section className="panel"><div className="panel-heading"><h2>{tr("The simulated orders")}<Help term="executionDate"/></h2></div><div className="table-scroll"><table><thead><tr><th>{tr("Date")}</th><th>{tr("Politician")}</th><th>{tr("Stock")}</th><th>{tr("Action")}</th><th>{tr("Cash amount")}</th><th>{tr("Source")}</th></tr></thead><tbody>{result.orders.map((o, i) => <tr key={`${o.sourceId}-${i}`}><td>{shortDate(o.date)}</td><td>{o.politician}</td><td><button className="stock-link" onClick={() => viewStock(o.ticker)}>{o.ticker}</button></td><td><span className={`trade-badge ${o.action}`}>{tr(o.action === 'buy' ? 'Buy' : 'Sell')}</span></td><td>{money(o.cashAmount)}</td><td><a href={o.sourceUrl} target="_blank" rel="noreferrer" aria-label={tr(`Source for simulated ${o.ticker} order`)}><ExternalLink size={15}/></a></td></tr>)}</tbody></table>{!result.orders.length && <p className="empty">{tr("These rules produced no orders in the selected period.")}</p>}</div></section></>}</div></div>}
-        {tab === 'recommendations' && <Recommendations/>}{tab === 'manual' && <Manual data={data} navigate={setTab}/>}<div hidden={tab !== 'chat'}><Chat data={data} configured={Boolean(status?.chatConfigured)} settings={settings} stock={stock} viewStock={viewStock}/></div><footer className="page-footer"><span><ShieldCheck size={14}/>{tr(" Private research \u00B7 No real trades")}</span><span>{tr("Official House filings \u00B7 Historical prices: Yahoo \u00B7 Latest quotes: Finnhub")}<Help term="coverage"/></span></footer>
+        <Suspense fallback={<p>{tr('Loading…')}</p>}>{tab === 'recommendations' && <Recommendations/>}{tab === 'manual' && <Manual data={data} navigate={setTab}/>}{(chatOpened || tab === 'chat') && <div hidden={tab !== 'chat'}><Chat data={data} configured={Boolean(status?.chatConfigured)} settings={settings} stock={stock} viewStock={viewStock}/></div>}</Suspense><footer className="page-footer"><span><ShieldCheck size={14}/>{tr(" Private research \u00B7 No real trades")}</span><span>{tr("Official House filings \u00B7 Historical prices: Yahoo \u00B7 Latest quotes: Finnhub")}<Help term="coverage"/></span></footer>
       </main></div>
     <dialog ref={dictionaryRef} className="dictionary-dialog" onCancel={() => setDictionary(false)} onClick={e => { if (e.target === dictionaryRef.current)
         setDictionary(false); }}><div className="panel-heading"><div><span className="eyebrow">{tr("A LITTLE HELP, RIGHT WHERE YOU NEED IT")}</span><h2>{tr("Word help")}</h2></div><button className="icon-button" aria-label={tr("Close word help")} onClick={() => setDictionary(false)}><X /></button></div><label className="search-field"><Search size={18}/><input autoFocus aria-label={tr("Search dictionary")} placeholder={tr("Find a word…")} value={dictionarySearch} onChange={e => setDictionarySearch(e.target.value)}/></label><div className="dictionary-list">{(Object.keys(glossary) as GlossaryKey[]).filter(k => (tr(glossary[k].title) + ' ' + glossary[k].title).toLowerCase().includes(dictionarySearch.toLowerCase())).map(k => <div key={k}><span>{tr(glossary[k].title)}</span><Help term={k}/></div>)}</div></dialog>

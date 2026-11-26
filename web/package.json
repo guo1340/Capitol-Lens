@@ -11,7 +11,9 @@
     "preview:auth": "wrangler dev --config tests/auth-fixture.jsonc --ip 127.0.0.1 --port 8790",
     "test": "vitest run",
     "deploy": "wrangler deploy",
-    "dev:backend": "node scripts/backend.mjs"
+    "dev:backend": "node scripts/backend.mjs",
+    "prebuild": "node scripts/dataset-version.mjs",
+    "predev": "node scripts/dataset-version.mjs"
   },
   "dependencies": {
     "react": "latest",

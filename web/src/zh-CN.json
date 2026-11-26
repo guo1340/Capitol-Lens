@@ -381,5 +381,10 @@
   "Quality research score": "质量研究分数",
   "A hypothetical group of stocks with target percentages. It is held stable within a calendar quarter for research. This is not a brokerage portfolio, order list, income forecast or personalized allocation.": "按目标比例组成的假设股票组合，在一个自然季度内保持稳定供研究。它不是券商持仓、订单、收入预测或个人化配置。",
   "An equal-weight average of relative ranks for annual operating profit divided by assets, operating cash flow divided by assets, and lower liabilities divided by assets. It compares only eligible companies in this screened list. It is not a probability, expected return, or valuation assessment. Accounting differences across industries limit comparisons.": "将年度营业利润/资产、经营现金流/资产和较低负债/资产的相对排名等权平均。仅比较本列表中符合条件的公司，不代表概率、预期收益或估值判断。不同行业会计差异限制可比性。",
-  "Daily evidence. Quarterly review. Long-term holding.": "每日更新证据，每季度检查，着眼长期持有。"
+  "Daily evidence. Quarterly review. Long-term holding.": "每日更新证据，每季度检查，着眼长期持有。",
+  "Loading…": "正在加载…",
+  "Cash flow valuation": "现金流估值",
+  "Long-term historical test": "长期历史测试",
+  "Annual operating cash flow divided by estimated market capitalization (a historical closing price times the latest published share count, adjusted for reported splits). Higher means more cash flow per dollar of market value, not a guaranteed bargain or dividend yield. The combined rank weights financial strength and this relative valuation equally.": "年度经营现金流除以估算市值（历史收盘价乘以最新已公开股数，按披露拆股调整）。较高表示每单位市值对应更多现金流，不保证便宜，也不是股息率。综合排名将财务实力与相对估值等权结合。",
+  "Starts with $10,000 in 2018, ranks only financial filings and prices available before each quarterly execution date, and trades at the next eligible opening price. It uses a hand-picked surviving universe, has not been independently validated, and cannot establish future profits. Adjusted-price units approximate dividend reinvestment, not actual share quantities.": "从 2018 年以 1 万美元开始，仅使用季度执行日前已公开的财报及价格排名，按下一可交易日开盘价执行。使用人工选定的存续公司列表，未经独立验证，不能证明未来盈利。复权价格单位近似分红再投资，不是实际股数。"
 }

@@ -91,10 +91,14 @@ def main():
             if len(basket)==20:break
         basketDate=cutoff
     payload={'schemaVersion':1,'strategyVersion':'quality-operating-v1','builtAt':now.isoformat(),'asOf':cutoff,'quarter':quarter,'basketDate':basketDate,'nextReview':f'{now.year+1}-01-01' if now.month>=10 else f'{now.year}-{((now.month-1)//3+1)*3+1:02d}-01','universe':UNIVERSE,'rows':rows,'gaps':gaps,'basket':basket,'cashWeight':100-sum(r['weight'] for r in basket),'status':'research_only' if rows else 'unavailable','previousSuccessfulAsOf':old.get('asOf') if old.get('rows') else old.get('previousSuccessfulAsOf')}
+    from long_term_value import augment
+    payload=augment(payload,mapping)
+    if old.get('strategyVersion')==payload['strategyVersion'] and old.get('quarter')==quarter and len(old.get('basket',[]))==20:
+        payload['basket']=old['basket'];payload['basketDate']=old['basketDate'];payload['cashWeight']=old['cashWeight']
     TARGET.parent.mkdir(parents=True,exist_ok=True)
     temp=TARGET.with_suffix('.tmp');temp.write_text(json.dumps(payload,ensure_ascii=False,indent=2));temp.replace(TARGET)
     # Immutable daily evidence for prospective review; failed attempts are explicit.
-    archive=ROOT/'research_snapshots'/f'{cutoff}-quality-operating-v1.json';archive.parent.mkdir(exist_ok=True)
+    archive=ROOT/'research_snapshots'/f"{cutoff}-{payload['strategyVersion']}.json";archive.parent.mkdir(exist_ok=True)
     if not archive.exists():archive.write_text(json.dumps(payload,ensure_ascii=False,indent=2))
-    print(f'{len(rows)}/{len(UNIVERSE)} eligible; {len(gaps)} gaps')
+    print(f"{len(payload['rows'])}/{len(UNIVERSE)} eligible; {len(payload['gaps'])} gaps; backtest {payload['backtest']['status']}")
 if __name__=='__main__':main()
