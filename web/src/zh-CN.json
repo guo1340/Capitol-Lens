@@ -1,4 +1,11 @@
 {
+  "Open Daily recommendations for company research cards and AI chat. Click Generate AI recommendations to request a dated assessment; loading the page does not use OpenAI credits.": "打开每日建议查看公司研究卡片并与 AI 交流。点击生成 AI 建议获取带日期的评估；仅加载页面不会使用 OpenAI 额度。",
+  "Click a stock card for company evidence, related politician disclosures and action drafts. Financial strength determines the default shortlist; valuation is context only.": "点击股票卡片查看公司证据、相关议员披露和操作草稿。默认候选由财务实力筛选，估值仅作参考。",
+  "Webull requires official API approval and backend credentials. Connect / refresh Webull reads holdings and cash only. Check the sharing option before generating an AI assessment that considers your portfolio.": "Webull 需要官方 API 审批和后端凭证。连接 / 刷新 Webull 仅读取持仓与现金；勾选分享选项后再生成评估，AI 才能考虑你的持仓。",
+  "Drafts use existing cash and holdings only. They stay in browser memory and never become orders. Refresh the production account before saving drafts; planned sale proceeds cannot fund buys.": "草稿仅使用现有现金和持仓，保存在浏览器内存中，不会下单。保存前请刷新正式账户；计划卖出所得不能用于买入。",
+  "Read the separate-period comparison as retrospective research, not an untouched test. Daily updates do not mean you need to trade daily.": "分时期比较属于回顾性研究，并非未接触的独立测试。每日更新不意味着需要每天交易。",
+  "Changing the language clears the conversation. Company and politician names remain in English. Never paste credentials into chat.": "切换语言会清空对话，公司和议员名称保留英文。请勿将凭证粘贴到聊天中。",
+  "Open Daily recommendations for a dated AI assessment and questions about your long-term decisions.": "打开每日建议获取带日期的 AI 评估，并讨论长期投资决策。",
   "Unavailable": "暂无数据",
   "Try again": "重试",
   "FOLLOW THE DISCLOSURES": "追踪公开披露",
@@ -386,5 +393,17 @@
   "Cash flow valuation": "现金流估值",
   "Long-term historical test": "长期历史测试",
   "Annual operating cash flow divided by estimated market capitalization (a historical closing price times the latest published share count, adjusted for reported splits). Higher means more cash flow per dollar of market value, not a guaranteed bargain or dividend yield. The combined rank weights financial strength and this relative valuation equally.": "年度经营现金流除以估算市值（历史收盘价乘以最新已公开股数，按披露拆股调整）。较高表示每单位市值对应更多现金流，不保证便宜，也不是股息率。综合排名将财务实力与相对估值等权结合。",
-  "Starts with $10,000 in 2018, ranks only financial filings and prices available before each quarterly execution date, and trades at the next eligible opening price. It uses a hand-picked surviving universe, has not been independently validated, and cannot establish future profits. Adjusted-price units approximate dividend reinvestment, not actual share quantities.": "从 2018 年以 1 万美元开始，仅使用季度执行日前已公开的财报及价格排名，按下一可交易日开盘价执行。使用人工选定的存续公司列表，未经独立验证，不能证明未来盈利。复权价格单位近似分红再投资，不是实际股数。"
+  "Starts with $10,000 in 2018, ranks only financial filings and prices available before each quarterly execution date, and trades at the next eligible opening price. It uses a hand-picked surviving universe, has not been independently validated, and cannot establish future profits. Adjusted-price units approximate dividend reinvestment, not actual share quantities.": "从 2018 年以 1 万美元开始，仅使用季度执行日前已公开的财报及价格排名，按下一可交易日开盘价执行。使用人工选定的存续公司列表，未经独立验证，不能证明未来盈利。复权价格单位近似分红再投资，不是实际股数。",
+  "Daily recommendations": "每日决策建议",
+  "Long-term decisions using evidence and your existing holdings.": "结合研究证据与现有持仓，辅助长期投资决策。",
+  "AI decision support": "AI 决策辅助",
+  "Read-only Webull access": "Webull 只读访问",
+  "Retrospective split test": "回顾性分段测试",
+  "Action draft": "操作草稿",
+  "AI interprets dated research and, only when you opt in, verified holdings and cash. It may suggest buy candidates, holding, watching, or reviewing a sale. It can be wrong; suggestions are not orders or guaranteed returns. Without verified holdings it cannot personalize sales or available spending.": "AI 解读带日期的研究数据；仅在你勾选后使用已核验持仓与现金。可提出买入候选、继续持有、观察或考虑卖出。AI 可能出错，建议不是订单或收益保证；无已核验持仓时不能给出个人卖出或支出建议。",
+  "The backend signs only account-list, balances and positions requests. Official API approval and backend secrets are required. Sandbox data is labelled and cannot fund production drafts. No order submission, cancellation or transfer endpoint is implemented.": "后端仅签名账户列表、余额与持仓查询。需要官方 API 审批及后端密钥。沙盒数据明确标识，不能用于正式账户草稿；未实现下单、撤单或转账接口。",
+  "Compares fixed rules over 2018–2021 and 2022 onward, each starting independently. We already saw full-period returns, so this is not an untouched test. Survivorship bias and repeated research limit conclusions. Valuation remains context, not a default ranking bonus.": "固定规则分别在 2018–2021 年及 2022 年以后运行，各段独立开始。我们已看过全期间结果，因此并非未接触的测试。幸存者偏差及反复研究限制结论；估值仅作参考，不作为默认排名加分。",
+  "An editable intention to buy or sell, kept only in page memory. It never reaches Webull. Historical prices provide an estimate only. Draft buys reserve existing cash; drafts of sales do not add cash. Real trading would require a separate verified quote and order approval flow.": "可编辑的买卖意向，仅保存在当前页面内存，不会发送至 Webull。历史价格仅作估算。买入草稿占用现有现金，卖出草稿不会增加现金。真实交易需另行核验报价及订单授权。",
+  "Research & backtests": "研究与回测",
+  "Annual operating cash flow divided by estimated market capitalization (a historical closing price times the latest published share count, adjusted for reported splits). Higher means more cash flow per dollar of market value, not a guaranteed bargain or dividend yield. Only the experimental comparison weights financial strength and valuation equally; the default ranking uses financial strength alone.": "年度经营现金流除以估算市值（历史收盘价乘以最新已公开股数，按披露拆股调整）。较高表示每单位市值对应更多现金流，不保证便宜，也不是股息率。综合排名将财务实力与相对估值等权结合。"
 }

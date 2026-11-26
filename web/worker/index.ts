@@ -1,6 +1,8 @@
 import { translate, type Language } from '../src/translations';
 import { authorize } from './auth';
 import { boundedJson, json } from './http';
+import { dailyEvidence } from './daily';
+import { portfolio } from './webull';
 import { chat } from './chat';
 
 const BASE = '/capitol-lens';
@@ -36,6 +38,8 @@ export default {
     }
     if (request.method === 'POST' && ![url.origin, 'https://www.guopq.com'].includes(request.headers.get('Origin') ?? '')) return json({ error: 'Cross-origin action rejected' }, 403);
     try {
+      if (path === '/api/daily' && request.method === 'GET') return json(await dailyEvidence(env, false));
+      if (path === '/api/webull/portfolio' && request.method === 'GET') return json(await portfolio(env));
       if (path === '/api/chat' && request.method === 'POST') return await chat(request, env);
       if (path === '/api/session') return json({ email: auth.email, local: String(env.ENVIRONMENT) === 'local' });
       if (path === '/api/status') return json({ chatConfigured: Boolean(env.OPENAI_API_KEY), quoteConfigured: Boolean(env.FINNHUB_API_KEY), refreshConfigured: Boolean(env.GITHUB_TOKEN && env.GITHUB_REPOSITORY), repository: env.GITHUB_REPOSITORY || null, environment: env.ENVIRONMENT });
@@ -71,7 +75,7 @@ export default {
       if (path.startsWith('/api/')) return json({ error: 'Not found' }, 404);
       if (!['GET', 'HEAD'].includes(request.method)) return json({ error: 'Method not allowed' }, 405);
       if (url.pathname === BASE) return Response.redirect(`${url.origin}${BASE}/`, 302);
-      return secured(await asset(env, ['/', '/manual', '/manual/', '/recommendations', '/recommendations/'].includes(path) ? '/index.html' : path));
+      return secured(await asset(env, ['/', '/manual', '/manual/', '/recommendations', '/recommendations/', '/explore', '/stock', '/whatif'].includes(path) ? '/index.html' : path));
     } catch {
       console.error(JSON.stringify({ event: 'request_failed', path }));
       return json({ error: 'request_failed', message: 'This request could not be completed. Please retry.' }, 502);

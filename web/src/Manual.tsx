@@ -24,7 +24,7 @@ const sections: { id: string; title: string; term?: GlossaryKey; steps: string[]
     'Read the historical coverage dates above before interpreting anything. Start in Explore trades and select one politician or search for a stock.',
     'Click a stock symbol to open Stock story. Select a disclosure and compare the trade date with the filing date and the next available opening price.',
     'Open What if, keep the initial settings for your first run, and click Run this what-if. Compare your result with SPY over the same dates.',
-    'Open Chat with AI and ask for a simple summary. To discuss your chosen simulation, check Include my current what-if settings before sending.',
+    'Open Daily recommendations for a dated AI assessment and questions about your long-term decisions.',
   ], destination: 'explore', button: 'Open Explore trades' },
   { id: 'explore', title: 'Explore trades: find a starting point', term: 'disclosure', steps: [
     'Search by stock symbol, company name or politician name. Combine the politician, buy/sell and filing-year filters to narrow the list.',
@@ -46,14 +46,14 @@ const sections: { id: string; title: string; term?: GlossaryKey; steps: string[]
     'Change only one setting at a time and rerun to compare its effect. After settings change, the existing results remain from the previous run until you run again.',
     'Save these settings stores one scenario in this browser. Load saved settings restores it. This does not save a result history or synchronize settings across devices.',
   ], destination: 'whatif', button: 'Open What if' },
-  { id: 'chat', title: 'Chat with AI: ask in everyday language', term: 'aiResearch', steps: [
-    'Choose a suggested question or type up to 2,000 characters, then click Send question. Useful questions include: What stands out? Which stocks deserve more research? What could go wrong?',
-    'Check Include my current what-if settings to have the backend recalculate that scenario for the answer. Without this option, the chat does not receive a calculated copy-strategy result.',
-    'Read the dated evidence and source chips under the answer. A source chip opens a stock view or an original filing. Historical price increases and frequent politician purchases do not prove a stock is a good buy today.',
-    'Chat uses the stored research snapshot, not live quotes, current news or your Webull account. Ask about missing evidence and downside risks as well as possible opportunities.',
-    'The language switch controls new answers. Company and politician names stay in English. Existing messages keep their original wording. New chat or reloading clears the conversation; switching tabs does not.',
-    'Sending a question uses your OpenAI API allowance. Stop cancels waiting in the interface but may not cancel provider processing or charges. Never paste an API key into the conversation.',
-  ], destination: 'chat', button: 'Open Chat with AI' },
+  { id: 'chat', title: 'Daily recommendations', term: 'decisionAI', steps: [
+    'Open Daily recommendations for company research cards and AI chat. Click Generate AI recommendations to request a dated assessment; loading the page does not use OpenAI credits.',
+    'Click a stock card for company evidence, related politician disclosures and action drafts. Financial strength determines the default shortlist; valuation is context only.',
+    'Webull requires official API approval and backend credentials. Connect / refresh Webull reads holdings and cash only. Check the sharing option before generating an AI assessment that considers your portfolio.',
+    'Drafts use existing cash and holdings only. They stay in browser memory and never become orders. Refresh the production account before saving drafts; planned sale proceeds cannot fund buys.',
+    'Read the separate-period comparison as retrospective research, not an untouched test. Daily updates do not mean you need to trade daily.',
+    'Changing the language clears the conversation. Company and politician names remain in English. Never paste credentials into chat.',
+  ], destination: 'chat', button: 'Daily recommendations' },
   { id: 'data', title: 'Dates, data updates and limitations', term: 'snapshot', steps: [
     'Historical coverage shows the stored date range. Snapshot built is when the data file was generated. A recent build date does not mean the market data is current.',
     'Refresh data requests the GitHub update workflow. It does not immediately replace the page’s data. Follow View update progress, wait for the workflow and Cloudflare deployment to succeed, then reload.',

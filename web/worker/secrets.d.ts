@@ -5,3 +5,10 @@ interface Env {
   OPENAI_API_KEY?: string;
   OPENAI_MODEL?: string;
 }
+interface Env {
+ WEBULL_APP_KEY?: string;
+ WEBULL_APP_SECRET?: string;
+ WEBULL_ACCESS_TOKEN?: string;
+ WEBULL_ACCOUNT_ID?: string;
+ WEBULL_ENVIRONMENT?: string;
+}

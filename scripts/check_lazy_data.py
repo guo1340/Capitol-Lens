@@ -13,7 +13,7 @@ with sync_playwright() as p:
   if path=='dataset-version':body['version']+=str(state['version'])
   route.fulfill(json=body)
  page.route('**/capitol-lens/api/**',api)
- page.goto('http://127.0.0.1:5173/capitol-lens/recommendations');page.get_by_role('heading',name='Long-term research, fewer decisions').wait_for();assert 'dataset' not in calls,calls
+ page.goto('http://127.0.0.1:5173/capitol-lens/recommendations');page.get_by_role('heading',name='Research & backtests').wait_for();assert 'dataset' not in calls,calls
  page.get_by_role('button',name='Explore trades',exact=True).click();page.get_by_role('heading',name='See the trades. Find the connections.').wait_for();assert calls.count('dataset')==1,calls
  page.reload();page.get_by_role('heading',name='See the trades. Find the connections.').wait_for();assert calls.count('dataset')==1,calls;assert calls.count('dataset-version')==2,calls
  state['version']=2;page.reload();page.get_by_role('heading',name='See the trades. Find the connections.').wait_for();assert calls.count('dataset')==2,calls

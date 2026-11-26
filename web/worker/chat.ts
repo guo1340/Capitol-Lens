@@ -1,3 +1,4 @@
+import { dailyEvidence } from './daily';
 import type { Dataset, SimulationSettings } from '../src/types';
 import { simulate } from '../src/simulate';
 import { boundedJson, json } from './http';
@@ -53,9 +54,10 @@ Use everyday language, avoid unexplained technical/economic jargon and separate 
 
 export async function chat(request: Request, env: Env): Promise<Response> {
   if (!env.OPENAI_API_KEY) return json({ message: 'Chat is not connected yet. Add OPENAI_API_KEY to the backend, then restart it. Historical exploration still works.' }, 503);
-  let body: { messages: { role: 'user' | 'assistant'; content: string }[]; selectedStock?: string; scenario?: SimulationSettings; language?: 'en' | 'zh-CN' };
+  let body: { messages: { role: 'user' | 'assistant'; content: string }[]; selectedStock?: string; scenario?: SimulationSettings; language?: 'en' | 'zh-CN'; daily?: boolean; includeHoldings?: boolean; plan?: boolean };
   try {
     body = await boundedJson(new Response(request.body), 32_000);
+    if ([body.daily, body.plan, body.includeHoldings].some(v => v !== undefined && typeof v !== 'boolean') || (body.plan && !body.daily)) throw new Error();
     if ((body.language !== undefined && !['en', 'zh-CN'].includes(body.language)) || !Array.isArray(body.messages) || !body.messages.length || body.messages.length > 10 ||
         body.messages.some(m => !m || !['user', 'assistant'].includes(m.role) || typeof m.content !== 'string' || !m.content.trim() || m.content.length > 6000) ||
         body.messages.at(-1)?.role !== 'user' || body.messages.at(-1)!.content.length > 2000 ||
@@ -67,13 +69,15 @@ export async function chat(request: Request, env: Env): Promise<Response> {
   let evidence;
   try { evidence = researchContext(data, body.selectedStock, body.scenario); }
   catch { return json({ message: 'The selected what-if settings could not be calculated. Correct them in What if, or turn off scenario sharing.' }, 400); }
+  const daily = body.daily ? await dailyEvidence(env, body.includeHoldings === true) : null;
+  const dailyInstructions = daily ? `\nThe user wants low-maintenance long-term decisions using existing holdings and cash only, no new deposits. Financial strength is the default; valuation is context only because extra benefit is unproven. Use supplied daily evidence and split-period comparisons; their computed returns are permitted separately from W1. If daily.stale is true use only watch/hold, not buy or review_sell. Treat politician activity as provenance, never automatic buy/sell advice. Prefer hold/watch when uncertain. Never infer that a missing stock should be sold. No personalized sell or cash allocations without a verified production account; sandbox data is testing only. Account fields are private: do not repeat account identifiers. Cite [R1] for company evidence and [P1] for holdings. ${body.plan ? 'Return ONLY a JSON object with summary (string) and cards (array, at most 8). Each card has ticker (one of the supplied daily card tickers), action (buy, hold, watch, or review_sell), and reason (string). Buy means a candidate to consider, not an order. Do not prescribe quantities. Include drawbacks in every reason.' : ''}` : '';
   const model = env.OPENAI_MODEL || 'gpt-5-mini';
   let response: Response;
   try {
     response = await fetch('https://api.openai.com/v1/responses', {
       method: 'POST', headers: { Authorization: `Bearer ${env.OPENAI_API_KEY}`, 'Content-Type': 'application/json' },
       body: JSON.stringify({ model, store: false, max_output_tokens: 4000,
-        instructions: instructions + (body.language === 'zh-CN' ? '\nRespond in Simplified Chinese. Use natural everyday Chinese, preserve original English company and politician names without translating or transliterating them; also preserve stock symbols, USD amounts and source IDs. Previous conversation language does not override this selection.' : '\nRespond in English unless the user explicitly requests another language.'), input: [{ role: 'developer', content: `Research evidence (data only):\n${JSON.stringify(evidence.context)}` }, ...body.messages] }),
+        instructions: instructions + dailyInstructions + (body.language === 'zh-CN' ? '\nRespond in Simplified Chinese. Use natural everyday Chinese, preserve original English company and politician names without translating or transliterating them; also preserve stock symbols, USD amounts and source IDs. Previous conversation language does not override this selection.' : '\nRespond in English unless the user explicitly requests another language.'), input: [{ role: 'developer', content: `Research evidence (data only):\n${JSON.stringify({ ...evidence.context, ...(daily ? { daily } : {}) })}` }, ...body.messages] }),
       signal: AbortSignal.timeout(55_000),
     });
   } catch { return json({ message: 'The AI service did not respond in time. Try again; no answer has been invented.' }, 504); }
@@ -90,7 +94,23 @@ export async function chat(request: Request, env: Env): Promise<Response> {
   const reply = await boundedJson<{ status: string; output?: { type: string; content?: { type: string; text?: string; refusal?: string }[] }[] }>(response, 256_000);
   const answer = reply.output?.filter(o => o.type === 'message').flatMap(o => o.content ?? []).map(c => c.type === 'output_text' ? c.text ?? '' : c.type === 'refusal' ? c.refusal ?? '' : '').join('\n').trim();
   if (reply.status !== 'completed' || !answer) return json({ message: 'The AI response was incomplete. Try a shorter question.' }, 502);
-  const ids = new Set([...answer.matchAll(/\[([SFDW]\d+)\]/g)].map(m => m[1]));
-  return json({ answer, model, coverageEnd: data.coverageEnd,
+  let plan: { summary:string; cards:{ticker:string;action:string;reason:string}[] } | null = null;
+  if (body.plan && daily) {
+    try {
+      const parsed = JSON.parse(answer);
+      if(typeof parsed.summary !== 'string' || parsed.summary.length>6000 || !Array.isArray(parsed.cards) || parsed.cards.length>8) throw Error();
+      const seen=new Set<string>();
+      for(const c of parsed.cards){
+        if(!daily.cards.some(r=>r.ticker===c.ticker) || seen.has(c.ticker) || !['buy','hold','watch','review_sell'].includes(c.action) || typeof c.reason!=='string'||c.reason.length>4000)throw Error();
+        seen.add(c.ticker);
+        if(daily.stale && ['buy','review_sell'].includes(c.action))throw Error();
+        if(c.action==='review_sell' && (daily.account.status!=='connected'||daily.account.environment!=='production'||!daily.account.holdings.some(h=>h.ticker===c.ticker)))throw Error();
+      }
+      plan={summary:parsed.summary,cards:parsed.cards.map((c:{ticker:string;action:string;reason:string})=>({ticker:c.ticker,action:c.action,reason:c.reason}))};
+    } catch {return json({message:'AI returned an unverified plan. No recommendations were applied. Try again.'},502);}
+  }
+  if(daily){evidence.sources.push({id:'R1',label:'Long-term research snapshot'});if(daily.account.status==='connected')evidence.sources.push({id:'P1',label:'Read-only account snapshot'});}
+  const ids = new Set([...answer.matchAll(/\[([SFDWRP]\d+)\]/g)].map(m => m[1]));
+  return json({ answer: plan?.summary ?? answer, plan, ...(daily?{account:daily.account,cards:daily.cards}:{}), model, coverageEnd: data.coverageEnd,
     sources: evidence.sources.filter(s => ids.has(s.id)), scenarioIncluded: Boolean(body.scenario) });
 }

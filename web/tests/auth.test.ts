@@ -29,7 +29,7 @@ it.each([
 ])('fails closed on rejected or unavailable verification', async (admin, status) => {
   expect((await authorize(request('/', { headers: cookie }), admin as Fetcher)).status).toBe(status);
 });
-it.each(['/', '/manual', '/manual/', '/recommendations', '/api/recommendations', '/api/dataset-version', '/data/recommendations.json', '/assets/app.js', '/data/dataset.json', '/api/dataset', '/api/status', '/api/quote?symbol=AAPL'])('protects %s before serving content', async path => {
+it.each(['/', '/manual', '/manual/', '/recommendations', '/api/recommendations', '/api/dataset-version', '/api/daily', '/api/webull/portfolio', '/data/recommendations.json', '/assets/app.js', '/data/dataset.json', '/api/dataset', '/api/status', '/api/quote?symbol=AAPL'])('protects %s before serving content', async path => {
   const bindings = env(); const response = await worker.fetch(request(path), bindings, ctx);
   expect(response.status).toBe(401); expect(bindings.ASSETS.fetch).not.toHaveBeenCalled();
   expect(response.headers.get('Cache-Control')).toBe('private, no-store');

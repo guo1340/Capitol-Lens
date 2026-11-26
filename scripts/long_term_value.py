@@ -108,9 +108,14 @@ def augment(payload,mapping):
   for t,h,e in pool.map(download,[r['ticker'] for r in UNIVERSE]+['SPY']):
    if h:histories[t]=h
    else:errors[t]=e
- rows,basket,gaps=selection(raws,histories,cutoff)
- payload.update({'strategyVersion':'quality-value-v2','rows':rows,'basket':basket,'basketDate':cutoff,'cashWeight':100-sum(r['weight'] for r in basket),'gaps':gaps,'priceErrors':errors,'backtest':{'status':'unavailable'}})
+ rows,basket,gaps=selection(raws,histories,cutoff,False)
+ for row in rows:
+  try:row.update(valuation(raws[row['ticker']],histories[row['ticker']],cutoff,row))
+  except (ValueError,KeyError,StopIteration):row['valuationUnavailable']=True
+ payload.update({'strategyVersion':'quality-baseline-v3','rows':rows,'basket':basket,'basketDate':cutoff,'cashWeight':100-sum(r['weight'] for r in basket),'gaps':gaps,'priceErrors':errors,'backtest':{'status':'unavailable'}})
  try:
   payload['backtest']={'status':'available','qualityValue':simulate(raws,histories,'2018-01-01',cutoff),'qualityOnly':simulate(raws,histories,'2018-01-01',cutoff,False),'higherCosts':simulate(raws,histories,'2018-01-01',cutoff,True,.0025),'costPercent':.1,'universeBias':'Today-selected survivors; not historical market membership. Exploratory, not out-of-sample validation.'}
+  payload['backtest']['periods']=[{'label':label,'qualityOnly':simulate(raws,histories,start,end,False),'qualityValue':simulate(raws,histories,start,end,True)} for label,start,end in [('development','2018-01-01','2022-01-01'),('retrospective_test','2022-01-01',cutoff)]]
+  payload['backtest']['testCaveat']='Retrospective split after inspecting full-period results. Not an untouched holdout; no parameters were tuned to this split.'
  except Exception as e:payload['backtest']={'status':'unavailable','reason':str(e)}
  return payload

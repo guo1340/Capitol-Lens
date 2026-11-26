@@ -4,3 +4,10 @@ GITHUB_TOKEN=
 OPENAI_API_KEY=
 # Optional Responses-compatible model; default is gpt-5-mini.
 OPENAI_MODEL=gpt-5-mini
+# Optional official Webull read-only connector. Requires API approval.
+WEBULL_APP_KEY=
+WEBULL_APP_SECRET=
+WEBULL_ACCESS_TOKEN=
+WEBULL_ACCOUNT_ID=
+# Use production only with approved production credentials.
+WEBULL_ENVIRONMENT=sandbox
