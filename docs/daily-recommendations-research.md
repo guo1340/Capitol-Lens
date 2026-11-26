@@ -26,7 +26,7 @@ Current app snapshot (checked 2026-11-26): coverage 2024-01-01 through 2026-11-2
 
 Acquire adjusted historical prices with corporate actions, actual/unadjusted quotes for order previews, security identifiers, industry/sector, trading eligibility and financial statements. Record source URL/provider, fetchedAt, priceAsOf, statement period end, filing publication/acceptance time and availability assumptions separately. Retain original filings; do not use later restatements in earlier backtests. Preserve all existing Python research and frozen historical results.
 
-Provider choice is pending the user's free-only vs paid-data preference. Do not invent API entitlements or pretend free quote access includes bulk historical prices/fundamentals. If historical universe membership/delistings are unavailable, explicitly label survivorship bias and narrow the conclusion.
+User confirmed strictly free data on 2026-11-26; display all coverage gaps and do not subscribe to paid services. Do not invent API entitlements or pretend free quote access includes bulk historical prices/fundamentals. If historical universe membership/delistings are unavailable, explicitly label survivorship bias and narrow the conclusion.
 
 ## Validation gates
 
@@ -60,8 +60,17 @@ Future sequence: approved official API access -> isolated sandbox -> read-only b
 
 ## Next dependencies
 
-1. User data-budget preference and provider entitlement verification.
+1. Free-provider entitlement, field coverage and reliability verification.
 2. Data acquisition and point-in-time storage; test coverage/quality before ranking.
 3. Independent research engine and reproducible validation reports.
 4. Protected daily page, snapshots, paper bundle tracking, dictionary/manual updates.
 5. Webull sandbox integration only in a separately authorized phase.
+
+
+## Confirmed free-data approach
+
+SEC submissions and companyfacts APIs require no API key and provide public filing histories and extracted financial facts: https://www.sec.gov/search-filings/edgar-application-programming-interfaces . Use documented fair-access identification/rate limits, caching and incremental refresh. Financial facts are not uniform across sectors or filers; SEC availability alone does not guarantee comparable metrics. Cross-check each value with filing dates and units.
+
+Broader coverage must be an explicit published universe and include a coverage funnel (listed -> mapped to issuer -> financials valid -> price coverage valid -> eligible). Do not imply all US stocks are covered. Free price-source coverage/terms are still unverified for this expansion; the existing unofficial Yahoo research source is not a supported-provider guarantee. Until a viable free daily-price pipeline is verified, current actionable recommendations remain unavailable. A stale historical research preview is permissible only with explicit date labels and no current bundle export.
+
+A free-only historical backtest cannot be called survivorship-free without historical membership and delisted securities. Prefer prospective paper tracking when these inputs cannot be obtained.
