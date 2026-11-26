@@ -4,6 +4,7 @@
   "main": "worker/index.ts",
   "compatibility_date": "2026-11-24",
   "compatibility_flags": ["nodejs_compat"],
+  "placement": { "region": "aws:us-east-1" },
   "workers_dev": false,
   "preview_urls": false,
   "routes": [{ "pattern": "www.guopq.com/capitol-lens/*", "zone_name": "guopq.com" }, { "pattern": "www.guopq.com/capitol-lens", "zone_name": "guopq.com" }, { "pattern": "api.guopq.com/capitol-lens/*", "zone_name": "guopq.com" }],
