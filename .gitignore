@@ -11,3 +11,5 @@ web/.dev.vars*
 web/worker-configuration.d.ts
 web/local-configuration.d.ts
 web/test-output/
+
+.research-cache/

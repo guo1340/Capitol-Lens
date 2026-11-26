@@ -19,11 +19,13 @@ jobs:
           python-version: '3.12'
       - run: python -m pip install PyMuPDF==1.28.0
       - run: python scripts/refresh_web_data.py
+        continue-on-error: true
+      - run: python scripts/refresh_recommendations.py
       - name: Commit refreshed private-app snapshot
         run: |
           git config user.name "capitol-lens-data"
           git config user.email "capitol-lens-data@users.noreply.github.com"
-          git add web/public/data/dataset.json
+          git add web/public/data/dataset.json web/public/data/recommendations.json research_snapshots/
           if ! git diff --cached --quiet; then
             git commit -m "Refresh Capitol Lens disclosure and price data"
             git push

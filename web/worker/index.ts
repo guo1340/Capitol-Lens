@@ -39,6 +39,7 @@ export default {
       if (path === '/api/chat' && request.method === 'POST') return await chat(request, env);
       if (path === '/api/session') return json({ email: auth.email, local: String(env.ENVIRONMENT) === 'local' });
       if (path === '/api/status') return json({ chatConfigured: Boolean(env.OPENAI_API_KEY), quoteConfigured: Boolean(env.FINNHUB_API_KEY), refreshConfigured: Boolean(env.GITHUB_TOKEN && env.GITHUB_REPOSITORY), repository: env.GITHUB_REPOSITORY || null, environment: env.ENVIRONMENT });
+      if (path === '/api/recommendations' && request.method === 'GET') return secured(await asset(env, '/data/recommendations.json'));
       if (path === '/api/dataset' && request.method === 'GET') return secured(await asset(env, '/data/dataset.json'));
       if (path === '/api/quote' && request.method === 'GET') {
         const symbol = (url.searchParams.get('symbol') ?? '').toUpperCase();
@@ -69,7 +70,7 @@ export default {
       if (path.startsWith('/api/')) return json({ error: 'Not found' }, 404);
       if (!['GET', 'HEAD'].includes(request.method)) return json({ error: 'Method not allowed' }, 405);
       if (url.pathname === BASE) return Response.redirect(`${url.origin}${BASE}/`, 302);
-      return secured(await asset(env, ['/', '/manual', '/manual/'].includes(path) ? '/index.html' : path));
+      return secured(await asset(env, ['/', '/manual', '/manual/', '/recommendations', '/recommendations/'].includes(path) ? '/index.html' : path));
     } catch {
       console.error(JSON.stringify({ event: 'request_failed', path }));
       return json({ error: 'request_failed', message: 'This request could not be completed. Please retry.' }, 502);

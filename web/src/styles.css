@@ -12,3 +12,4 @@
 @media(max-width:1100px){.manual-layout{grid-template-columns:1fr}.manual-toc{position:static;grid-template-columns:1fr 1fr}.manual-toc h2{grid-column:1/-1}}
 @media(max-width:600px){.sidebar nav{grid-template-columns:repeat(5,minmax(0,1fr))}.sidebar nav button{font-size:.6rem;padding-inline:3px;gap:5px}html[lang="zh-CN"] .sidebar nav button{font-size:.65rem}.manual-toc{grid-template-columns:1fr;padding:20px}.manual-intro,.manual-section{padding:21px}.manual-section li{font-size:.9rem}.manual-intro h2{font-size:1.2rem}}
 @media(max-width:600px){.sidebar nav{display:grid}.sidebar nav button{min-width:0}}
+@media(max-width:600px){.sidebar nav{grid-template-columns:repeat(6,minmax(0,1fr))}.sidebar nav button{font-size:.55rem;line-height:1.2}html[lang="zh-CN"] .sidebar nav button{font-size:.58rem}.sidebar nav button svg{flex-shrink:0}}

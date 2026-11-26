@@ -68,7 +68,7 @@ const sections: { id: string; title: string; term?: GlossaryKey; steps: string[]
     'Hover over a small question mark, focus it with the keyboard, or tap it to read the central dictionary explanation. Press Escape to dismiss it. Open Word help to search the full dictionary in English or Chinese.',
   ] },
   { id: 'troubleshooting', title: 'If something does not work', steps: [
-    'Not found at a custom domain: the currently supported hosted address is api.guopq.com/capitol-lens/. Adding a different domain alone does not change the app’s paths or move its login cookie.',
+    'Not found at a custom domain: the currently supported hosted address is www.guopq.com/capitol-lens/. Adding a different domain alone does not change the app’s paths or move its login cookie.',
     'Access denied: sign in at admin.guopq.com with guo1340@vt.edu, return to the app and reload. If verification is unavailable, the administrator should check the ADMIN service binding to guopq-admin.',
     'Local page cannot load data: start npm run dev:backend and npm run dev in separate terminals inside web. For a first setup, run npm ci and npm run build before starting the backend.',
     'Chat not connected: configure the exact backend secret name OPENAI_API_KEY. Local keys belong in web/.dev.vars; hosted keys belong in the Worker’s runtime Variables & Secrets. Restart the backend or save/deploy the hosted change, then reload.',

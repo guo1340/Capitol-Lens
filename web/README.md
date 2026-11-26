@@ -283,3 +283,17 @@ that integration exists it intentionally denies access. API calls still use the
 existing host-only admin_token with credentials included. No API secrets belong
 in frontend build variables. Credentialed CORS allows only https://www.guopq.com.
 The manual URL is now https://www.guopq.com/capitol-lens/manual.
+
+## Long-term research page
+
+Open `/capitol-lens/recommendations` (same authorized login). Daily SEC financial data feeds a hand-selected, published multi-sector US universe wider than the politician dataset. Run `python scripts/refresh_recommendations.py` from the repository root to refresh it. No API key or paid service is needed; a documented identifying SEC User-Agent is used. The ignored `.research-cache/` retains downloaded SEC JSON for 24 hours (issuer directory 7 days), limiting repeat downloads. At most 3 downloads run concurrently.
+
+The daily/manual GitHub workflow refreshes both datasets. A politician-source failure does not prevent the independent company research refresh. Inspect workflow logs as well as the coverage panel. `research_snapshots/YYYY-MM-DD-quality-operating-v1.json` preserves the first daily assessment for prospective evaluation. This is not an immutable intraday audit or a historical backtest. Daily failures are published as gaps rather than successful invented data; the prior daily archive remains available.
+
+Strategy `quality-operating-v1` ranks eligible positive-operating-profit/positive-operating-cash-flow companies using equal-weight percentile ranks for operating profit/assets, operating cash flow/assets and lower liabilities/assets. Ratios use matched annual period ends and only filings before the UTC assessment date. Restated data may be used in today's assessment; it must not be reused to reconstruct earlier decisions. Missing or mismatched fields exclude a company. Annual statements older than 550 days are excluded. No industry normalization, valuation, trend or dividend forecast is implemented; this is explicitly shown on the page.
+
+The hypothetical basket has up to 20 names at 5% each and at most 5 names per listed industry group. A complete basket is frozen until the next calendar quarter. An incomplete basket can fill as data arrives and is not shown as a usable amount preview. Missing selected-stock data, fewer than 20 eligible names, a snapshot older than 4 calendar days, or an overdue quarter block the amount preview. Four calendar days is an operational freshness rule, not a US trading calendar calculation; statements retain their own older period/filing dates. No prices or tradable share quantities are fabricated. No Webull account connection or orders exist.
+
+The amount preview is hypothetical, does not incorporate existing holdings/tax/risk preferences, and is not an income forecast. Research claims require future independent validation. A long horizon still entails losses and dividend reductions. Review quarterly rather than interpreting daily refreshed ranks as buy/sell instructions.
+
+Tests: `python -m unittest discover -s tests -p test_recommendations.py`, `npm --prefix web test`, `npm --prefix web run build`.
