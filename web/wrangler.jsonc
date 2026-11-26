@@ -11,5 +11,5 @@
   "assets": { "directory": "dist", "binding": "ASSETS", "run_worker_first": true },
   "services": [{ "binding": "ADMIN", "service": "guopq-admin" }],
   "observability": { "enabled": true, "head_sampling_rate": 1 },
-  "vars": { "ENVIRONMENT": "production", "GITHUB_REPOSITORY": "guo1340/Capitol-Lens", "GITHUB_REF": "main" }
+  "vars": { "ENVIRONMENT": "production", "GITHUB_REPOSITORY": "guo1340/Capitol-Lens", "GITHUB_REF": "main", "WEBULL_ENVIRONMENT": "production" }
 }
