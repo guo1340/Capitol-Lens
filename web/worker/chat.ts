@@ -78,7 +78,12 @@ export async function chat(request: Request, env: Env): Promise<Response> {
     });
   } catch { return json({ message: 'The AI service did not respond in time. Try again; no answer has been invented.' }, 504); }
   if (!response.ok) {
-    await response.body?.cancel();
+    let providerError: { error?: { code?: unknown; type?: unknown } } = {};
+    try { providerError = await boundedJson(response, 16_000); } catch { /* Do not log raw error bodies: they may contain credentials. */ }
+    const safe = (value: unknown) => typeof value === 'string' && /^[a-zA-Z0-9_-]{1,100}$/.test(value) ? value : null;
+    console.error(JSON.stringify({ event: 'openai_request_failed', status: response.status,
+      code: safe(providerError.error?.code), type: safe(providerError.error?.type),
+      requestId: safe(response.headers.get('x-request-id')) }));
     return json({ message: response.status === 429 ? 'OpenAI reported a usage or rate limit. Check your API credits and limits, then try again.' : response.status === 401 || response.status === 403 ? 'OpenAI rejected the backend API credentials. Check the key and project access.' : 'OpenAI could not complete this request. Check the configured model and retry.' }, 502);
   }
   const reply = await boundedJson<{ status: string; output?: { type: string; content?: { type: string; text?: string; refusal?: string }[] }[] }>(response, 256_000);
