@@ -20,7 +20,7 @@ it('preserves stock identifiers and translates dynamic labels', () => {
   expect(translate('Pelosi · NVDA · filed 2025-01-21', 'zh-CN')).toBe('Pelosi · NVDA · 披露于 2025-01-21');
 });
 it('provides a language switch on the protected login page', async () => {
-  const response = await worker.fetch(new Request('https://api.guopq.com/capitol-lens/?lang=zh-CN', { headers: { Accept: 'text/html' } }), {} as Env, {} as ExecutionContext);
+  const response = await worker.fetch(new Request('https://www.guopq.com/capitol-lens/?lang=zh-CN', { headers: { Accept: 'text/html' } }), {} as Env, {} as ExecutionContext);
   expect(response.status).toBe(401);
   expect(await response.text()).toContain('打开 guopq 管理后台');
   expect(response.headers.get('Set-Cookie')).toContain('capitol-language=zh-CN');

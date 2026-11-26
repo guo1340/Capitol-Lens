@@ -7,7 +7,7 @@ const BASE = '/capitol-lens';
 const securityHeaders = {
   'Cache-Control': 'private, no-store', 'X-Content-Type-Options': 'nosniff',
   'Referrer-Policy': 'same-origin', 'X-Frame-Options': 'DENY',
-  'Content-Security-Policy': "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; worker-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
+  'Content-Security-Policy': "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://api.guopq.com; worker-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
 };
 function secured(response: Response): Response {
   const headers = new Headers(response.headers);
@@ -18,10 +18,12 @@ async function asset(env: Env, path: string): Promise<Response> {
   return env.ASSETS.fetch(new Request(`https://capitol-lens.internal${path}`));
 }
 export default {
-  async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
+  async handle(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
     if (url.pathname !== BASE && !url.pathname.startsWith(`${BASE}/`)) return json({ error: 'Not found' }, 404);
     const path = url.pathname.slice(BASE.length) || '/';
+    if (url.hostname === 'www.guopq.com' && path.startsWith('/api/')) return json({ error: 'Use the API host' }, 404);
+    if (url.hostname === 'api.guopq.com' && !path.startsWith('/api/')) return Response.redirect(`https://www.guopq.com${url.pathname}${url.search}`, 302);
     const auth = await authorize(request, env.ADMIN);
     if (auth.status !== 'allowed') {
       const status = auth.status === 'forbidden' ? 403 : auth.status === 'unavailable' ? 503 : 401;
@@ -29,10 +31,10 @@ export default {
       const local = String(env.ENVIRONMENT) === 'local';
       const language: Language = (url.searchParams.get('lang') ?? request.headers.get('Cookie')?.match(/(?:^|;\s*)capitol-language=([^;]+)/)?.[1]) === 'zh-CN' ? 'zh-CN' : 'en';
       const l = (text: string) => translate(text, language);
-      const login = local ? 'http://127.0.0.1:8790/login' : 'https://admin.guopq.com/login';
+      const login = local ? 'http://127.0.0.1:8790/login' : 'https://api.guopq.com/api/auth/capitol-lens/start?returnTo=' + encodeURIComponent('https://www.guopq.com' + url.pathname);
       return secured(new Response(`<!doctype html><html lang="${language}"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Capitol Lens · ${language === 'zh-CN' ? '私人访问' : 'Private access'}</title><style>body{font:18px/1.7 system-ui;background:#101822;color:#edf4fa;max-width:580px;margin:15vh auto;padding:24px}a{color:#89d8ca}h1{font-size:38px}</style><h1>Capitol Lens</h1><p>${l(status === 503 ? 'Your admin session could not be checked. Please retry shortly.' : status === 403 ? 'This account does not have access to Capitol Lens.' : 'Use your existing guopq admin session to open your research workspace.')}</p><p><a href="${login}">${l('Open guopq admin')}</a></p><p>${l('After signing in, return here and reload.')}</p><a href="?lang=${language === 'en' ? 'zh-CN' : 'en'}">${language === 'en' ? '中文' : 'English'}</a>${local ? '<p>' + l('Local development preview: uses a test identity, not your production session.') + '</p>' : ''}</html>`, { status, headers: { 'Content-Type': 'text/html; charset=utf-8', 'Set-Cookie': `capitol-language=${language}; Path=/capitol-lens; SameSite=Lax${url.protocol === 'https:' ? '; Secure' : ''}` } }));
     }
-    if (request.method === 'POST' && request.headers.get('Origin') !== url.origin) return json({ error: 'Cross-origin action rejected' }, 403);
+    if (request.method === 'POST' && ![url.origin, 'https://www.guopq.com'].includes(request.headers.get('Origin') ?? '')) return json({ error: 'Cross-origin action rejected' }, 403);
     try {
       if (path === '/api/chat' && request.method === 'POST') return await chat(request, env);
       if (path === '/api/session') return json({ email: auth.email, local: String(env.ENVIRONMENT) === 'local' });
@@ -73,4 +75,21 @@ export default {
       return json({ error: 'request_failed', message: 'This request could not be completed. Please retry.' }, 502);
     }
   },
-} satisfies ExportedHandler<Env>;
+  async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
+    const origin = request.headers.get('Origin');
+    const cors = origin === 'https://www.guopq.com' && new URL(request.url).hostname === 'api.guopq.com';
+    if (request.method === 'OPTIONS') {
+      return new Response(null, { status: cors ? 204 : 403, headers: cors ? {
+        'Access-Control-Allow-Origin': origin!, 'Access-Control-Allow-Credentials': 'true',
+        'Access-Control-Allow-Methods': 'GET, HEAD, POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type', 'Vary': 'Origin',
+      } : {} });
+    }
+    const response = await this.handle(request, env, ctx);
+    if (!cors) return response;
+    const headers = new Headers(response.headers);
+    headers.set('Access-Control-Allow-Origin', origin!);
+    headers.set('Access-Control-Allow-Credentials', 'true');
+    headers.append('Vary', 'Origin');
+    return new Response(response.body, { status: response.status, headers });
+  },
+};

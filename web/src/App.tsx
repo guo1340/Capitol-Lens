@@ -7,7 +7,7 @@ import { Chat } from './Chat';
 import { Manual } from './Manual';
 import { glossary, type GlossaryKey } from './glossary';
 import type { Dataset, SimulationResult, SimulationSettings, Trade } from './types';
-const API = '/capitol-lens/api';
+const API = location.hostname === 'www.guopq.com' ? 'https://api.guopq.com/capitol-lens/api' : '/capitol-lens/api';
 const money = (n: number | undefined | null, digits = 2) => n == null ? tr('Unavailable') : n.toLocaleString(locale(), { style: 'currency', currency: 'USD', maximumFractionDigits: digits });
 const percent = (n: number) => `${n >= 0 ? '+' : ''}${n.toFixed(2)}%`;
 const shortDate = (d: string) => new Date(`${d.slice(0, 10)}T12:00:00Z`).toLocaleDateString(locale(), { month: 'short', day: 'numeric', year: 'numeric' });
@@ -28,7 +28,7 @@ interface Quote {
     changePercent: number | null;
 }
 async function api<T>(path: string, options?: RequestInit): Promise<T> {
-    const response = await fetch(`${API}${path}`, { ...options, credentials: 'same-origin' });
+    const response = await fetch(`${API}${path}`, { ...options, credentials: 'include' });
     if (response.status === 401 || response.status === 403)
         throw new Error('Access could not be verified. Sign in at admin.guopq.com, then return here and retry. For local development, start npm run dev:backend in a separate terminal.');
     const body = await response.json() as {

@@ -6,7 +6,7 @@
   "compatibility_flags": ["nodejs_compat"],
   "workers_dev": false,
   "preview_urls": false,
-  "routes": [{ "pattern": "api.guopq.com/capitol-lens*", "zone_name": "guopq.com" }],
+  "routes": [{ "pattern": "www.guopq.com/capitol-lens/*", "zone_name": "guopq.com" }, { "pattern": "www.guopq.com/capitol-lens", "zone_name": "guopq.com" }, { "pattern": "api.guopq.com/capitol-lens/*", "zone_name": "guopq.com" }],
   "assets": { "directory": "dist", "binding": "ASSETS", "run_worker_first": true },
   "services": [{ "binding": "ADMIN", "service": "guopq-admin" }],
   "observability": { "enabled": true, "head_sampling_rate": 1 },

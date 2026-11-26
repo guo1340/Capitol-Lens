@@ -2,7 +2,7 @@ import { it, expect, vi, afterEach } from 'vitest';
 import { authorize } from '../worker/auth';
 import worker from '../worker/index';
 
-const request = (path = '/', init: RequestInit = {}) => new Request(`https://api.guopq.com/capitol-lens${path}`, init);
+const request = (path = '/', init: RequestInit = {}) => new Request(`https://local.test/capitol-lens${path}`, init);
 const service = (body: unknown, status = 200) => ({ fetch: vi.fn(async () => Response.json(body, { status })) }) as unknown as Fetcher;
 const allowed = () => service({ success: true, data: { email: 'guo1340@vt.edu' } });
 const ctx = { waitUntil: vi.fn() } as unknown as ExecutionContext;
@@ -51,6 +51,26 @@ it('validates symbols and queues an authorized refresh', async () => {
   expect((await worker.fetch(request('/api/quote?symbol=../bad', { headers: cookie }), env(), ctx)).status).toBe(400);
   const fetchMock = vi.fn(async () => new Response(null, { status: 204 })); vi.stubGlobal('fetch', fetchMock);
   const bindings = { ...env(), GITHUB_TOKEN: 'test-token' };
-  const response = await worker.fetch(request('/api/refresh', { method: 'POST', headers: { ...cookie, Origin: 'https://api.guopq.com' } }), bindings, ctx);
+  const response = await worker.fetch(request('/api/refresh', { method: 'POST', headers: { ...cookie, Origin: 'https://local.test' } }), bindings, ctx);
   expect(response.status).toBe(202); expect(fetchMock).toHaveBeenCalledOnce();
+});
+
+it('requires the dedicated gateway cookie on www and forwards no admin token', async () => {
+  const admin = allowed();
+  const url = 'https://www.guopq.com/capitol-lens/';
+  expect((await authorize(new Request(url, { headers: cookie }), admin)).status).toBe('unauthorized');
+  expect((await authorize(new Request(url, { headers: { Cookie: 'capitol_session=test; admin_token=secret' } }), admin)).status).toBe('allowed');
+  const forwarded = vi.mocked(admin.fetch).mock.calls[0][0] as Request;
+  expect(forwarded.url).toBe('https://api.guopq.com/api/auth/capitol-lens/me');
+  expect(forwarded.headers.get('Cookie')).toBe('capitol_session=test');
+});
+it('protects www assets and limits credentialed CORS to www', async () => {
+  const bindings = env();
+  const page = await worker.fetch(new Request('https://www.guopq.com/capitol-lens/manual'), bindings, ctx);
+  expect(page.status).toBe(401); expect(bindings.ASSETS.fetch).not.toHaveBeenCalled();
+  for (const origin of ['https://www.guopq.com', 'https://evil.example']) {
+    const response = await worker.fetch(new Request('https://api.guopq.com/capitol-lens/api/status', { method: 'OPTIONS', headers: { Origin: origin } }), bindings, ctx);
+    expect(response.status).toBe(origin.includes('www.guopq') ? 204 : 403);
+    expect(response.headers.get('Access-Control-Allow-Origin')).toBe(origin.includes('www.guopq') ? origin : null);
+  }
 });

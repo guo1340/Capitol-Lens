@@ -56,7 +56,7 @@ export function Chat({ data, configured, settings, stock, viewStock }: {
         const abort = new AbortController();
         controller.current = abort;
         try {
-            const response = await fetch('/capitol-lens/api/chat', { method: 'POST', credentials: 'same-origin',
+            const response = await fetch(location.hostname === 'www.guopq.com' ? 'https://api.guopq.com/capitol-lens/api/chat' : '/capitol-lens/api/chat', { method: 'POST', credentials: 'include',
                 headers: { 'Content-Type': 'application/json' }, signal: abort.signal,
                 body: JSON.stringify({ messages: next.slice(-9).map(m => ({ role: m.role, content: m.content.slice(0, 6000) })), selectedStock: stock, language, ...(includeScenario ? { scenario: settings } : {}) }) });
             const result = await response.json() as {

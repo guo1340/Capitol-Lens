@@ -266,3 +266,20 @@ Architecture references: [static asset routing](https://developers.cloudflare.co
 [service bindings](https://developers.cloudflare.com/workers/runtime-apis/bindings/service-bindings/),
 [Git builds](https://developers.cloudflare.com/workers/ci-cd/builds/),
 [Finnhub API](https://finnhub.io/docs/api).
+
+
+## Frontend on www, API on api (migration)
+
+The frontend now uses https://www.guopq.com/capitol-lens/ and the API remains
+https://api.guopq.com/capitol-lens/api/. Only the /capitol-lens path on www is
+routed to this Worker; the existing homepage is untouched. Keep the ADMIN service
+binding. Remove obsolete custom domains and old broad routes from this Worker's
+Cloudflare dashboard if they remain after deployment. Do not assign www as a
+custom domain to this Worker: use the path routes in wrangler.jsonc.
+
+Deploy the admin integration described in ADMIN_AGENT_PROMPT.md first. The page
+requires a dedicated capitol_session cookie verified by the ADMIN service; until
+that integration exists it intentionally denies access. API calls still use the
+existing host-only admin_token with credentials included. No API secrets belong
+in frontend build variables. Credentialed CORS allows only https://www.guopq.com.
+The manual URL is now https://www.guopq.com/capitol-lens/manual.
