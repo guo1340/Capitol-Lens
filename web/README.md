@@ -73,6 +73,15 @@ make a public repository private.
 
 ## Local development
 
+### In-app user manual / 使用手册
+
+Open **User manual / 使用手册** in the navigation, or go directly to
+`/capitol-lens/manual` on the app's host. The manual has English and Simplified
+Chinese instructions for every tab, a linked contents list, question-mark word
+help, troubleshooting and buttons to try each feature. It requires the same login
+as the rest of the app. The manual displays the currently loaded coverage dates;
+its examples do not imply that the historical snapshot is up to date.
+
 ### English / 简体中文
 
 Use the **中文 / English** button in the top bar to switch languages instantly.

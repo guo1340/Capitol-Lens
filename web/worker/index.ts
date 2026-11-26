@@ -67,7 +67,7 @@ export default {
       if (path.startsWith('/api/')) return json({ error: 'Not found' }, 404);
       if (!['GET', 'HEAD'].includes(request.method)) return json({ error: 'Method not allowed' }, 405);
       if (url.pathname === BASE) return Response.redirect(`${url.origin}${BASE}/`, 302);
-      return secured(await asset(env, path === '/' ? '/index.html' : path));
+      return secured(await asset(env, ['/', '/manual', '/manual/'].includes(path) ? '/index.html' : path));
     } catch {
       console.error(JSON.stringify({ event: 'request_failed', path }));
       return json({ error: 'request_failed', message: 'This request could not be completed. Please retry.' }, 502);
