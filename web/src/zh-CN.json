@@ -374,5 +374,6 @@
   "Open Explore trades": "打开交易概览",
   "Open Stock story": "打开个股分析",
   "Open What if": "打开模拟投资",
-  "Open Chat with AI": "打开 AI 对话"
+  "Open Chat with AI": "打开 AI 对话",
+  "OpenAI rejected this request because its detected country or region is unsupported. This is not an API-key error.": "OpenAI 检测到的国家或地区不受支持，因此拒绝了请求。这不是 API 密钥错误。"
 }

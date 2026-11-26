@@ -84,6 +84,7 @@ export async function chat(request: Request, env: Env): Promise<Response> {
     console.error(JSON.stringify({ event: 'openai_request_failed', status: response.status,
       code: safe(providerError.error?.code), type: safe(providerError.error?.type),
       requestId: safe(response.headers.get('x-request-id')) }));
+    if (providerError.error?.code === 'unsupported_country_region_territory') return json({ message: 'OpenAI rejected this request because its detected country or region is unsupported. This is not an API-key error.' }, 502);
     return json({ message: response.status === 429 ? 'OpenAI reported a usage or rate limit. Check your API credits and limits, then try again.' : response.status === 401 || response.status === 403 ? 'OpenAI rejected the backend API credentials. Check the key and project access.' : 'OpenAI could not complete this request. Check the configured model and retry.' }, 502);
   }
   const reply = await boundedJson<{ status: string; output?: { type: string; content?: { type: string; text?: string; refusal?: string }[] }[] }>(response, 256_000);
