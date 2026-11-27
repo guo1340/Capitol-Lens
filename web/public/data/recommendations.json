@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "strategyVersion": "quality-baseline-v3",
-  "builtAt": "2026-11-26T12:55:24.085723+00:00",
-  "asOf": "2026-11-26",
+  "builtAt": "2026-11-27T12:51:07.902094+00:00",
+  "asOf": "2026-11-27",
   "quarter": "2026-Q4",
   "basketDate": "2026-11-26",
   "nextReview": "2027-01-01",
@@ -284,7 +284,7 @@
       "sharesDate": "2026-08-21",
       "sharesFiled": "2026-08-26",
       "marketCapEstimate": 3598130073547.3633,
-      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?period1=1420070400&period2=1795651200&interval=1d&events=div%2Csplits"
+      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?period1=1420070400&period2=1795737600&interval=1d&events=div%2Csplits"
     },
     {
       "ticker": "META",
@@ -376,7 +376,7 @@
       "sharesDate": "2026-09-30",
       "sharesFiled": "2026-10-29",
       "marketCapEstimate": 3357491475036.621,
-      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/GOOGL?period1=1420070400&period2=1795651200&interval=1d&events=div%2Csplits"
+      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/GOOGL?period1=1420070400&period2=1795737600&interval=1d&events=div%2Csplits"
     },
     {
       "ticker": "ADBE",
@@ -425,7 +425,7 @@
       "sharesDate": "2026-09-18",
       "sharesFiled": "2026-09-22",
       "marketCapEstimate": 90617436712.64648,
-      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/ADBE?period1=1420070400&period2=1795651200&interval=1d&events=div%2Csplits"
+      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/ADBE?period1=1420070400&period2=1795737600&interval=1d&events=div%2Csplits"
     },
     {
       "ticker": "MSFT",
@@ -474,7 +474,7 @@
       "sharesDate": "2026-10-22",
       "sharesFiled": "2026-10-28",
       "marketCapEstimate": 3638315442470.2866,
-      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/MSFT?period1=1420070400&period2=1795651200&interval=1d&events=div%2Csplits"
+      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/MSFT?period1=1420070400&period2=1795737600&interval=1d&events=div%2Csplits"
     },
     {
       "ticker": "AAPL",
@@ -523,7 +523,7 @@
       "sharesDate": "2026-10-23",
       "sharesFiled": "2026-11-03",
       "marketCapEstimate": 5167353080425.721,
-      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/AAPL?period1=1420070400&period2=1795651200&interval=1d&events=div%2Csplits"
+      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/AAPL?period1=1420070400&period2=1795737600&interval=1d&events=div%2Csplits"
     },
     {
       "ticker": "BKNG",
@@ -572,7 +572,7 @@
       "sharesDate": "2026-10-26",
       "sharesFiled": "2026-11-03",
       "marketCapEstimate": 111183337921.5,
-      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/BKNG?period1=1420070400&period2=1795651200&interval=1d&events=div%2Csplits"
+      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/BKNG?period1=1420070400&period2=1795737600&interval=1d&events=div%2Csplits"
     },
     {
       "ticker": "PG",
@@ -621,7 +621,7 @@
       "sharesDate": "2026-09-30",
       "sharesFiled": "2026-10-22",
       "marketCapEstimate": 401509563959.2521,
-      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/PG?period1=1420070400&period2=1795651200&interval=1d&events=div%2Csplits"
+      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/PG?period1=1420070400&period2=1795737600&interval=1d&events=div%2Csplits"
     },
     {
       "ticker": "COST",
@@ -670,7 +670,7 @@
       "sharesDate": "2026-09-29",
       "sharesFiled": "2026-10-07",
       "marketCapEstimate": 481597433751.3003,
-      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/COST?period1=1420070400&period2=1795651200&interval=1d&events=div%2Csplits"
+      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/COST?period1=1420070400&period2=1795737600&interval=1d&events=div%2Csplits"
     },
     {
       "ticker": "CL",
@@ -719,7 +719,7 @@
       "sharesDate": "2026-09-30",
       "sharesFiled": "2026-10-30",
       "marketCapEstimate": 79221781236.66586,
-      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/CL?period1=1420070400&period2=1795651200&interval=1d&events=div%2Csplits"
+      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/CL?period1=1420070400&period2=1795737600&interval=1d&events=div%2Csplits"
     },
     {
       "ticker": "CRM",
@@ -768,7 +768,7 @@
       "sharesDate": "2026-08-20",
       "sharesFiled": "2026-08-27",
       "marketCapEstimate": 162303835525.5127,
-      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/CRM?period1=1420070400&period2=1795651200&interval=1d&events=div%2Csplits"
+      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/CRM?period1=1420070400&period2=1795737600&interval=1d&events=div%2Csplits"
     },
     {
       "ticker": "HD",
@@ -817,7 +817,7 @@
       "sharesDate": "2026-11-17",
       "sharesFiled": "2026-11-20",
       "marketCapEstimate": 360484112495.87085,
-      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/HD?period1=1420070400&period2=1795651200&interval=1d&events=div%2Csplits"
+      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/HD?period1=1420070400&period2=1795737600&interval=1d&events=div%2Csplits"
     },
     {
       "ticker": "LIN",
@@ -866,7 +866,7 @@
       "sharesDate": "2026-09-30",
       "sharesFiled": "2026-10-29",
       "marketCapEstimate": 240839934576.32996,
-      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/LIN?period1=1420070400&period2=1795651200&interval=1d&events=div%2Csplits"
+      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/LIN?period1=1420070400&period2=1795737600&interval=1d&events=div%2Csplits"
     },
     {
       "ticker": "LOW",
@@ -915,7 +915,7 @@
       "sharesDate": "2026-11-23",
       "sharesFiled": "2026-11-25",
       "marketCapEstimate": 132210937981.03528,
-      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/LOW?period1=1420070400&period2=1795651200&interval=1d&events=div%2Csplits"
+      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/LOW?period1=1420070400&period2=1795737600&interval=1d&events=div%2Csplits"
     },
     {
       "ticker": "UNP",
@@ -964,7 +964,7 @@
       "sharesDate": "2026-10-16",
       "sharesFiled": "2026-10-22",
       "marketCapEstimate": 177312442027.69336,
-      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/UNP?period1=1420070400&period2=1795651200&interval=1d&events=div%2Csplits"
+      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/UNP?period1=1420070400&period2=1795737600&interval=1d&events=div%2Csplits"
     },
     {
       "ticker": "CSCO",
@@ -1013,7 +1013,7 @@
       "sharesDate": "2026-11-12",
       "sharesFiled": "2026-11-17",
       "marketCapEstimate": 371378606901.40295,
-      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/CSCO?period1=1420070400&period2=1795651200&interval=1d&events=div%2Csplits"
+      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/CSCO?period1=1420070400&period2=1795737600&interval=1d&events=div%2Csplits"
     },
     {
       "ticker": "MDT",
@@ -1062,7 +1062,7 @@
       "sharesDate": "2026-08-28",
       "sharesFiled": "2026-09-03",
       "marketCapEstimate": 122873982590.50476,
-      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/MDT?period1=1420070400&period2=1795651200&interval=1d&events=div%2Csplits"
+      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/MDT?period1=1420070400&period2=1795737600&interval=1d&events=div%2Csplits"
     },
     {
       "ticker": "SBUX",
@@ -1111,7 +1111,7 @@
       "sharesDate": "2026-11-05",
       "sharesFiled": "2026-11-12",
       "marketCapEstimate": 122834371564.48364,
-      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/SBUX?period1=1420070400&period2=1795651200&interval=1d&events=div%2Csplits"
+      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/SBUX?period1=1420070400&period2=1795737600&interval=1d&events=div%2Csplits"
     },
     {
       "ticker": "APD",
@@ -1160,7 +1160,7 @@
       "sharesDate": "2026-10-31",
       "sharesFiled": "2026-11-19",
       "marketCapEstimate": 69983632887.08032,
-      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/APD?period1=1420070400&period2=1795651200&interval=1d&events=div%2Csplits"
+      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/APD?period1=1420070400&period2=1795737600&interval=1d&events=div%2Csplits"
     },
     {
       "ticker": "CAT",
@@ -1209,7 +1209,7 @@
       "sharesDate": "2026-09-30",
       "sharesFiled": "2026-11-04",
       "marketCapEstimate": 248789377579.23328,
-      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/CAT?period1=1420070400&period2=1795651200&interval=1d&events=div%2Csplits"
+      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/CAT?period1=1420070400&period2=1795737600&interval=1d&events=div%2Csplits"
     },
     {
       "ticker": "CSX",
@@ -1258,7 +1258,7 @@
       "sharesDate": "2026-09-30",
       "sharesFiled": "2026-10-21",
       "marketCapEstimate": 94308252142.31976,
-      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/CSX?period1=1420070400&period2=1795651200&interval=1d&events=div%2Csplits"
+      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/CSX?period1=1420070400&period2=1795737600&interval=1d&events=div%2Csplits"
     },
     {
       "ticker": "WM",
@@ -1307,7 +1307,7 @@
       "sharesDate": "2026-10-23",
       "sharesFiled": "2026-10-28",
       "marketCapEstimate": 98331135707.97198,
-      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/WM?period1=1420070400&period2=1795651200&interval=1d&events=div%2Csplits"
+      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/WM?period1=1420070400&period2=1795737600&interval=1d&events=div%2Csplits"
     },
     {
       "ticker": "PEP",
@@ -1356,7 +1356,7 @@
       "sharesDate": "2026-10-01",
       "sharesFiled": "2026-10-08",
       "marketCapEstimate": 196139315390.54614,
-      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/PEP?period1=1420070400&period2=1795651200&interval=1d&events=div%2Csplits"
+      "priceSource": "https://query1.finance.yahoo.com/v8/finance/chart/PEP?period1=1420070400&period2=1795737600&interval=1d&events=div%2Csplits"
     },
     {
       "ticker": "AEP",
@@ -1705,12 +1705,12 @@
     "qualityValue": {
       "start": "2018-01-02",
       "end": "2026-11-25",
-      "returnPercent": 286.3553,
-      "spyPercent": 205.25159999999997,
-      "annualizedPercent": 16.409546751619473,
-      "spyDrawdownPercent": 33.71728351156935,
-      "drawdownPercent": 30.617056497140183,
-      "costs": 176.40077327776447,
+      "returnPercent": 286.35540000000003,
+      "spyPercent": 205.25150000000002,
+      "annualizedPercent": 16.409550138829985,
+      "spyDrawdownPercent": 33.717260441279414,
+      "drawdownPercent": 30.617055233424356,
+      "costs": 176.4007881905509,
       "orderCount": 737,
       "curve": [
         {
@@ -1771,12 +1771,12 @@
         {
           "date": "2018-11-30",
           "value": 10902.82,
-          "spy": 10415.78
+          "spy": 10415.77
         },
         {
           "date": "2019-01-03",
           "value": 9982.5,
-          "spy": 9281.67
+          "spy": 9281.66
         },
         {
           "date": "2019-02-04",
@@ -1806,7 +1806,7 @@
         {
           "date": "2019-07-05",
           "value": 12416.92,
-          "spy": 11448.92
+          "spy": 11448.91
         },
         {
           "date": "2019-08-05",
@@ -1816,7 +1816,7 @@
         {
           "date": "2019-09-04",
           "value": 12540.34,
-          "spy": 11279.37
+          "spy": 11279.36
         },
         {
           "date": "2019-10-03",
@@ -1826,12 +1826,12 @@
         {
           "date": "2019-11-01",
           "value": 12910.08,
-          "spy": 11797.76
+          "spy": 11797.75
         },
         {
           "date": "2019-12-03",
           "value": 12885.83,
-          "spy": 11929.17
+          "spy": 11929.16
         },
         {
           "date": "2020-01-03",
@@ -1841,12 +1841,12 @@
         {
           "date": "2020-02-04",
           "value": 14122.82,
-          "spy": 12743.38
+          "spy": 12743.37
         },
         {
           "date": "2020-03-05",
           "value": 13217.32,
-          "spy": 11713.25
+          "spy": 11713.24
         },
         {
           "date": "2020-04-03",
@@ -1861,12 +1861,12 @@
         {
           "date": "2020-06-04",
           "value": 14190.65,
-          "spy": 12128.82
+          "spy": 12128.81
         },
         {
           "date": "2020-07-06",
           "value": 14462.98,
-          "spy": 12404.82
+          "spy": 12404.81
         },
         {
           "date": "2020-08-04",
@@ -1876,7 +1876,7 @@
         {
           "date": "2020-09-02",
           "value": 16422.51,
-          "spy": 13995.28
+          "spy": 13995.27
         },
         {
           "date": "2020-10-02",
@@ -1891,7 +1891,7 @@
         {
           "date": "2020-12-02",
           "value": 17217.38,
-          "spy": 14408.38
+          "spy": 14408.37
         },
         {
           "date": "2021-01-04",
@@ -1901,22 +1901,22 @@
         {
           "date": "2021-02-03",
           "value": 17628.77,
-          "spy": 15063.91
+          "spy": 15063.9
         },
         {
           "date": "2021-03-05",
           "value": 17843.27,
-          "spy": 15134.13
+          "spy": 15134.12
         },
         {
           "date": "2021-04-06",
           "value": 19267.15,
-          "spy": 16073.83
+          "spy": 16073.82
         },
         {
           "date": "2021-05-05",
           "value": 19745.82,
-          "spy": 16454.98
+          "spy": 16454.97
         },
         {
           "date": "2021-06-04",
@@ -1925,23 +1925,23 @@
         },
         {
           "date": "2021-07-06",
-          "value": 20649.66,
+          "value": 20649.67,
           "spy": 17191.0
         },
         {
           "date": "2021-08-04",
           "value": 21036.64,
-          "spy": 17431.24
+          "spy": 17431.23
         },
         {
           "date": "2021-09-02",
           "value": 22044.66,
-          "spy": 17995.5
+          "spy": 17995.49
         },
         {
           "date": "2021-10-04",
           "value": 20639.31,
-          "spy": 17075.18
+          "spy": 17075.17
         },
         {
           "date": "2021-11-02",
@@ -1951,7 +1951,7 @@
         {
           "date": "2021-12-02",
           "value": 23296.52,
-          "spy": 18220.86
+          "spy": 18220.85
         },
         {
           "date": "2022-01-03",
@@ -1960,8 +1960,8 @@
         },
         {
           "date": "2022-02-02",
-          "value": 23558.1,
-          "spy": 18282.87
+          "value": 23558.11,
+          "spy": 18282.86
         },
         {
           "date": "2022-03-04",
@@ -1986,12 +1986,12 @@
         {
           "date": "2022-07-06",
           "value": 20342.02,
-          "spy": 15434.66
+          "spy": 15434.65
         },
         {
           "date": "2022-08-04",
           "value": 22180.16,
-          "spy": 16679.9
+          "spy": 16679.89
         },
         {
           "date": "2022-09-02",
@@ -2016,12 +2016,12 @@
         {
           "date": "2023-01-04",
           "value": 22018.57,
-          "spy": 15589.95
+          "spy": 15589.94
         },
         {
           "date": "2023-02-03",
           "value": 23165.73,
-          "spy": 16751.39
+          "spy": 16751.38
         },
         {
           "date": "2023-03-07",
@@ -2030,23 +2030,23 @@
         },
         {
           "date": "2023-04-05",
-          "value": 23602.0,
-          "spy": 16621.62
+          "value": 23602.01,
+          "spy": 16621.61
         },
         {
           "date": "2023-05-05",
           "value": 23975.3,
-          "spy": 16826.74
+          "spy": 16826.73
         },
         {
           "date": "2023-06-06",
           "value": 24360.58,
-          "spy": 17454.74
+          "spy": 17454.73
         },
         {
           "date": "2023-07-07",
           "value": 25155.33,
-          "spy": 17950.17
+          "spy": 17950.16
         },
         {
           "date": "2023-08-07",
@@ -2056,12 +2056,12 @@
         {
           "date": "2023-09-06",
           "value": 25942.08,
-          "spy": 18264.11
+          "spy": 18264.1
         },
         {
           "date": "2023-10-05",
           "value": 24317.21,
-          "spy": 17436.38
+          "spy": 17436.37
         },
         {
           "date": "2023-11-03",
@@ -2076,7 +2076,7 @@
         {
           "date": "2024-01-05",
           "value": 27042.07,
-          "spy": 19297.79
+          "spy": 19297.78
         },
         {
           "date": "2024-02-06",
@@ -2091,37 +2091,37 @@
         {
           "date": "2024-04-08",
           "value": 28140.72,
-          "spy": 21459.33
+          "spy": 21459.32
         },
         {
           "date": "2024-05-07",
           "value": 28418.14,
-          "spy": 21393.97
+          "spy": 21393.96
         },
         {
           "date": "2024-06-06",
           "value": 28800.29,
-          "spy": 22118.77
+          "spy": 22118.76
         },
         {
           "date": "2024-07-09",
           "value": 29195.25,
-          "spy": 23068.33
+          "spy": 23068.32
         },
         {
           "date": "2024-08-07",
           "value": 28975.0,
-          "spy": 21526.07
+          "spy": 21526.06
         },
         {
           "date": "2024-09-06",
           "value": 30539.49,
-          "spy": 22426.69
+          "spy": 22426.68
         },
         {
           "date": "2024-10-07",
           "value": 31715.28,
-          "spy": 23637.82
+          "spy": 23637.81
         },
         {
           "date": "2024-11-05",
@@ -2131,17 +2131,17 @@
         {
           "date": "2024-12-05",
           "value": 32996.63,
-          "spy": 25255.58
+          "spy": 25255.57
         },
         {
           "date": "2025-01-07",
           "value": 30729.21,
-          "spy": 24587.46
+          "spy": 24587.45
         },
         {
           "date": "2025-02-07",
           "value": 31793.92,
-          "spy": 25094.56
+          "spy": 25094.55
         },
         {
           "date": "2025-03-11",
@@ -2150,18 +2150,18 @@
         },
         {
           "date": "2025-04-09",
-          "value": 29811.39,
+          "value": 29811.4,
           "spy": 22985.15
         },
         {
           "date": "2025-05-09",
           "value": 30313.28,
-          "spy": 23643.77
+          "spy": 23643.75
         },
         {
           "date": "2025-06-10",
           "value": 32289.72,
-          "spy": 25266.83
+          "spy": 25266.82
         },
         {
           "date": "2025-07-11",
@@ -2176,31 +2176,31 @@
         {
           "date": "2025-09-10",
           "value": 33740.72,
-          "spy": 27405.97
+          "spy": 27405.96
         },
         {
           "date": "2025-10-09",
           "value": 34753.59,
-          "spy": 28280.44
+          "spy": 28280.43
         },
         {
           "date": "2025-11-07",
-          "value": 34726.64,
-          "spy": 28272.44
+          "value": 34726.65,
+          "spy": 28272.43
         },
         {
           "date": "2025-12-09",
           "value": 35400.39,
-          "spy": 28781.03
+          "spy": 28781.01
         },
         {
           "date": "2026-01-09",
           "value": 35875.42,
-          "spy": 29332.21
+          "spy": 29332.2
         },
         {
           "date": "2026-02-10",
-          "value": 36740.14,
+          "value": 36740.15,
           "spy": 29249.8
         },
         {
@@ -2210,23 +2210,23 @@
         },
         {
           "date": "2026-04-13",
-          "value": 35636.84,
-          "spy": 29074.58
+          "value": 35636.85,
+          "spy": 29074.57
         },
         {
           "date": "2026-05-12",
-          "value": 36079.84,
-          "spy": 31281.55
+          "value": 36079.85,
+          "spy": 31281.54
         },
         {
           "date": "2026-06-11",
-          "value": 35681.42,
+          "value": 35681.43,
           "spy": 31263.75
         },
         {
           "date": "2026-07-14",
           "value": 36475.42,
-          "spy": 31942.07
+          "spy": 31942.06
         },
         {
           "date": "2026-08-12",
@@ -2236,22 +2236,22 @@
         {
           "date": "2026-09-11",
           "value": 37414.91,
-          "spy": 32471.44
+          "spy": 32471.43
         },
         {
           "date": "2026-10-12",
           "value": 37251.48,
-          "spy": 33140.26
+          "spy": 33140.25
         },
         {
           "date": "2026-11-10",
-          "value": 39042.19,
-          "spy": 31940.04
+          "value": 39042.2,
+          "spy": 31940.03
         },
         {
           "date": "2026-11-25",
-          "value": 38635.53,
-          "spy": 30525.16
+          "value": 38635.54,
+          "spy": 30525.15
         }
       ],
       "audit": [
@@ -8117,11 +8117,11 @@
       "start": "2018-01-02",
       "end": "2026-11-25",
       "returnPercent": 315.63419999999996,
-      "spyPercent": 205.25159999999997,
+      "spyPercent": 205.25150000000002,
       "annualizedPercent": 17.36943942060014,
-      "spyDrawdownPercent": 33.71728351156935,
-      "drawdownPercent": 31.87760722258145,
-      "costs": 112.64140852311323,
+      "spyDrawdownPercent": 33.717260441279414,
+      "drawdownPercent": 31.87760773185973,
+      "costs": 112.64141098034911,
       "orderCount": 718,
       "curve": [
         {
@@ -8182,12 +8182,12 @@
         {
           "date": "2018-11-30",
           "value": 10804.71,
-          "spy": 10415.78
+          "spy": 10415.77
         },
         {
           "date": "2019-01-03",
           "value": 9858.17,
-          "spy": 9281.67
+          "spy": 9281.66
         },
         {
           "date": "2019-02-04",
@@ -8217,7 +8217,7 @@
         {
           "date": "2019-07-05",
           "value": 12507.75,
-          "spy": 11448.92
+          "spy": 11448.91
         },
         {
           "date": "2019-08-05",
@@ -8227,7 +8227,7 @@
         {
           "date": "2019-09-04",
           "value": 12602.56,
-          "spy": 11279.37
+          "spy": 11279.36
         },
         {
           "date": "2019-10-03",
@@ -8237,12 +8237,12 @@
         {
           "date": "2019-11-01",
           "value": 13000.07,
-          "spy": 11797.76
+          "spy": 11797.75
         },
         {
           "date": "2019-12-03",
           "value": 12994.24,
-          "spy": 11929.17
+          "spy": 11929.16
         },
         {
           "date": "2020-01-03",
@@ -8252,12 +8252,12 @@
         {
           "date": "2020-02-04",
           "value": 14254.93,
-          "spy": 12743.38
+          "spy": 12743.37
         },
         {
           "date": "2020-03-05",
           "value": 13256.48,
-          "spy": 11713.25
+          "spy": 11713.24
         },
         {
           "date": "2020-04-03",
@@ -8272,22 +8272,22 @@
         {
           "date": "2020-06-04",
           "value": 14227.34,
-          "spy": 12128.82
+          "spy": 12128.81
         },
         {
           "date": "2020-07-06",
           "value": 14641.81,
-          "spy": 12404.82
+          "spy": 12404.81
         },
         {
           "date": "2020-08-04",
-          "value": 15302.38,
+          "value": 15302.37,
           "spy": 12913.84
         },
         {
           "date": "2020-09-02",
           "value": 17058.11,
-          "spy": 13995.28
+          "spy": 13995.27
         },
         {
           "date": "2020-10-02",
@@ -8296,13 +8296,13 @@
         },
         {
           "date": "2020-11-02",
-          "value": 15850.75,
+          "value": 15850.74,
           "spy": 12971.03
         },
         {
           "date": "2020-12-02",
           "value": 17620.41,
-          "spy": 14408.38
+          "spy": 14408.37
         },
         {
           "date": "2021-01-04",
@@ -8312,22 +8312,22 @@
         {
           "date": "2021-02-03",
           "value": 18146.74,
-          "spy": 15063.91
+          "spy": 15063.9
         },
         {
           "date": "2021-03-05",
-          "value": 18387.11,
-          "spy": 15134.13
+          "value": 18387.12,
+          "spy": 15134.12
         },
         {
           "date": "2021-04-06",
           "value": 19968.2,
-          "spy": 16073.83
+          "spy": 16073.82
         },
         {
           "date": "2021-05-05",
           "value": 20483.77,
-          "spy": 16454.98
+          "spy": 16454.97
         },
         {
           "date": "2021-06-04",
@@ -8341,18 +8341,18 @@
         },
         {
           "date": "2021-08-04",
-          "value": 21901.38,
-          "spy": 17431.24
+          "value": 21901.39,
+          "spy": 17431.23
         },
         {
           "date": "2021-09-02",
           "value": 22960.0,
-          "spy": 17995.5
+          "spy": 17995.49
         },
         {
           "date": "2021-10-04",
           "value": 21442.63,
-          "spy": 17075.18
+          "spy": 17075.17
         },
         {
           "date": "2021-11-02",
@@ -8362,7 +8362,7 @@
         {
           "date": "2021-12-02",
           "value": 24019.58,
-          "spy": 18220.86
+          "spy": 18220.85
         },
         {
           "date": "2022-01-03",
@@ -8372,7 +8372,7 @@
         {
           "date": "2022-02-02",
           "value": 23779.51,
-          "spy": 18282.87
+          "spy": 18282.86
         },
         {
           "date": "2022-03-04",
@@ -8397,12 +8397,12 @@
         {
           "date": "2022-07-06",
           "value": 19456.92,
-          "spy": 15434.66
+          "spy": 15434.65
         },
         {
           "date": "2022-08-04",
           "value": 21212.49,
-          "spy": 16679.9
+          "spy": 16679.89
         },
         {
           "date": "2022-09-02",
@@ -8427,12 +8427,12 @@
         {
           "date": "2023-01-04",
           "value": 20461.84,
-          "spy": 15589.95
+          "spy": 15589.94
         },
         {
           "date": "2023-02-03",
           "value": 22414.81,
-          "spy": 16751.39
+          "spy": 16751.38
         },
         {
           "date": "2023-03-07",
@@ -8442,22 +8442,22 @@
         {
           "date": "2023-04-05",
           "value": 23018.37,
-          "spy": 16621.62
+          "spy": 16621.61
         },
         {
           "date": "2023-05-05",
           "value": 23610.85,
-          "spy": 16826.74
+          "spy": 16826.73
         },
         {
           "date": "2023-06-06",
           "value": 24713.54,
-          "spy": 17454.74
+          "spy": 17454.73
         },
         {
           "date": "2023-07-07",
           "value": 25633.88,
-          "spy": 17950.17
+          "spy": 17950.16
         },
         {
           "date": "2023-08-07",
@@ -8467,12 +8467,12 @@
         {
           "date": "2023-09-06",
           "value": 26749.15,
-          "spy": 18264.11
+          "spy": 18264.1
         },
         {
           "date": "2023-10-05",
           "value": 25597.0,
-          "spy": 17436.38
+          "spy": 17436.37
         },
         {
           "date": "2023-11-03",
@@ -8487,7 +8487,7 @@
         {
           "date": "2024-01-05",
           "value": 28072.34,
-          "spy": 19297.79
+          "spy": 19297.78
         },
         {
           "date": "2024-02-06",
@@ -8502,37 +8502,37 @@
         {
           "date": "2024-04-08",
           "value": 31164.84,
-          "spy": 21459.33
+          "spy": 21459.32
         },
         {
           "date": "2024-05-07",
           "value": 30765.05,
-          "spy": 21393.97
+          "spy": 21393.96
         },
         {
           "date": "2024-06-06",
           "value": 31509.85,
-          "spy": 22118.77
+          "spy": 22118.76
         },
         {
           "date": "2024-07-09",
           "value": 32516.24,
-          "spy": 23068.33
+          "spy": 23068.32
         },
         {
           "date": "2024-08-07",
           "value": 31294.72,
-          "spy": 21526.07
+          "spy": 21526.06
         },
         {
           "date": "2024-09-06",
           "value": 32939.14,
-          "spy": 22426.69
+          "spy": 22426.68
         },
         {
           "date": "2024-10-07",
           "value": 34545.72,
-          "spy": 23637.82
+          "spy": 23637.81
         },
         {
           "date": "2024-11-05",
@@ -8542,17 +8542,17 @@
         {
           "date": "2024-12-05",
           "value": 36620.45,
-          "spy": 25255.58
+          "spy": 25255.57
         },
         {
           "date": "2025-01-07",
           "value": 34455.41,
-          "spy": 24587.46
+          "spy": 24587.45
         },
         {
           "date": "2025-02-07",
           "value": 35818.12,
-          "spy": 25094.56
+          "spy": 25094.55
         },
         {
           "date": "2025-03-11",
@@ -8567,12 +8567,12 @@
         {
           "date": "2025-05-09",
           "value": 32955.06,
-          "spy": 23643.77
+          "spy": 23643.75
         },
         {
           "date": "2025-06-10",
           "value": 35405.71,
-          "spy": 25266.83
+          "spy": 25266.82
         },
         {
           "date": "2025-07-11",
@@ -8587,27 +8587,27 @@
         {
           "date": "2025-09-10",
           "value": 36802.21,
-          "spy": 27405.97
+          "spy": 27405.96
         },
         {
           "date": "2025-10-09",
           "value": 37216.33,
-          "spy": 28280.44
+          "spy": 28280.43
         },
         {
           "date": "2025-11-07",
           "value": 36773.24,
-          "spy": 28272.44
+          "spy": 28272.43
         },
         {
           "date": "2025-12-09",
           "value": 37616.14,
-          "spy": 28781.03
+          "spy": 28781.01
         },
         {
           "date": "2026-01-09",
           "value": 38538.09,
-          "spy": 29332.21
+          "spy": 29332.2
         },
         {
           "date": "2026-02-10",
@@ -8622,12 +8622,12 @@
         {
           "date": "2026-04-13",
           "value": 38051.43,
-          "spy": 29074.58
+          "spy": 29074.57
         },
         {
           "date": "2026-05-12",
           "value": 39068.12,
-          "spy": 31281.55
+          "spy": 31281.54
         },
         {
           "date": "2026-06-11",
@@ -8637,7 +8637,7 @@
         {
           "date": "2026-07-14",
           "value": 39781.33,
-          "spy": 31942.07
+          "spy": 31942.06
         },
         {
           "date": "2026-08-12",
@@ -8647,22 +8647,22 @@
         {
           "date": "2026-09-11",
           "value": 40816.46,
-          "spy": 32471.44
+          "spy": 32471.43
         },
         {
           "date": "2026-10-12",
           "value": 41076.09,
-          "spy": 33140.26
+          "spy": 33140.25
         },
         {
           "date": "2026-11-10",
           "value": 42152.87,
-          "spy": 31940.04
+          "spy": 31940.03
         },
         {
           "date": "2026-11-25",
           "value": 41563.42,
-          "spy": 30525.16
+          "spy": 30525.15
         }
       ],
       "audit": [
@@ -14395,9 +14395,9 @@
       "returnPercent": 281.7649,
       "spyPercent": 204.79479999999998,
       "annualizedPercent": 16.253234190989453,
-      "spyDrawdownPercent": 33.71728351156934,
-      "drawdownPercent": 30.62442599176714,
-      "costs": 437.3211136865801,
+      "spyDrawdownPercent": 33.717260441279414,
+      "drawdownPercent": 30.62442472276008,
+      "costs": 437.32115047695686,
       "orderCount": 737,
       "curve": [
         {
@@ -14428,17 +14428,17 @@
         {
           "date": "2018-06-04",
           "value": 10400.1,
-          "spy": 10279.0
+          "spy": 10278.99
         },
         {
           "date": "2018-07-03",
           "value": 10273.96,
-          "spy": 10174.92
+          "spy": 10174.91
         },
         {
           "date": "2018-08-02",
-          "value": 10757.38,
-          "spy": 10606.48
+          "value": 10757.39,
+          "spy": 10606.47
         },
         {
           "date": "2018-08-31",
@@ -14483,7 +14483,7 @@
         {
           "date": "2019-05-06",
           "value": 12021.42,
-          "spy": 11161.48
+          "spy": 11161.47
         },
         {
           "date": "2019-06-05",
@@ -14493,7 +14493,7 @@
         {
           "date": "2019-07-05",
           "value": 12389.22,
-          "spy": 11431.79
+          "spy": 11431.78
         },
         {
           "date": "2019-08-05",
@@ -14508,7 +14508,7 @@
         {
           "date": "2019-10-03",
           "value": 12422.32,
-          "spy": 11175.21
+          "spy": 11175.2
         },
         {
           "date": "2019-11-01",
@@ -14518,7 +14518,7 @@
         {
           "date": "2019-12-03",
           "value": 12855.93,
-          "spy": 11911.32
+          "spy": 11911.31
         },
         {
           "date": "2020-01-03",
@@ -14538,7 +14538,7 @@
         {
           "date": "2020-04-03",
           "value": 11091.05,
-          "spy": 9653.61
+          "spy": 9653.6
         },
         {
           "date": "2020-05-05",
@@ -14548,22 +14548,22 @@
         {
           "date": "2020-06-04",
           "value": 14145.42,
-          "spy": 12110.67
+          "spy": 12110.66
         },
         {
           "date": "2020-07-06",
           "value": 14410.78,
-          "spy": 12386.26
+          "spy": 12386.25
         },
         {
           "date": "2020-08-04",
           "value": 14966.34,
-          "spy": 12894.52
+          "spy": 12894.51
         },
         {
           "date": "2020-09-02",
           "value": 16363.43,
-          "spy": 13974.34
+          "spy": 13974.33
         },
         {
           "date": "2020-10-02",
@@ -14578,12 +14578,12 @@
         {
           "date": "2020-12-02",
           "value": 17152.91,
-          "spy": 14386.82
+          "spy": 14386.81
         },
         {
           "date": "2021-01-04",
           "value": 17177.11,
-          "spy": 14526.93
+          "spy": 14526.92
         },
         {
           "date": "2021-02-03",
@@ -14597,13 +14597,13 @@
         },
         {
           "date": "2021-04-06",
-          "value": 19175.68,
-          "spy": 16049.78
+          "value": 19175.69,
+          "spy": 16049.77
         },
         {
           "date": "2021-05-05",
           "value": 19652.23,
-          "spy": 16430.36
+          "spy": 16430.35
         },
         {
           "date": "2021-06-04",
@@ -14612,18 +14612,18 @@
         },
         {
           "date": "2021-07-06",
-          "value": 20546.84,
-          "spy": 17165.28
+          "value": 20546.85,
+          "spy": 17165.27
         },
         {
           "date": "2021-08-04",
           "value": 20932.05,
-          "spy": 17405.16
+          "spy": 17405.15
         },
         {
           "date": "2021-09-02",
           "value": 21935.09,
-          "spy": 17968.57
+          "spy": 17968.56
         },
         {
           "date": "2021-10-04",
@@ -14648,7 +14648,7 @@
         {
           "date": "2022-02-02",
           "value": 23429.56,
-          "spy": 18255.52
+          "spy": 18255.51
         },
         {
           "date": "2022-03-04",
@@ -14657,13 +14657,13 @@
         },
         {
           "date": "2022-04-04",
-          "value": 23593.86,
+          "value": 23593.87,
           "spy": 18290.2
         },
         {
           "date": "2022-05-04",
           "value": 22729.59,
-          "spy": 17179.5
+          "spy": 17179.49
         },
         {
           "date": "2022-06-03",
@@ -14673,7 +14673,7 @@
         {
           "date": "2022-07-06",
           "value": 20217.31,
-          "spy": 15411.57
+          "spy": 15411.55
         },
         {
           "date": "2022-08-04",
@@ -14703,12 +14703,12 @@
         {
           "date": "2023-01-04",
           "value": 21874.84,
-          "spy": 15566.62
+          "spy": 15566.61
         },
         {
           "date": "2023-02-03",
           "value": 23014.74,
-          "spy": 16726.33
+          "spy": 16726.32
         },
         {
           "date": "2023-03-07",
@@ -14718,7 +14718,7 @@
         {
           "date": "2023-04-05",
           "value": 23433.86,
-          "spy": 16596.75
+          "spy": 16596.74
         },
         {
           "date": "2023-05-05",
@@ -14733,27 +14733,27 @@
         {
           "date": "2023-07-07",
           "value": 24974.32,
-          "spy": 17923.31
+          "spy": 17923.3
         },
         {
           "date": "2023-08-07",
-          "value": 25923.38,
+          "value": 25923.39,
           "spy": 18420.28
         },
         {
           "date": "2023-09-06",
           "value": 25755.41,
-          "spy": 18236.78
+          "spy": 18236.77
         },
         {
           "date": "2023-10-05",
           "value": 24135.82,
-          "spy": 17410.29
+          "spy": 17410.28
         },
         {
           "date": "2023-11-03",
           "value": 25055.29,
-          "spy": 17828.22
+          "spy": 17828.21
         },
         {
           "date": "2023-12-05",
@@ -14772,33 +14772,33 @@
         },
         {
           "date": "2024-03-07",
-          "value": 27682.05,
-          "spy": 21199.84
+          "value": 27682.06,
+          "spy": 21199.83
         },
         {
           "date": "2024-04-08",
-          "value": 27898.24,
-          "spy": 21427.22
+          "value": 27898.25,
+          "spy": 21427.21
         },
         {
           "date": "2024-05-07",
           "value": 28173.09,
-          "spy": 21361.96
+          "spy": 21361.95
         },
         {
           "date": "2024-06-06",
           "value": 28551.08,
-          "spy": 22085.67
+          "spy": 22085.66
         },
         {
           "date": "2024-07-09",
-          "value": 28933.97,
+          "value": 28933.98,
           "spy": 23033.81
         },
         {
           "date": "2024-08-07",
           "value": 28715.31,
-          "spy": 21493.86
+          "spy": 21493.85
         },
         {
           "date": "2024-09-06",
@@ -14808,7 +14808,7 @@
         {
           "date": "2024-10-07",
           "value": 31413.45,
-          "spy": 23602.45
+          "spy": 23602.44
         },
         {
           "date": "2024-11-05",
@@ -14823,12 +14823,12 @@
         {
           "date": "2025-01-07",
           "value": 30429.34,
-          "spy": 24550.68
+          "spy": 24550.66
         },
         {
           "date": "2025-02-07",
           "value": 31483.81,
-          "spy": 25057.01
+          "spy": 25057.0
         },
         {
           "date": "2025-03-11",
@@ -14838,47 +14838,47 @@
         {
           "date": "2025-04-09",
           "value": 29511.28,
-          "spy": 22950.76
+          "spy": 22950.75
         },
         {
           "date": "2025-05-09",
           "value": 30007.93,
-          "spy": 23608.39
+          "spy": 23608.38
         },
         {
           "date": "2025-06-10",
-          "value": 31964.6,
-          "spy": 25229.02
+          "value": 31964.61,
+          "spy": 25229.01
         },
         {
           "date": "2025-07-11",
           "value": 32716.95,
-          "spy": 26165.41
+          "spy": 26165.4
         },
         {
           "date": "2025-08-11",
           "value": 33112.69,
-          "spy": 26681.48
+          "spy": 26681.47
         },
         {
           "date": "2025-09-10",
           "value": 33390.34,
-          "spy": 27364.97
+          "spy": 27364.96
         },
         {
           "date": "2025-10-09",
           "value": 34376.92,
-          "spy": 28238.13
+          "spy": 28238.12
         },
         {
           "date": "2025-11-07",
           "value": 34350.91,
-          "spy": 28230.13
+          "spy": 28230.12
         },
         {
           "date": "2025-12-09",
-          "value": 35017.41,
-          "spy": 28737.96
+          "value": 35017.42,
+          "spy": 28737.95
         },
         {
           "date": "2026-01-09",
@@ -14888,52 +14888,52 @@
         {
           "date": "2026-02-10",
           "value": 36322.5,
-          "spy": 29206.04
+          "spy": 29206.03
         },
         {
           "date": "2026-03-12",
           "value": 35273.5,
-          "spy": 28106.36
+          "spy": 28106.35
         },
         {
           "date": "2026-04-13",
           "value": 35225.38,
-          "spy": 29031.07
+          "spy": 29031.06
         },
         {
           "date": "2026-05-12",
           "value": 35663.28,
-          "spy": 31234.75
+          "spy": 31234.74
         },
         {
           "date": "2026-06-11",
-          "value": 35269.62,
-          "spy": 31216.98
+          "value": 35269.63,
+          "spy": 31216.97
         },
         {
           "date": "2026-07-14",
           "value": 36050.2,
-          "spy": 31894.28
+          "spy": 31894.27
         },
         {
           "date": "2026-08-12",
-          "value": 37487.69,
-          "spy": 32770.72
+          "value": 37487.7,
+          "spy": 32770.71
         },
         {
           "date": "2026-09-11",
           "value": 36978.27,
-          "spy": 32422.86
+          "spy": 32422.85
         },
         {
           "date": "2026-10-12",
           "value": 36809.5,
-          "spy": 33090.67
+          "spy": 33090.66
         },
         {
           "date": "2026-11-10",
           "value": 38578.47,
-          "spy": 31892.25
+          "spy": 31892.24
         },
         {
           "date": "2026-11-25",
@@ -20809,11 +20809,11 @@
           "start": "2018-01-02",
           "end": "2021-12-31",
           "returnPercent": 147.52779999999998,
-          "spyPercent": 89.86840000000001,
+          "spyPercent": 89.8683,
           "annualizedPercent": 25.470286769836846,
-          "spyDrawdownPercent": 33.71728351156935,
-          "drawdownPercent": 31.87760722258145,
-          "costs": 36.11032508436707,
+          "spyDrawdownPercent": 33.717260441279414,
+          "drawdownPercent": 31.87760773185973,
+          "costs": 36.110325232335114,
           "orderCount": 312,
           "curve": [
             {
@@ -20874,12 +20874,12 @@
             {
               "date": "2018-11-30",
               "value": 10804.71,
-              "spy": 10415.78
+              "spy": 10415.77
             },
             {
               "date": "2019-01-03",
               "value": 9858.17,
-              "spy": 9281.67
+              "spy": 9281.66
             },
             {
               "date": "2019-02-04",
@@ -20909,7 +20909,7 @@
             {
               "date": "2019-07-05",
               "value": 12507.75,
-              "spy": 11448.92
+              "spy": 11448.91
             },
             {
               "date": "2019-08-05",
@@ -20919,7 +20919,7 @@
             {
               "date": "2019-09-04",
               "value": 12602.56,
-              "spy": 11279.37
+              "spy": 11279.36
             },
             {
               "date": "2019-10-03",
@@ -20929,12 +20929,12 @@
             {
               "date": "2019-11-01",
               "value": 13000.07,
-              "spy": 11797.76
+              "spy": 11797.75
             },
             {
               "date": "2019-12-03",
               "value": 12994.24,
-              "spy": 11929.17
+              "spy": 11929.16
             },
             {
               "date": "2020-01-03",
@@ -20944,12 +20944,12 @@
             {
               "date": "2020-02-04",
               "value": 14254.93,
-              "spy": 12743.38
+              "spy": 12743.37
             },
             {
               "date": "2020-03-05",
               "value": 13256.48,
-              "spy": 11713.25
+              "spy": 11713.24
             },
             {
               "date": "2020-04-03",
@@ -20964,22 +20964,22 @@
             {
               "date": "2020-06-04",
               "value": 14227.34,
-              "spy": 12128.82
+              "spy": 12128.81
             },
             {
               "date": "2020-07-06",
               "value": 14641.81,
-              "spy": 12404.82
+              "spy": 12404.81
             },
             {
               "date": "2020-08-04",
-              "value": 15302.38,
+              "value": 15302.37,
               "spy": 12913.84
             },
             {
               "date": "2020-09-02",
               "value": 17058.11,
-              "spy": 13995.28
+              "spy": 13995.27
             },
             {
               "date": "2020-10-02",
@@ -20988,13 +20988,13 @@
             },
             {
               "date": "2020-11-02",
-              "value": 15850.75,
+              "value": 15850.74,
               "spy": 12971.03
             },
             {
               "date": "2020-12-02",
               "value": 17620.41,
-              "spy": 14408.38
+              "spy": 14408.37
             },
             {
               "date": "2021-01-04",
@@ -21004,22 +21004,22 @@
             {
               "date": "2021-02-03",
               "value": 18146.74,
-              "spy": 15063.91
+              "spy": 15063.9
             },
             {
               "date": "2021-03-05",
-              "value": 18387.11,
-              "spy": 15134.13
+              "value": 18387.12,
+              "spy": 15134.12
             },
             {
               "date": "2021-04-06",
               "value": 19968.2,
-              "spy": 16073.83
+              "spy": 16073.82
             },
             {
               "date": "2021-05-05",
               "value": 20483.77,
-              "spy": 16454.98
+              "spy": 16454.97
             },
             {
               "date": "2021-06-04",
@@ -21033,18 +21033,18 @@
             },
             {
               "date": "2021-08-04",
-              "value": 21901.38,
-              "spy": 17431.24
+              "value": 21901.39,
+              "spy": 17431.23
             },
             {
               "date": "2021-09-02",
               "value": 22960.0,
-              "spy": 17995.5
+              "spy": 17995.49
             },
             {
               "date": "2021-10-04",
               "value": 21442.63,
-              "spy": 17075.18
+              "spy": 17075.17
             },
             {
               "date": "2021-11-02",
@@ -21054,12 +21054,12 @@
             {
               "date": "2021-12-02",
               "value": 24019.58,
-              "spy": 18220.86
+              "spy": 18220.85
             },
             {
               "date": "2021-12-31",
               "value": 24752.78,
-              "spy": 18986.84
+              "spy": 18986.83
             }
           ],
           "audit": [
@@ -23762,11 +23762,11 @@
           "start": "2018-01-02",
           "end": "2021-12-31",
           "returnPercent": 141.55029999999996,
-          "spyPercent": 89.86840000000001,
+          "spyPercent": 89.8683,
           "annualizedPercent": 24.704794830772016,
-          "spyDrawdownPercent": 33.71728351156935,
-          "drawdownPercent": 30.617056497140183,
-          "costs": 45.42758974670544,
+          "spyDrawdownPercent": 33.717260441279414,
+          "drawdownPercent": 30.617055233424356,
+          "costs": 45.42759108972046,
           "orderCount": 309,
           "curve": [
             {
@@ -23827,12 +23827,12 @@
             {
               "date": "2018-11-30",
               "value": 10902.82,
-              "spy": 10415.78
+              "spy": 10415.77
             },
             {
               "date": "2019-01-03",
               "value": 9982.5,
-              "spy": 9281.67
+              "spy": 9281.66
             },
             {
               "date": "2019-02-04",
@@ -23862,7 +23862,7 @@
             {
               "date": "2019-07-05",
               "value": 12416.92,
-              "spy": 11448.92
+              "spy": 11448.91
             },
             {
               "date": "2019-08-05",
@@ -23872,7 +23872,7 @@
             {
               "date": "2019-09-04",
               "value": 12540.34,
-              "spy": 11279.37
+              "spy": 11279.36
             },
             {
               "date": "2019-10-03",
@@ -23882,12 +23882,12 @@
             {
               "date": "2019-11-01",
               "value": 12910.08,
-              "spy": 11797.76
+              "spy": 11797.75
             },
             {
               "date": "2019-12-03",
               "value": 12885.83,
-              "spy": 11929.17
+              "spy": 11929.16
             },
             {
               "date": "2020-01-03",
@@ -23897,12 +23897,12 @@
             {
               "date": "2020-02-04",
               "value": 14122.82,
-              "spy": 12743.38
+              "spy": 12743.37
             },
             {
               "date": "2020-03-05",
               "value": 13217.32,
-              "spy": 11713.25
+              "spy": 11713.24
             },
             {
               "date": "2020-04-03",
@@ -23917,12 +23917,12 @@
             {
               "date": "2020-06-04",
               "value": 14190.65,
-              "spy": 12128.82
+              "spy": 12128.81
             },
             {
               "date": "2020-07-06",
               "value": 14462.98,
-              "spy": 12404.82
+              "spy": 12404.81
             },
             {
               "date": "2020-08-04",
@@ -23932,7 +23932,7 @@
             {
               "date": "2020-09-02",
               "value": 16422.51,
-              "spy": 13995.28
+              "spy": 13995.27
             },
             {
               "date": "2020-10-02",
@@ -23947,7 +23947,7 @@
             {
               "date": "2020-12-02",
               "value": 17217.38,
-              "spy": 14408.38
+              "spy": 14408.37
             },
             {
               "date": "2021-01-04",
@@ -23957,22 +23957,22 @@
             {
               "date": "2021-02-03",
               "value": 17628.77,
-              "spy": 15063.91
+              "spy": 15063.9
             },
             {
               "date": "2021-03-05",
               "value": 17843.27,
-              "spy": 15134.13
+              "spy": 15134.12
             },
             {
               "date": "2021-04-06",
               "value": 19267.15,
-              "spy": 16073.83
+              "spy": 16073.82
             },
             {
               "date": "2021-05-05",
               "value": 19745.82,
-              "spy": 16454.98
+              "spy": 16454.97
             },
             {
               "date": "2021-06-04",
@@ -23981,23 +23981,23 @@
             },
             {
               "date": "2021-07-06",
-              "value": 20649.66,
+              "value": 20649.67,
               "spy": 17191.0
             },
             {
               "date": "2021-08-04",
               "value": 21036.64,
-              "spy": 17431.24
+              "spy": 17431.23
             },
             {
               "date": "2021-09-02",
               "value": 22044.66,
-              "spy": 17995.5
+              "spy": 17995.49
             },
             {
               "date": "2021-10-04",
               "value": 20639.31,
-              "spy": 17075.18
+              "spy": 17075.17
             },
             {
               "date": "2021-11-02",
@@ -24007,12 +24007,12 @@
             {
               "date": "2021-12-02",
               "value": 23296.52,
-              "spy": 18220.86
+              "spy": 18220.85
             },
             {
               "date": "2021-12-31",
               "value": 24155.03,
-              "spy": 18986.84
+              "spy": 18986.83
             }
           ],
           "audit": [
@@ -26775,9 +26775,9 @@
           "returnPercent": 67.7634,
           "spyPercent": 60.15760000000001,
           "annualizedPercent": 11.154359919888023,
-          "spyDrawdownPercent": 24.49638885379867,
-          "drawdownPercent": 26.753448372065048,
-          "costs": 38.97249401960711,
+          "spyDrawdownPercent": 24.49639399279445,
+          "drawdownPercent": 26.753444664016286,
+          "costs": 38.9724960309686,
           "orderCount": 405,
           "curve": [
             {
@@ -26803,7 +26803,7 @@
             {
               "date": "2022-05-04",
               "value": 8986.04,
-              "spy": 9027.15
+              "spy": 9027.14
             },
             {
               "date": "2022-06-03",
@@ -26813,7 +26813,7 @@
             {
               "date": "2022-07-06",
               "value": 7853.44,
-              "spy": 8098.17
+              "spy": 8098.16
             },
             {
               "date": "2022-08-04",
@@ -26858,12 +26858,12 @@
             {
               "date": "2023-04-05",
               "value": 9290.96,
-              "spy": 8720.94
+              "spy": 8720.93
             },
             {
               "date": "2023-05-05",
               "value": 9530.1,
-              "spy": 8828.56
+              "spy": 8828.55
             },
             {
               "date": "2023-06-06",
@@ -26883,7 +26883,7 @@
             {
               "date": "2023-09-06",
               "value": 10796.82,
-              "spy": 9582.71
+              "spy": 9582.7
             },
             {
               "date": "2023-10-05",
@@ -26912,7 +26912,7 @@
             },
             {
               "date": "2024-03-07",
-              "value": 12724.0,
+              "value": 12724.01,
               "spy": 11139.67
             },
             {
@@ -26928,12 +26928,12 @@
             {
               "date": "2024-06-06",
               "value": 12718.4,
-              "spy": 11605.15
+              "spy": 11605.14
             },
             {
               "date": "2024-07-09",
               "value": 13124.61,
-              "spy": 12103.36
+              "spy": 12103.35
             },
             {
               "date": "2024-08-07",
@@ -26963,7 +26963,7 @@
             {
               "date": "2025-01-07",
               "value": 13907.32,
-              "spy": 12900.41
+              "spy": 12900.4
             },
             {
               "date": "2025-02-07",
@@ -26978,7 +26978,7 @@
             {
               "date": "2025-04-09",
               "value": 13065.02,
-              "spy": 12059.72
+              "spy": 12059.71
             },
             {
               "date": "2025-05-09",
@@ -26993,7 +26993,7 @@
             {
               "date": "2025-07-11",
               "value": 14533.37,
-              "spy": 13748.88
+              "spy": 13748.89
             },
             {
               "date": "2025-08-11",
@@ -27003,7 +27003,7 @@
             {
               "date": "2025-09-10",
               "value": 14854.56,
-              "spy": 14379.21
+              "spy": 14379.2
             },
             {
               "date": "2025-10-09",
@@ -27028,7 +27028,7 @@
             {
               "date": "2026-02-10",
               "value": 15919.22,
-              "spy": 15346.61
+              "spy": 15346.62
             },
             {
               "date": "2026-03-12",
@@ -27063,7 +27063,7 @@
             {
               "date": "2026-09-11",
               "value": 16474.85,
-              "spy": 17036.93
+              "spy": 17036.92
             },
             {
               "date": "2026-10-12",
@@ -27072,7 +27072,7 @@
             },
             {
               "date": "2026-11-10",
-              "value": 17014.26,
+              "value": 17014.27,
               "spy": 16758.11
             },
             {
@@ -30118,9 +30118,9 @@
           "returnPercent": 59.8797,
           "spyPercent": 60.15760000000001,
           "annualizedPercent": 10.066180476772747,
-          "spyDrawdownPercent": 24.49638885379867,
-          "drawdownPercent": 21.20538762018052,
-          "costs": 61.41199127440748,
+          "spyDrawdownPercent": 24.49639399279445,
+          "drawdownPercent": 21.20538768757447,
+          "costs": 61.41199544419361,
           "orderCount": 426,
           "curve": [
             {
@@ -30146,7 +30146,7 @@
             {
               "date": "2022-05-04",
               "value": 9460.74,
-              "spy": 9027.15
+              "spy": 9027.14
             },
             {
               "date": "2022-06-03",
@@ -30156,7 +30156,7 @@
             {
               "date": "2022-07-06",
               "value": 8417.84,
-              "spy": 8098.17
+              "spy": 8098.16
             },
             {
               "date": "2022-08-04",
@@ -30201,12 +30201,12 @@
             {
               "date": "2023-04-05",
               "value": 9766.87,
-              "spy": 8720.94
+              "spy": 8720.93
             },
             {
               "date": "2023-05-05",
               "value": 9921.34,
-              "spy": 8828.56
+              "spy": 8828.55
             },
             {
               "date": "2023-06-06",
@@ -30226,7 +30226,7 @@
             {
               "date": "2023-09-06",
               "value": 10735.23,
-              "spy": 9582.71
+              "spy": 9582.7
             },
             {
               "date": "2023-10-05",
@@ -30271,12 +30271,12 @@
             {
               "date": "2024-06-06",
               "value": 11918.0,
-              "spy": 11605.15
+              "spy": 11605.14
             },
             {
               "date": "2024-07-09",
               "value": 12081.44,
-              "spy": 12103.36
+              "spy": 12103.35
             },
             {
               "date": "2024-08-07",
@@ -30306,7 +30306,7 @@
             {
               "date": "2025-01-07",
               "value": 12716.21,
-              "spy": 12900.41
+              "spy": 12900.4
             },
             {
               "date": "2025-02-07",
@@ -30321,7 +30321,7 @@
             {
               "date": "2025-04-09",
               "value": 12336.41,
-              "spy": 12059.72
+              "spy": 12059.71
             },
             {
               "date": "2025-05-09",
@@ -30336,7 +30336,7 @@
             {
               "date": "2025-07-11",
               "value": 13680.75,
-              "spy": 13748.88
+              "spy": 13748.89
             },
             {
               "date": "2025-08-11",
@@ -30346,7 +30346,7 @@
             {
               "date": "2025-09-10",
               "value": 13962.42,
-              "spy": 14379.21
+              "spy": 14379.2
             },
             {
               "date": "2025-10-09",
@@ -30371,7 +30371,7 @@
             {
               "date": "2026-02-10",
               "value": 15203.63,
-              "spy": 15346.61
+              "spy": 15346.62
             },
             {
               "date": "2026-03-12",
@@ -30406,7 +30406,7 @@
             {
               "date": "2026-09-11",
               "value": 15482.86,
-              "spy": 17036.93
+              "spy": 17036.92
             },
             {
               "date": "2026-10-12",
